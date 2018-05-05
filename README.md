@@ -1,4 +1,4 @@
 # Server Development Tutorial
 
-- Web Server Basics
+- [Web Server Basics](basics/basics.md)
 - Elixir Basics
