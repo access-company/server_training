@@ -1,0 +1,16 @@
+{
+  "name": "server_training",
+  "version": "1.0.0",
+  "description": "Server Dev Tutorials",
+  "main": "index.js",
+  "repository": "git@github.com:access-company/server_training.git",
+  "author": "ymtszw <yu.matsuzawa@access-company.com>",
+  "private": true,
+  "scripts": {
+    "start": "gitbook serve . docs/",
+    "build": "gitbook build . docs/"
+  },
+  "dependencies": {
+    "gitbook-cli": "^2.3.2"
+  }
+}
