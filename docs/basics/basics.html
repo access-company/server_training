@@ -1,0 +1,387 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Basics · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="requirements.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Server Development Tutorial
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="basics.html">
+            
+                <a href="basics.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="requirements.html">
+            
+                <a href="requirements.html">
+            
+                    
+                    前提
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="dev_to1.html">
+            
+                <a href="dev_to1.html">
+            
+                    
+                    dev.to part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="recap.html">
+            
+                <a href="recap.html">
+            
+                    
+                    復習: インターネットとWeb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="dev_to2.html">
+            
+                <a href="dev_to2.html">
+            
+                    
+                    dev.to part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="app_server.html">
+            
+                <a href="app_server.html">
+            
+                    
+                    アプリケーションサーバ, 「動的生成」
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="api_design.html">
+            
+                <a href="api_design.html">
+            
+                    
+                    API設計, 「状態」
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="database.html">
+            
+                <a href="database.html">
+            
+                    
+                    「リソース」, データベース
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="distribution.html">
+            
+                <a href="distribution.html">
+            
+                    
+                    「キャッシュ」そして「分散」
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="conclusion.html">
+            
+                <a href="conclusion.html">
+            
+                    
+                    結び
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Basics</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x30B5;&#x30FC;&#x30D0;&#x958B;&#x767A;&#x57FA;&#x790E;">&#x30B5;&#x30FC;&#x30D0;&#x958B;&#x767A;&#x57FA;&#x790E;</h1>
+<hr>
+<h2 id="&#x307E;&#x3048;&#x304C;&#x304D;">&#x307E;&#x3048;&#x304C;&#x304D;</h2>
+<ul>
+<li>&#x3053;&#x306E;&#x6587;&#x66F8;&#x306F;:<ul>
+<li><a href="https://github.com/access-company" target="_blank">@access-company</a>&#x306E;&#x65B0;&#x5352;&#x6280;&#x8853;&#x7814;&#x4FEE;&#x3001;&#x5EA7;&#x5B66;&#x8CC7;&#x6599;</li>
+<li>2018&#x5E74;&#x5EA6;&#x4F5C;&#x6210;</li>
+<li>&#x6587;&#x8CAC;&#x306F;<a href="https://github.com/ymtszw" target="_blank">@ymtszw</a></li>
+<li>1&#x6642;&#x9593;&#x7A0B;&#x5EA6;&#x3092;&#x60F3;&#x5B9A;<ul>
+<li>&#x3057;&#x3066;&#x305F;&#x3051;&#x3069;&#x3001;&#x6587;&#x91CF;&#x7684;&#x306B;&#x306F;&#x3068;&#x3066;&#x3082;&#x53CE;&#x307E;&#x3089;&#x306A;&#x3044;&#x3068;&#x601D;&#x308F;&#x308C;&#x308B;&#x3002;&#x73FE;&#x5834;&#x3067;&#x306F;&#x9069;&#x5B9C;&#x30B9;&#x30AD;&#x30C3;&#x30D7;&#x3059;&#x308B;</li>
+</ul>
+</li>
+<li>&#x300C;&#x30B5;&#x30FC;&#x30D0;&#x958B;&#x767A;&#x57FA;&#x790E;&#x300D;&#x306E;&#x304F;&#x304F;&#x308A;&#x3067;&#x3042;&#x308B;</li>
+<li>&#x3068;&#x3044;&#x3063;&#x3066;&#x3082;&#x3042;&#x307E;&#x308A;&#x7CFB;&#x7D71;&#x7ACB;&#x3066;&#x3089;&#x308C;&#x305F;&#x300C;&#x6388;&#x696D;&#x300D;&#x306F;&#x3057;&#x305F;&#x3053;&#x3068;&#x3082;&#x306A;&#x3044;&#x3057;&#x3067;&#x304D;&#x306A;&#x3044;&#x306E;&#x3067;&#x3001;&#x30D5;&#x30EF;&#x30C3;&#x30D5;&#x30EF;&#x3057;&#x305F;&#x8B1B;&#x7FA9;&#x306B;&#x306A;&#x308B;&#x3067;&#x3042;&#x308D;&#x3046;</li>
+<li>&#x305D;&#x3082;&#x305D;&#x3082;&#x7B46;&#x8005;&#x500B;&#x4EBA;&#x304C;&#x3001;&#x300C;&#x30B5;&#x30FC;&#x30D0;&#x958B;&#x767A;&#x300D;&#x306B;&#x95A2;&#x3057;&#x3066;&#x7CFB;&#x7D71;&#x7ACB;&#x3063;&#x305F;&#x6559;&#x80B2;&#x3092;&#x53D7;&#x3051;&#x305F;&#x3053;&#x3068;&#x306F;&#x306A;&#x3044;<ul>
+<li>&#x7B46;&#x8005;&#x81EA;&#x8EAB;&#x306E;&#x65B0;&#x5352;&#x7814;&#x4FEE;&#x3067;&#x306F;&#x3001;&#x30B5;&#x30FC;&#x30D0;&#x30B5;&#x30A4;&#x30C9;&#x306F; Rails &#x30C1;&#x30E5;&#x30FC;&#x30C8;&#x30EA;&#x30A2;&#x30EB;&#x30D9;&#x30FC;&#x30B9;&#x3060;&#x3063;&#x305F;&#x3088;&#x3046;&#x306A;&#x8A18;&#x61B6;&#x304C;&#x3042;&#x308B;&#x304C;&#x3001;&#x304B;&#x306A;&#x308A;&#x524D;&#x306A;&#x306E;&#x3067;&#x602A;&#x3057;&#x3044;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x5185;&#x5916;&#x306E;&#x65B9;&#x3078;: Issue/PR&#x304F;&#x3060;&#x3055;&#x3044;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Server Development Tutorial">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="requirements.html" class="navigation navigation-next " aria-label="Next page: 前提">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Basics","level":"1.2","depth":1,"next":{"title":"前提","level":"1.2.1","depth":2,"path":"basics/requirements.md","ref":"basics/requirements.md","articles":[]},"previous":{"title":"Server Development Tutorial","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"basics/basics.md","mtime":"2018-05-05T23:20:34.471Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-05T23:36:11.796Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

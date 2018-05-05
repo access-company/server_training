@@ -1,0 +1,529 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>「リソース」, データベース · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="distribution.html" />
+    
+    
+    <link rel="prev" href="api_design.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Server Development Tutorial
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics.html">
+            
+                <a href="basics.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="requirements.html">
+            
+                <a href="requirements.html">
+            
+                    
+                    前提
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="dev_to1.html">
+            
+                <a href="dev_to1.html">
+            
+                    
+                    dev.to part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="recap.html">
+            
+                <a href="recap.html">
+            
+                    
+                    復習: インターネットとWeb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="dev_to2.html">
+            
+                <a href="dev_to2.html">
+            
+                    
+                    dev.to part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="app_server.html">
+            
+                <a href="app_server.html">
+            
+                    
+                    アプリケーションサーバ, 「動的生成」
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="api_design.html">
+            
+                <a href="api_design.html">
+            
+                    
+                    API設計, 「状態」
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.7" data-path="database.html">
+            
+                <a href="database.html">
+            
+                    
+                    「リソース」, データベース
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="distribution.html">
+            
+                <a href="distribution.html">
+            
+                    
+                    「キャッシュ」そして「分散」
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="conclusion.html">
+            
+                <a href="conclusion.html">
+            
+                    
+                    結び
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >「リソース」, データベース</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x300C;&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x300D;&#x306E;&#x68F2;&#x51E6;">&#x300C;&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x300D;&#x306E;&#x68F2;&#x51E6;</h2>
+<ul>
+<li>&#x3053;&#x3053;&#x307E;&#x3067;&#x3092;&#x632F;&#x308A;&#x8FD4;&#x308B;&#x3068;&#x3001;<ul>
+<li>Web&#x30B5;&#x30FC;&#x30D0;&#x306E;&#x4E00;&#x985E;&#x578B;&#x3068;&#x3057;&#x3066;&#x3001;HTTP&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x3092;&#x5165;&#x529B;&#x306B;&#x3001;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x306B;&#x57FA;&#x3065;&#x3044;&#x305F;&#x51E6;&#x7406;&#x3092;&#x884C;&#x3044;&#x3001;
+&#x52D5;&#x7684;&#x306A;&#x30B3;&#x30F3;&#x30C6;&#x30F3;&#x30C4;&#x3092;&#x751F;&#x6210;&#x3057;&#x305F;&#x308A;&#x3059;&#x308B;&#x306E;&#x304C;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x30B5;&#x30FC;&#x30D0;</li>
+<li>API&#x306E;&#x8A2D;&#x8A08;&#x306B;&#x306F;&#x3001;&#x30D9;&#x30FC;&#x30B9;&#x3068;&#x3059;&#x308B;&#x30D7;&#x30ED;&#x30C8;&#x30B3;&#x30EB;&#x306E;&#x9055;&#x3044;&#x3084;&#x3001;RESTful&#x306A;&#x3069;&#x306E;&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x306A;&#x3069;&#x3001;&#x8907;&#x6570;&#x306E;&#x6D41;&#x5100;&#x304C;&#x3042;&#x308B;</li>
+<li>&#x300C;&#x72B6;&#x614B;&#x300D;&#x3084;&#x3001;&#x300C;&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x300D;&#x3068;&#x3044;&#x3063;&#x305F;&#x6982;&#x5FF5;&#x304C;&#x767B;&#x5834;&#x3059;&#x308B;</li>
+</ul>
+</li>
+<li>&#x300C;<strong>&#x30EA;&#x30BD;&#x30FC;&#x30B9;</strong>&#x300D;&#x3068;&#x7121;&#x90AA;&#x6C17;&#x306B;&#x8A00;&#x3044;&#x653E;&#x3063;&#x3066;&#x304D;&#x305F;&#x304C;&#x3001;&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3063;&#x3066;&#x306A;&#x3093;&#x3060;&#x308D;&#x3046;&#x304B;</li>
+</ul>
+<hr>
+<ul>
+<li>&#x53E4;&#x5178;&#x7684;&#x306A;&#x9759;&#x7684;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x9001;&#x4FE1;&#x3059;&#x308B;Web&#x30B5;&#x30FC;&#x30D0;&#x306B;&#x7ACB;&#x3061;&#x623B;&#x308B;&#x3068;&#x3001;&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x2252;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3060;&#x3063;&#x305F;</li>
+<li>&#x3057;&#x304B;&#x3057;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x30B5;&#x30FC;&#x30D0;&#x3067;&#x306F;&#x3001;&#x5FC5;&#x305A;&#x3057;&#x3082;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3068;&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x306F;1&#x5BFE;1&#x5BFE;&#x5FDC;&#x3057;&#x306A;&#x3044;</li>
+<li>Unix&#x7CFB;&#x3067;&#x3082;Windows&#x3067;&#x3082;&#x3001; <strong>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x30B7;&#x30B9;&#x30C6;&#x30E0;; file system</strong> &#x306F;&#x3001;<ul>
+<li>&#x30C4;&#x30EA;&#x30FC;&#x72B6;&#x306E;&#x30C7;&#x30FC;&#x30BF;&#x69CB;&#x9020;</li>
+<li>&#x4E00;&#x610F;&#x306B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x7279;&#x5B9A;&#x3059;&#x308B; <strong>&#x30D1;&#x30B9;; path</strong></li>
+<li>&#x4F5C;&#x6210;&#x6642;&#x523B;&#x3001;&#x66F4;&#x65B0;&#x6642;&#x523B;&#x3001;&#x30D0;&#x30A4;&#x30C8;&#x30B5;&#x30A4;&#x30BA;&#x306A;&#x3069;&#x306E;&#x30E1;&#x30BF;&#x30C7;&#x30FC;&#x30BF;</li>
+<li>&#x4E2D;&#x8EAB;&#x306E;&#x30C7;&#x30FC;&#x30BF;&#x306E;&#x4FDD;&#x6301;</li>
+</ul>
+</li>
+<li>&#x3068;&#x3044;&#x3063;&#x305F;&#x7279;&#x5FB4;&#x306F;&#x5171;&#x901A;&#x3067;&#x3001;&#x305D;&#x308C;&#x81EA;&#x4F53;&#x6C4E;&#x7528;&#x7684;&#x3067;&#x6B20;&#x304B;&#x305B;&#x306A;&#x3044;&#x4F53;&#x7CFB;&#x306A;&#x306E;&#x3060;&#x304C;&#x3001;
+Web&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x5B9F;&#x88C5;&#x3059;&#x308B;&#x306B;&#x3042;&#x305F;&#x3063;&#x3066;&#x306F;&#x305D;&#x308C;&#x3060;&#x3051;&#x3067;&#x306F;&#x8DB3;&#x308A;&#x306A;&#x3044;&#x3053;&#x3068;&#x304C;&#x591A;&#x3044;</li>
+</ul>
+<hr>
+<ul>
+<li>&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3068;&#x3057;&#x3066;&#x4FDD;&#x5B58;&#x3057;&#x305F;&#x3044;&#x4E8B;&#x9805;&#x306F;&#x69D8;&#x3005;&#x3042;&#x308B;&#x306E;&#x3067;&#x3001;&#x30C7;&#x30FC;&#x30BF;&#x306E;&#x4E2D;&#x8EAB;&#x3092; <strong>&#x69CB;&#x9020;&#x5316;</strong> &#x3057;&#x305F;&#x3044;<ul>
+<li>&#x4E00;&#x3064;&#x4E00;&#x3064;&#x306E;&#x30C7;&#x30FC;&#x30BF;&#x70B9;&#x304C;&#x3001;&#x7279;&#x5B9A;&#x306E;&#x5024;&#x306E;&#x7D44;&#x307F;&#x5408;&#x308F;&#x305B;&#x3092;&#x6301;&#x3064;&#x3088;&#x3046;&#x898F;&#x5B9A;&#x3067;&#x304D;&#x308B;<ul>
+<li>&#x305F;&#x3068;&#x3048;&#x3070;&#x3001;&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x306E;&#x30E6;&#x30FC;&#x30B6;&#x60C5;&#x5831;&#x3060;&#x3063;&#x305F;&#x3089;<code>id, email, family_name, given_name</code>&#x306A;&#x3069;</li>
+</ul>
+</li>
+<li>&#x69CB;&#x9020;&#x306B;&#x305D;&#x3050;&#x308F;&#x306A;&#x3044;&#x30C7;&#x30FC;&#x30BF;&#x5165;&#x529B;&#x306F;&#x62D2;&#x5426;&#x3059;&#x308B;&#x306A;&#x3069;&#x3001;&#x691C;&#x8A3C;&#x30FB;&#x5F37;&#x5236;&#x3067;&#x304D;&#x308B;<ul>
+<li>&#x751F;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x306B;&#x304A;&#x3044;&#x3066;&#x306F;&#x3001;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306F;&#x4EFB;&#x610F;&#x306E;&#x30C7;&#x30FC;&#x30BF;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x69CB;&#x9020;&#x5316;&#x3055;&#x308C;&#x305F;&#x30C7;&#x30FC;&#x30BF;&#x306E;&#x4E2D;&#x8EAB;&#x3092;&#x3082;&#x3068;&#x306B;&#x3001; <strong>&#x554F;&#x3044;&#x5408;&#x308F;&#x305B;, &#x30AF;&#x30A8;&#x30EA;; query</strong> &#x3042;&#x308B;&#x3044;&#x306F; <strong>&#x691C;&#x7D22;; search</strong> &#x3057;&#x305F;&#x3044;<ul>
+<li>&#x4EFB;&#x610F;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x7FA4;&#x76F8;&#x624B;&#x3067;&#x306F;&#x3001;&#x6C42;&#x3081;&#x308B;&#x5185;&#x5BB9;&#x3092;&#x542B;&#x3080;&#x3082;&#x306E;&#x3092;&#x4E00;&#x610F;&#x306B;&#x898B;&#x3064;&#x3051;&#x51FA;&#x3059;&#x3053;&#x3068;&#x306F;&#x96E3;&#x3057;&#x3044;<ul>
+<li>&#x30D0;&#x30A4;&#x30CA;&#x30EA;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3067;&#x3042;&#x308C;&#x3070;&#x3001;&#x5185;&#x90E8;&#x69CB;&#x9020;&#x3092;&#x89E3;&#x91C8;&#x3059;&#x308B;&#x65B9;&#x6CD5;&#x3092;&#x77E5;&#x3089;&#x306A;&#x3051;&#x308C;&#x3070;&#x306A;&#x3089;&#x306A;&#x3044;</li>
+<li>&#x30C6;&#x30AD;&#x30B9;&#x30C8;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3067;&#x3082;&#x3001; <strong>encoding</strong> &#x306B;&#x3088;&#x3063;&#x3066;&#x306F;&#x8AAD;&#x307F;&#x51FA;&#x3057;&#x65B9;&#x304C;&#x7570;&#x306A;&#x308B;</li>
+<li>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306F; <strong>&#x6697;&#x53F7;&#x5316;</strong> &#x3055;&#x308C;&#x3066;&#x3044;&#x3066;&#x305D;&#x306E;&#x307E;&#x307E;&#x3067;&#x306F;&#x8AAD;&#x3081;&#x306A;&#x3044;&#x304B;&#x3082;&#x3057;&#x308C;&#x306A;&#x3044;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x30AF;&#x30A8;&#x30EA;&#x3084;&#x691C;&#x7D22;&#x304C; <strong>&#x6642;&#x9593;&#x7684;&#x30FB;&#x7A7A;&#x9593;&#x7684;&#x306B;&#x9AD8;&#x52B9;&#x7387;(time and spatial efficiency)</strong> &#x3067;&#x884C;&#x3048;&#x308B;&#x3088;&#x3046;&#x306A;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x3067;&#x3042;&#x3063;&#x3066;&#x6B32;&#x3057;&#x3044;<ul>
+<li>&#x300C;&#x76EE;&#x7684;&#x3068;&#x3059;&#x308B;&#x6587;&#x5B57;&#x5217;&#x3092;&#x542B;&#x3080;&#x884C;&#x3092;&#x30C6;&#x30AD;&#x30B9;&#x30C8;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304B;&#x3089;&#x898B;&#x3064;&#x3051;&#x51FA;&#x3059;&#x300D;&#x3068;&#x3044;&#x3063;&#x305F;&#x539F;&#x59CB;&#x7684;&#x306A;&#x64CD;&#x4F5C;&#x306A;&#x3089;&#x69D8;&#x3005;&#x306A;&#x65B9;&#x6CD5;&#x304C;&#x3042;&#x308B;(&#x4F8B;&#x3048;&#x3070; <strong>grep</strong>)<ul>
+<li>&#x304C;&#x3001;&#x5358;&#x306A;&#x308B;grep&#x306A;&#x3069;&#x306F; <strong>&#x7DDA;&#x5F62;&#x6642;&#x9593;; linear time</strong> &#x3067;&#x52D5;&#x304F;</li>
+<li>&#x3064;&#x307E;&#x308A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x6570;(&#x884C;&#x6570;)&#x304C;&#x5897;&#x3048;&#x308B;&#x3054;&#x3068;&#x306B;&#x3001;&#x691C;&#x7D22;&#x5B8C;&#x4E86;&#x307E;&#x3067;&#x306B;&#x304B;&#x304B;&#x308B;&#x6642;&#x9593;&#x306F;&#x7DDA;&#x5F62;&#x3067;&#x4F38;&#x3073;&#x308B;</li>
+</ul>
+</li>
+<li>&#x3064;&#x3044;&#x3067;&#x306B;query&#x306F;&#x3067;&#x304D;&#x305F;&#x3089;&#x7D71;&#x4E00;&#x7684;&#x306A;&#x6587;&#x6CD5;&#x3067;&#x7C21;&#x5358;&#x306B;&#x66F8;&#x304D;&#x305F;&#x3044;&#x3057;&#x3001;&#x306A;&#x3093;&#x306A;&#x3089;&#x8907;&#x96D1;&#x306A;&#x6761;&#x4EF6;&#x3092;&#x7D44;&#x307F;&#x5408;&#x308F;&#x305B;&#x305F;&#x308A;&#x3082;&#x3057;&#x305F;&#x3044;</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="&#x30C7;&#x30FC;&#x30BF;&#x30D9;&#x30FC;&#x30B9;">&#x30C7;&#x30FC;&#x30BF;&#x30D9;&#x30FC;&#x30B9;</h2>
+<ul>
+<li>&#x307E;&#x3055;&#x306B; <strong>&#x30C7;&#x30FC;&#x30BF;&#x30D9;&#x30FC;&#x30B9;; database (DB)</strong> &#x306E;&#x5FC5;&#x8981;&#x3068;&#x3055;&#x308C;&#x308B;&#x4E16;&#x754C;<ul>
+<li>&#x3053;&#x306E;&#x3088;&#x3046;&#x306A;&#x8981;&#x6C42;&#x306F;<strong>Web&#x306E;&#x8A95;&#x751F;&#x4EE5;&#x524D;&#x304B;&#x3089;&#x3042;&#x308A;</strong>&#x3001;&#x8C4A;&#x5BCC;&#x306A;&#x77E5;&#x898B;&#x3001;&#x7814;&#x7A76;&#x3001;&#x6280;&#x8853;&#x306E;&#x84C4;&#x7A4D;&#x304C;&#x3042;&#x308B;</li>
+<li>&#x8C4A;&#x5BCC;&#x3067;&#x3042;&#x308B;&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;&#x306F;&#x5F53;&#x7136;&#x53D6;&#x3063;&#x639B;&#x304B;&#x308A;&#x304C;&#x3064;&#x304B;&#x307F;&#x306B;&#x304F;&#x3044;&#x4E16;&#x754C;&#x3067;&#x3082;&#x3042;&#x308B;</li>
+</ul>
+</li>
+<li>&#x591A;&#x304F;&#x306E;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x30B5;&#x30FC;&#x30D0;&#x306F;&#x3001;&#x4F55;&#x51E6;&#x304B;&#x306B;&#x3042;&#x308B;&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3092;&#x7D44;&#x307F;&#x5408;&#x308F;&#x305B;&#x3066;&#x6A5F;&#x80FD;&#x3092;&#x5B9F;&#x73FE;&#x3059;&#x308B;&#x304C;&#x3001;DB&#x306F;&#x305D;&#x306E;&#x4E3B;&#x305F;&#x308B;&#x68F2;&#x51E6;&#x306E;&#x4E00;&#x3064;</li>
+<li>DB&#x7BA1;&#x7406;&#x30B7;&#x30B9;&#x30C6;&#x30E0;(<strong>database management system; DBMS</strong>)&#x3082;&#x69D8;&#x3005;&#x5B58;&#x5728;&#x3059;&#x308B;&#x304C;&#x3001;&#x304A;&#x304A;&#x3088;&#x305D;&#x306E;&#x5171;&#x901A;&#x9805;&#x3068;&#x3057;&#x3066;&#x306F;&#x3001;<ul>
+<li>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x4E0A;&#x3067;&#x52D5;&#x4F5C;&#x3057;&#x3001;&#x6700;&#x7D42;&#x7684;&#x306B;&#x30C7;&#x30FC;&#x30BF;&#x5B9F;&#x4F53;&#x306F;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3068;&#x3057;&#x3066;&#x4FDD;&#x5B58;&#x3059;&#x308B;</li>
+<li>&#x305F;&#x3060;&#x3057;&#x3001;&#x4FDD;&#x5B58;(<strong>&#x6C38;&#x7D9A;&#x5316;</strong>)&#x3059;&#x308B;&#x969B;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x5F62;&#x5F0F;&#x3068;&#x3001;&#x8AAD;&#x307F;&#x51FA;&#x3055;&#x308C;&#x308B;&#x3068;&#x304D;&#x306E;&#x5F62;&#x5F0F;&#x3068;&#x306F;&#x5FC5;&#x305A;&#x3057;&#x3082;&#x5BFE;&#x5FDC;&#x3057;&#x306A;&#x3044;&#x3002;
+&#x305D;&#x3053;&#x306F;DBMS&#x306E;&#x5B9F;&#x88C5;&#x304C;&#x77E5;&#x3063;&#x3066;&#x3044;&#x308C;&#x3070;&#x3044;&#x3044;&#x90E8;&#x5206;&#x3067;&#x3001;&#x5229;&#x7528;&#x8005;&#x5074;&#x304B;&#x3089;&#x306F;<strong>&#x96A0;&#x853D;</strong>&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;<ul>
+<li><strong>Database engine/Storage engine</strong>&#x306E;&#x62C5;&#x5F53;&#x7B87;&#x6240;&#x3002;&#x305D;&#x306E;DBMS&#x306E;&#x6027;&#x80FD;&#x3068;&#x5BC6;&#x63A5;&#x306A;&#x95A2;&#x4FC2;&#x3092;&#x6301;&#x3064;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x304C;&#x53D6;&#x308A;&#x6271;&#x3046;&#x30EA;&#x30BD;&#x30FC;&#x30B9;&#x3092;&#x3069;&#x306E;&#x3088;&#x3046;&#x306B;&#x8868;&#x73FE;&#x3057;&#x3001;&#x305D;&#x308C;&#x3092;&#x3069;&#x306E;&#x3088;&#x3046;&#x306B;(&#x7269;&#x7406;&#x7684;&#x30FB;&#x8AD6;&#x7406;&#x7684;&#x306B;)DB&#x306B;&#x683C;&#x7D0D;&#x3059;&#x308B;&#x304B;&#x306F;&#x9577;&#x3089;&#x304F;&#x7814;&#x7A76;&#x3055;&#x308C;&#x3066;&#x304D;&#x305F;</li>
+<li><strong>&#x95A2;&#x4FC2;(&#x30EA;&#x30EC;&#x30FC;&#x30B7;&#x30E7;&#x30CA;&#x30EB;)&#x30C7;&#x30FC;&#x30BF;&#x30E2;&#x30C7;&#x30EB;; Relational data model</strong> &#x3068;&#x3001;
+&#x305D;&#x308C;&#x306B;&#x5BFE;&#x5FDC;&#x3057;&#x305F; <strong>&#x95A2;&#x4FC2;(&#x30EA;&#x30EC;&#x30FC;&#x30B7;&#x30E7;&#x30CA;&#x30EB;)&#x30C7;&#x30FC;&#x30BF;&#x30D9;&#x30FC;&#x30B9;; Relational database management system, RDBMS</strong> &#x304C;&#x975E;&#x5E38;&#x306B;&#x5E83;&#x7BC4;&#x306B;&#x4F7F;&#x7528;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;<ul>
+<li>RDBMS&#x306F;&#x3001;&#x300C;&#x3042;&#x308B;&#x7A0B;&#x5EA6;&#x300D;&#x6A19;&#x6E96;&#x5316;&#x3055;&#x308C;&#x305F; <strong>SQL</strong> &#x3068;&#x3044;&#x3046;&#x5C02;&#x7528;&#x8A00;&#x8A9E;(<strong>Domain Specific Language; DSL</strong>)&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;&#x30C7;&#x30FC;&#x30BF;&#x306E;&#x64CD;&#x4F5C;&#x3084;&#x30AF;&#x30A8;&#x30EA;&#x3092;&#x884C;&#x3046;<ul>
+<li>&#x300C;&#x3042;&#x308B;&#x7A0B;&#x5EA6;&#x300D;&#x3068;&#x3044;&#x3046;&#x306E;&#x304C;&#x30AD;&#x30E2;&#x3067;&#x3001;&#x6A19;&#x6E96;&#x5316;&#x56E3;&#x4F53;&#x306B;&#x3088;&#x308B;&#x898F;&#x683C;&#x306F;&#x7B56;&#x5B9A;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x304C;&#x3001;
+&#x5BFE;&#x5FDC;&#x72B6;&#x6CC1;&#x304C;&#x307E;&#x3061;&#x307E;&#x3061;&#x3060;&#x3063;&#x305F;&#x308A;&#x3001;&#x88FD;&#x54C1;&#x3054;&#x3068;&#x306E;&#x72EC;&#x81EA;&#x62E1;&#x5F35;&#x304C;&#x305F;&#x304F;&#x3055;&#x3093;&#x3042;&#x3063;&#x305F;&#x308A;&#x3059;&#x308B;</li>
+</ul>
+</li>
+<li>&#x7279;&#x5B9A;&#x306E;&#x7A7A;&#x9593;&#x306A;&#x3044;&#x3057;&#x96C6;&#x5408;(<strong>&#x30C6;&#x30FC;&#x30D6;&#x30EB;; table</strong>)&#x306B;&#x5C5E;&#x3059;&#x308B;&#x30C7;&#x30FC;&#x30BF;(<strong>&#x30EC;&#x30B3;&#x30FC;&#x30C9;; record</strong>)&#x306F;&#x3001;
+&#x7279;&#x5B9A;&#x306E;&#x5024;&#x306E;&#x7D44;&#x307F;&#x5408;&#x308F;&#x305B;&#x3092;&#x6301;&#x3064;&#x3088;&#x3046;&#x5F37;&#x5236;&#x529B;&#x306E;&#x3042;&#x308B;&#x898F;&#x5B9A;&#x304C;&#x3067;&#x304D;&#x308B;(<strong>&#x30B9;&#x30AD;&#x30FC;&#x30DE;; Schema</strong>)</li>
+<li>&#x88FD;&#x54C1;&#x306B;&#x3088;&#x3063;&#x3066;&#x306F;&#x3001;&#x300C;<strong>&#x4E00;&#x9023;&#x306E;&#x64CD;&#x4F5C;&#x304C;&#x3059;&#x3079;&#x3066;&#x6210;&#x529F;&#x3059;&#x308B;&#x304B;&#x3001;(&#x4F55;&#x3089;&#x304B;&#x306E;&#x554F;&#x984C;&#x304C;&#x3042;&#x3063;&#x305F;&#x5834;&#x5408;&#x306B;&#x306F;)&#x307E;&#x308B;&#x3054;&#x3068;&#x4E00;&#x5207;&#x306A;&#x304B;&#x3063;&#x305F;&#x3053;&#x3068;&#x306B;&#x3067;&#x304D;&#x308B;</strong>&#x300D;
+&#x3068;&#x3044;&#x3046;all-or-nothing&#x306A;&#x64CD;&#x4F5C;&#x3092;&#x884C;&#x3046;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x308B;&#x3082;&#x306E;&#x304C;&#x3042;&#x308B;<ul>
+<li>&#x3053;&#x308C;&#x3092; <strong>&#x30C8;&#x30E9;&#x30F3;&#x30B6;&#x30AF;&#x30B7;&#x30E7;&#x30F3;; transaction</strong> &#x51E6;&#x7406;&#x3068;&#x3044;&#x3046;</li>
+<li>Transaction&#x51E6;&#x7406;&#x306E;&#x6E80;&#x305F;&#x3059;&#x3079;&#x304D;&#x7279;&#x6027;&#x3092; <strong>ACID(Atomicity, Consistency, Isolation, Durability)</strong> &#x7279;&#x6027;&#x3068;&#x3044;&#x3046;</li>
+<li>&#x305F;&#x3068;&#x3048;&#x3070; <strong>&#x96FB;&#x5B50;&#x5546;&#x53D6;&#x5F15;; E-Commerce</strong> &#x3067;&#x3088;&#x304F;&#x3042;&#x308B;&#x4F8B;&#x3060;&#x3068;&#x3001;
+&#x300C;&#x30E6;&#x30FC;&#x30B6;&#x306E;&#x4FDD;&#x6709;&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x3092;&#x6D88;&#x8CBB;&#x3057;&#x3001;&#x5546;&#x54C1;&#x3092;&#x5229;&#x7528;&#x53EF;&#x80FD;&#x306B;&#x3059;&#x308B;&#x300D;&#x3068;&#x3044;&#x3063;&#x305F;&#x51E6;&#x7406;&#x306F;&#x4E0D;&#x53EF;&#x5206;&#x3068;&#x3057;&#x305F;&#x3044;<ul>
+<li>&#x300C;&#x30DD;&#x30A4;&#x30F3;&#x30C8;&#x3060;&#x3051;&#x6E1B;&#x3063;&#x3066;&#x3001;&#x5546;&#x54C1;&#x304C;&#x5229;&#x7528;&#x3067;&#x304D;&#x306A;&#x3044;&#x300D;&#x3068;&#x3044;&#x3063;&#x305F; <strong>&#x90E8;&#x5206;&#x7684;&#x5931;&#x6557;; partial failure</strong> &#x306F;&#x30E6;&#x30FC;&#x30B6;&#x4F53;&#x9A13;&#x3092;&#x8457;&#x3057;&#x304F;&#x640D;&#x306A;&#x3046;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x6709;&#x540D;&#x306A;RDBMS: <strong>MySQL</strong>, <strong>PostgresSQL</strong>, <strong>Oracle Database</strong> &#x306A;&#x3069;</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>&#x4E00;&#x65B9;&#x3067;&#x3001;RDBMS&#x3060;&#x3051;&#x3067;&#x306F;&#x8FD1;&#x5E74;&#x306E;Web&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x8981;&#x6C42;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x6700;&#x9069;&#x306A;&#x6027;&#x80FD;&#x30FB;&#x4FE1;&#x983C;&#x6027;&#x3092;&#x62C5;&#x4FDD;&#x3067;&#x304D;&#x306A;&#x3044;&#x30B1;&#x30FC;&#x30B9;&#x304C;&#x8FD1;&#x5E74;&#x983B;&#x51FA;&#x3057;&#x305F;</li>
+<li>&#x305D;&#x3053;&#x3067;&#x73FE;&#x308C;&#x3066;&#x304D;&#x305F;&#x306E;&#x304C; <strong>NoSQL; Not only SQL</strong> &#x3068;&#x547C;&#x3070;&#x308C;&#x308B;&#x30C7;&#x30FC;&#x30BF;&#x30D9;&#x30FC;&#x30B9;&#x306E;&#x985E;&#x578B;<ul>
+<li>RDBMS&#x306E;&#x65E2;&#x5B58;&#x88FD;&#x54C1;&#x304C;&#x6301;&#x3063;&#x3066;&#x3044;&#x305F;&#x7279;&#x5FB4;&#x306E;&#x4E00;&#x90E8;&#x3092;&#x8AE6;&#x3081;&#x308B;&#x30FB;&#x5F31;&#x3081;&#x308B;&#x3053;&#x3068;&#x3092;&#x53D7;&#x3051;&#x5BB9;&#x308C;&#x3064;&#x3064;&#x3001;</li>
+<li>&#x5225;&#x306E;&#x90E8;&#x5206;&#x306E;&#x6027;&#x80FD;&#x30FB;&#x4FE1;&#x983C;&#x6027;&#x3092;&#x5411;&#x4E0A;&#x3055;&#x305B;&#x308B;&#x30A2;&#x30D7;&#x30ED;&#x30FC;&#x30C1;&#x3092;&#x53D6;&#x308B;</li>
+</ul>
+</li>
+<li><strong>Key-Value Store; KVS</strong><ul>
+<li>&#x300C;&#x30AD;&#x30FC;&#x306B;&#x5BFE;&#x3059;&#x308B;&#x5024;&#x300D;&#x3001;&#x3068;&#x3044;&#x3046;&#x5358;&#x7D14;&#x306A;&#x30DA;&#x30A2;&#x3092;&#x57FA;&#x790E;&#x3068;&#x3057;&#x3066;&#x30C7;&#x30FC;&#x30BF;&#x3092;&#x4FDD;&#x6301;&#x3059;&#x308B;&#x3082;&#x306E;</li>
+<li>&#x30C7;&#x30FC;&#x30BF;&#x306E;&#x8907;&#x96D1;&#x306A;&#x69CB;&#x9020;&#x5316;&#x3084;&#x3001;&#x305D;&#x308C;&#x306B;&#x5BFE;&#x3059;&#x308B;SQL&#x3092;&#x7528;&#x3044;&#x305F;&#x8907;&#x96D1;&#x306A;&#x30AF;&#x30A8;&#x30EA;&#x306A;&#x3069;&#x306F;(&#x3042;&#x308B;&#x7A0B;&#x5EA6;)&#x8AE6;&#x3081;&#x308B;&#x4EE3;&#x308F;&#x308A;&#x306B;&#x9AD8;&#x901F;&#x3067;&#x3001;
+<strong>&#x5206;&#x6563;; distributed</strong> &#x51E6;&#x7406;&#x306E;&#x9069;&#x7528;&#x304C;&#x3057;&#x6613;&#x3044;</li>
+<li>&#x30C7;&#x30FC;&#x30BF;&#x3092;&#x6C38;&#x7D9A;&#x5316;&#x305B;&#x305A;&#x3001;&#x30E1;&#x30E2;&#x30EA;&#x5185;&#x3060;&#x3051;&#x3067;&#x5B9F;&#x73FE;&#x3059;&#x308B;&#x3082;&#x306E;&#x3082;&#x3042;&#x308B;</li>
+<li>&#x6709;&#x540D;&#x306A;KVS: <strong>Amazon Dynamo</strong>, <strong>RiakKV</strong>, <strong>Redis</strong>(in-memory) &#x306A;&#x3069;</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;&#x6307;&#x5411;DB; Document-oriented database</strong><ul>
+<li><strong>JSON</strong>&#x306A;&#x3069;&#x306E;&#x300C;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;&#x300D;&#x5F62;&#x5F0F;&#x3067;&#x3001;&#x69CB;&#x9020;&#x5316;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x304C;&#x3001;&#x56FA;&#x5B9A;&#x306E;&#x30B9;&#x30AD;&#x30FC;&#x30DE;&#x306B;&#x7E1B;&#x3089;&#x308C;&#x306A;&#x3044;&#x30C7;&#x30FC;&#x30BF;&#x3092;&#x6295;&#x5165;&#x3067;&#x304D;&#x308B;</li>
+<li>&#x4E00;&#x3064;&#x306E;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;&#x5185;&#x3067;&#x30C7;&#x30FC;&#x30BF;&#x306E;&#x968E;&#x5C64;&#x5316;&#x306A;&#x3069;&#x3082;&#x884C;&#x3048;&#x308B;</li>
+<li>SQL&#x307B;&#x3069;&#x6A19;&#x6E96;&#x5316;&#x306F;&#x3055;&#x308C;&#x3066;&#x3044;&#x306A;&#x3044;&#x304C;&#x3001;&#x305D;&#x308C;&#x305E;&#x308C;&#x306E;&#x88FD;&#x54C1;&#x3054;&#x3068;&#x306B;&#x30AF;&#x30A8;&#x30EA;&#x306E;&#x305F;&#x3081;&#x306E;&#x6587;&#x6CD5;&#x3092;&#x6301;&#x3064;&#x3053;&#x3068;&#x304C;&#x591A;&#x3044;</li>
+<li>&#x5B8C;&#x5168;&#x306A;ACID&#x30C8;&#x30E9;&#x30F3;&#x30B6;&#x30AF;&#x30B7;&#x30E7;&#x30F3;&#x3092;&#x30B5;&#x30DD;&#x30FC;&#x30C8;&#x3057;&#x306A;&#x3044;&#x3082;&#x306E;&#x304C;&#x591A;&#x3044;&#x304C;&#x3001;&#x3088;&#x308A;&#x5F31;&#x3044;&#x4EEE;&#x5B9A;&#x306E;&#x6A5F;&#x80FD;&#x3084;&#x4FDD;&#x8A3C;&#x3092;&#x6301;&#x3064;&#x3053;&#x3068;&#x306F;&#x3042;&#x308B;<ul>
+<li><strong>&#x7D50;&#x679C;&#x6574;&#x5408;&#x6027;; eventual consistency</strong></li>
+<li><strong>&#x697D;&#x89B3;&#x30ED;&#x30C3;&#x30AF;; optimistic lock/optimistic concurrency control</strong></li>
+</ul>
+</li>
+<li>&#x6709;&#x540D;&#x306A;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;&#x6307;&#x5411;DB: <strong>Amazon DynamoDB</strong>, <strong>MongoDB</strong>, <strong>CouchDB</strong>, <strong>MarkLogic</strong> &#x306A;&#x3069;</li>
+<li><strong>&#x5168;&#x6587;&#x691C;&#x7D22;&#x30A8;&#x30F3;&#x30B8;&#x30F3;; Full-text search engine</strong> &#x3082;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;&#x6307;&#x5411;DB&#x306E;&#x4E00;&#x7A2E;&#x3068;&#x307F;&#x306A;&#x3059;&#x3053;&#x3068;&#x3082;&#x3042;&#x308B;</li>
+</ul>
+</li>
+<li><strong>&#x5217;&#x6307;&#x5411;DB; Columnar database</strong></li>
+<li><strong>&#x30B0;&#x30E9;&#x30D5;DB; Graph database</strong></li>
+</ul>
+<hr>
+<h2 id="&#x30A4;&#x30F3;&#x30C7;&#x30C3;&#x30AF;&#x30B9;">&#x30A4;&#x30F3;&#x30C7;&#x30C3;&#x30AF;&#x30B9;</h2>
+<ul>
+<li>&#x3068;&#x3053;&#x308D;&#x3067;&#x3001;RDBMS&#x306B;&#x3057;&#x308D;NoSQL&#x306B;&#x3057;&#x308D;&#x3001;&#x76EE;&#x7684;&#x3068;&#x3059;&#x308B;&#x30C7;&#x30FC;&#x30BF;&#x306E;&#x8AAD;&#x307F;&#x51FA;&#x3057;&#x306B;<strong>&#x7DDA;&#x5F62;&#x6642;&#x9593;</strong>(O(N))&#x304B;&#x304B;&#x3063;&#x305F;&#x306E;&#x3067;&#x306F;&#x610F;&#x5473;&#x304C;&#x306A;&#x3044;<ul>
+<li>&#x305F;&#x3068;&#x3048;&#x3070;&#x3001;&#x30E6;&#x30FC;&#x30B6;ID&#x3092;&#x5143;&#x306B;&#x3057;&#x3066;&#x305D;&#x306E;&#x30E6;&#x30FC;&#x30B6;&#x306E;&#x60C5;&#x5831;&#x3092;&#x53D6;&#x5F97;&#x3057;&#x305F;&#x3044;&#x3068;&#x304D;&#x306B;&#x3001;
+&#x30E6;&#x30FC;&#x30B6;&#x304C;&#x5408;&#x8A08;100&#x4E07;&#x4EBA;&#x3044;&#x308B;&#x306A;&#x3089;&#x6700;&#x60AA;&#x30B1;&#x30FC;&#x30B9;&#x3067;100&#x4E07;&#x4EF6;&#x7DCF;&#x306A;&#x3081;&#x3057;&#x306A;&#x3044;&#x3068;&#x5BFE;&#x8C61;&#x30E6;&#x30FC;&#x30B6;&#x304C;&#x898B;&#x3064;&#x304B;&#x3089;&#x306A;&#x3044;&#x3001;&#x306A;&#x3069;&#x3068;&#x3044;&#x3046;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x306F;&#x4F7F;&#x3048;&#x306A;&#x3044;</li>
+</ul>
+</li>
+<li>&#x307B;&#x3068;&#x3093;&#x3069;&#x306E;DB&#x306F;&#x3001;&#x30C7;&#x30FC;&#x30BF;&#x306E;&#x53D6;&#x308A;&#x51FA;&#x3057;&#x3092;&#x7DDA;&#x5F62;&#x6642;&#x9593;&#x672A;&#x6E80;&#x3067;&#x884C;&#x3046;&#x305F;&#x3081;&#x306B; <strong>&#x30A4;&#x30F3;&#x30C7;&#x30C3;&#x30AF;&#x30B9;; index</strong> &#x3068;&#x3044;&#x3046;&#x88DC;&#x52A9;&#x7684;&#x306A;&#x30C7;&#x30FC;&#x30BF;&#x7A7A;&#x9593;&#x3092;&#x6301;&#x3064;<ul>
+<li>&#x300C;&#x30C7;&#x30FC;&#x30BF;&#x304C;&#x6301;&#x3064;&#x9805;&#x76EE;(&#x5C5E;&#x6027;)&#x306E;&#x4E00;&#x3064;(<strong>index key</strong>)&#x300D;&#x304B;&#x3089;&#x3001;
+&#x300C;&#x305D;&#x306E;&#x30C7;&#x30FC;&#x30BF;&#x304C;&#x6C38;&#x7D9A;&#x5316;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x7269;&#x7406;&#x7684;&#x306A;&#x7A7A;&#x9593;&#x4F4D;&#x7F6E;&#x300D;&#x3092;&#x9AD8;&#x901F;&#x306B;&#x89E3;&#x6C7A;&#x3067;&#x304D;&#x308B;&#x3001;&#x307E;&#x3055;&#x306B;&#x300C;&#x7D22;&#x5F15;&#x300D;</li>
+<li><strong>&#x5E73;&#x8861;&#x6728;; Balanced tree</strong> &#x306E;&#x4E00;&#x7A2E;(<strong>B-tree</strong> &#x3084; <strong>B+ tree</strong> &#x306A;&#x3069;)&#x3084;
+<strong>&#x30CF;&#x30C3;&#x30B7;&#x30E5;&#x30C6;&#x30FC;&#x30D6;&#x30EB;; Hash table</strong> &#x3092;&#x4F7F;&#x3063;&#x3066;&#x5B9F;&#x88C5;&#x3055;&#x308C;&#x308B;<ul>
+<li>&#x4F8B;&#x3048;&#x3070;<a href="https://docs.mongodb.com/manual/indexes/index.html#id2" target="_blank">MongoDB&#x306F;B-tree&#x3092;&#x4F7F;&#x3063;&#x3066;&#x3044;&#x308B;</a></li>
+</ul>
+</li>
+<li><strong>O(log(N))</strong> &#x3067;&#x76EE;&#x7684;&#x30C7;&#x30FC;&#x30BF;&#x3092;&#x53D6;&#x5F97;&#x30FB;&#x66F4;&#x65B0;&#x30FB;&#x524A;&#x9664;&#x3067;&#x304D;&#x308B;&#x3082;&#x306E;&#x304C;&#x591A;&#x3044;</li>
+<li>&#x3042;&#x308B;&#x9805;&#x76EE;&#x306B;&#x540C;&#x3058;&#x5024;&#x3092;&#x6301;&#x3064;&#x30C7;&#x30FC;&#x30BF;&#x306F;&#x305D;&#x306E;&#x96C6;&#x5408;&#x5185;&#x306B;1&#x3064;&#x3057;&#x304B;&#x5B58;&#x5728;&#x3067;&#x304D;&#x306A;&#x3044;(<strong>&#x4E00;&#x610F;&#x6027;; uniqueness</strong>)&#x3068;&#x3044;&#x3063;&#x305F;&#x5236;&#x7D04;&#x3082;&#x3001;
+&#x305D;&#x306E;&#x9805;&#x76EE;&#x3092;key&#x3068;&#x3059;&#x308B;index&#x3092;&#x4E8B;&#x524D;&#x306B;&#x69CB;&#x7BC9;&#x3057;&#x3066;&#x5229;&#x7528;&#x3059;&#x308B;&#x3053;&#x3068;&#x3067;&#x9054;&#x6210;&#x3059;&#x308B;</li>
+</ul>
+</li>
+<li>DB&#x3092;&#x300C;&#x6B63;&#x3057;&#x304F;&#x300D;&#x300C;&#x52B9;&#x7387;&#x7684;&#x306B;&#x300D;&#x4F7F;&#x3046;&#x306B;&#x306F;<strong>&#x30A4;&#x30F3;&#x30C7;&#x30C3;&#x30AF;&#x30B9;&#x306E;&#x5B58;&#x5728;&#x3092;&#x610F;&#x8B58;&#x3057;&#x3066;&#x304A;&#x304F;&#x306E;&#x304C;&#x809D;&#x5FC3;</strong><ul>
+<li>&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x3067;&#x53D6;&#x308A;&#x6271;&#x3046;&#x30C7;&#x30FC;&#x30BF;&#x69CB;&#x9020;&#x3092;&#x8A2D;&#x8A08;&#x3059;&#x308B;&#x969B;&#x3082;&#x3001;DB&#x3092;&#x52B9;&#x7387;&#x826F;&#x304F;&#x4F7F;&#x3046;&#x3053;&#x3068;&#x3092;&#x5FF5;&#x982D;&#x306B;&#x7F6E;&#x304D;&#x306A;&#x304C;&#x3089;&#x8003;&#x3048;&#x308B;</li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="api_design.html" class="navigation navigation-prev " aria-label="Previous page: API設計, 「状態」">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="distribution.html" class="navigation navigation-next " aria-label="Next page: 「キャッシュ」そして「分散」">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"「リソース」, データベース","level":"1.2.7","depth":2,"next":{"title":"「キャッシュ」そして「分散」","level":"1.2.8","depth":2,"path":"basics/distribution.md","ref":"basics/distribution.md","articles":[]},"previous":{"title":"API設計, 「状態」","level":"1.2.6","depth":2,"path":"basics/api_design.md","ref":"basics/api_design.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"basics/database.md","mtime":"2018-05-05T23:16:39.078Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-05T23:36:11.796Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

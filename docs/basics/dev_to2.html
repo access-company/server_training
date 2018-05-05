@@ -1,0 +1,509 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>dev.to part 2 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="app_server.html" />
+    
+    
+    <link rel="prev" href="recap.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Server Development Tutorial
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basics.html">
+            
+                <a href="basics.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="requirements.html">
+            
+                <a href="requirements.html">
+            
+                    
+                    前提
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="dev_to1.html">
+            
+                <a href="dev_to1.html">
+            
+                    
+                    dev.to part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="recap.html">
+            
+                <a href="recap.html">
+            
+                    
+                    復習: インターネットとWeb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="dev_to2.html">
+            
+                <a href="dev_to2.html">
+            
+                    
+                    dev.to part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="app_server.html">
+            
+                <a href="app_server.html">
+            
+                    
+                    アプリケーションサーバ, 「動的生成」
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="api_design.html">
+            
+                <a href="api_design.html">
+            
+                    
+                    API設計, 「状態」
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="database.html">
+            
+                <a href="database.html">
+            
+                    
+                    「リソース」, データベース
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="distribution.html">
+            
+                <a href="distribution.html">
+            
+                    
+                    「キャッシュ」そして「分散」
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="conclusion.html">
+            
+                <a href="conclusion.html">
+            
+                    
+                    結び
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >dev.to part 2</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x518D;&#x3073;devto">&#x518D;&#x3073;[dev.to]</h2>
+<ul>
+<li>&#x3053;&#x3053;&#x307E;&#x3067;&#x3055;&#x3089;&#x3063;&#x305F;&#x3068;&#x3053;&#x308D;&#x3067;&#x3001;&#x6539;&#x3081;&#x3066;dev.to&#x3092;&#x95B2;&#x89A7;&#x3057;&#x305F;&#x6642;&#x306E;&#x72B6;&#x6CC1;&#x3092;&#x898B;&#x3066;&#x307F;&#x308B;</li>
+</ul>
+<p><img src="devto2.png" alt="dev.to"></p>
+<hr>
+<h2 id="&#x6C17;&#x3065;&#x3051;&#x308B;&#x3053;&#x3068;">&#x6C17;&#x3065;&#x3051;&#x308B;&#x3053;&#x3068;</h2>
+<ul>
+<li>&#x305D;&#x3082;&#x305D;&#x3082;<code>dev.to</code>&#x3068;&#x3057;&#x304B;&#x8981;&#x6C42;&#x3057;&#x3066;&#x3044;&#x306A;&#x3044;&#x3001;&#x3064;&#x307E;&#x308A;&#x300C;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x30D1;&#x30B9;&#x300D;&#x3092;&#x4E0E;&#x3048;&#x3066;&#x3044;&#x306A;&#x3044;&#x306B;&#x3082;&#x304B;&#x304B;&#x308F;&#x3089;&#x305A;&#x3001;&#x610F;&#x5473;&#x306E;&#x3042;&#x308B;&#x60C5;&#x5831;&#x304C;&#x8FD4;&#x3063;&#x3066;&#x304D;&#x3066;&#x3044;&#x308B;</li>
+<li><code>https://dev.to</code>&#x3068;&#x3044;&#x3046;&#x5358;&#x4E00;&#x306E;URL&#x3092;&#x8981;&#x6C42;&#x3057;&#x305F;&#x3060;&#x3051;&#x306A;&#x306E;&#x306B;&#x3001;&#x5927;&#x91CF;&#x306E;&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x304C;&#x4ED8;&#x968F;&#x3057;&#x3066;&#x767A;&#x751F;&#x3057;&#x3066;&#x3044;&#x308B;</li>
+<li><strong>13ms&#x3068;&#x3044;&#x3046;&#x901F;&#x3055;</strong> &#x3067;<code>dev.to</code>&#x306B;&#x5BFE;&#x3059;&#x308B;&#x5192;&#x982D;&#x306E;&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x304C;&#x5B8C;&#x4E86;&#x3057;&#x3066;&#x3044;&#x308B;</li>
+<li><strong>&#x3055;&#x3063;&#x304D;&#x306E;&#x753B;&#x50CF;&#x3068;&#x4E2D;&#x8EAB;&#x304C;&#x9055;&#x3046;</strong></li>
+<li>(&#x307B;&#x304B;&#x306B;&#x3082;&#x6319;&#x3052;&#x3066;&#x307F;&#x3088;&#x3046;)</li>
+</ul>
+<hr>
+<blockquote>
+<ul>
+<li>&#x305D;&#x3082;&#x305D;&#x3082;<code>dev.to</code>&#x3068;&#x3057;&#x304B;&#x8981;&#x6C42;&#x3057;&#x3066;&#x3044;&#x306A;&#x3044;&#x3001;&#x3064;&#x307E;&#x308A;&#x300C;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x30D1;&#x30B9;&#x300D;&#x3092;&#x4E0E;&#x3048;&#x3066;&#x3044;&#x306A;&#x3044;&#x306B;&#x3082;&#x304B;&#x304B;&#x308F;&#x3089;&#x305A;&#x3001;&#x610F;&#x5473;&#x306E;&#x3042;&#x308B;&#x60C5;&#x5831;&#x304C;&#x8FD4;&#x3063;&#x3066;&#x304D;&#x3066;&#x3044;&#x308B;</li>
+</ul>
+</blockquote>
+<ul>
+<li>&#x5B9F;&#x306F;Web&#x30B5;&#x30FC;&#x30D0;&#x306F;&#x3001;&#x5FC5;&#x305A;&#x3057;&#x3082;&#x300C;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x300D;&#x3092;&#x660E;&#x793A;&#x7684;&#x306B;&#x8981;&#x6C42;&#x3055;&#x308C;&#x3066;&#x3001;&#x305D;&#x308C;&#x3092;&#x8FD4;&#x3055;&#x306A;&#x3051;&#x308C;&#x3070;&#x306A;&#x3089;&#x306A;&#x3044;&#x3068;&#x3044;&#x3046;&#x308F;&#x3051;&#x3067;&#x306F;&#x306A;&#x3044;<ul>
+<li>&#x300C;<strong>&#x9001;&#x4FE1;&#x3079;&#x304D;&#x60C5;&#x5831;</strong>&#x300D;&#x304C;&#x78BA;&#x5B9A;&#x3057;&#x305F;&#x306E;&#x3067;&#x3042;&#x308C;&#x3070;&#x3001;Web&#x30B5;&#x30FC;&#x30D0;&#x306F;&#x305D;&#x308C;&#x3092;&#x9001;&#x4FE1;&#x3059;&#x308B;&#x81EA;&#x7531;&#x304C;&#x3042;&#x308B;</li>
+<li><code>dev.to</code>(hostname)&#x3060;&#x3051;&#x3092;&#x8981;&#x6C42;&#x3055;&#x308C;&#x305F;&#x5834;&#x5408;&#x306F;&#x30B5;&#x30A4;&#x30C8;&#x306E;&#x300C;&#x30C8;&#x30C3;&#x30D7;&#x30DA;&#x30FC;&#x30B8;&#x300D;&#x3092;&#x8981;&#x6C42;&#x3055;&#x308C;&#x305F;&#x3082;&#x306E;&#x3068;&#x307F;&#x306A;&#x3057;&#x3066;&#x3044;&#x308B;<ul>
+<li>&#x540C;&#x3058;&#x6163;&#x7FD2;&#x3092;&#x63A1;&#x7528;&#x3057;&#x3066;&#x3044;&#x308B;Web&#x30B5;&#x30FC;&#x30D0;&#x306F;&#x591A;&#x3044;</li>
+<li>&#x9006;&#x306B;&#x3001;&#x53E4;&#x5178;&#x7684;&#x306A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x30D9;&#x30FC;&#x30B9;&#x306E;&#x30B5;&#x30A4;&#x30C8;&#x3067;&#x306F;&#x300C;&#x30C8;&#x30C3;&#x30D7;&#x30DA;&#x30FC;&#x30B8;&#x300D;&#x3092;&#x610F;&#x5473;&#x3059;&#x308B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x5B9F;&#x4F53;&#x3068;&#x3057;&#x3066;
+<code>index.html</code>&#x306A;&#x3069;&#x306E;&quot;index&quot;&#x3068;&#x3044;&#x3046;&#x540D;&#x524D;&#x3092;&#x6301;&#x3064;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x6301;&#x3063;&#x3066;&#x3044;&#x308B;&#x3053;&#x3068;&#x304C;&#x591A;&#x3044;<ul>
+<li>&#x300C;&#x53E4;&#x5178;&#x7684;&#x300D;&#x3068;&#x3044;&#x3063;&#x3066;&#x3082;&#x3001;&#x60AA;&#x3044;&#x610F;&#x5473;&#x3067;&#x306F;&#x306A;&#x3044;&#x3002;&#x3053;&#x306E;&#x65B9;&#x5F0F;&#x306F;&#x73FE;&#x5728;&#x3082;&#x983B;&#x7E41;&#x306B;&#x4F7F;&#x308F;&#x308C;&#x308B;</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>dev.to</code>&#x3068;&#x8981;&#x6C42;&#x3055;&#x308C;&#x305F;Web&#x30B5;&#x30FC;&#x30D0;&#x306F;&#x3001;<ul>
+<li>&#x300C;&#x30C8;&#x30C3;&#x30D7;&#x30DA;&#x30FC;&#x30B8;&#x300D;&#x306E;&#x5B9F;&#x4F53;&#x3068;&#x3057;&#x3066;&#x5B58;&#x5728;&#x3059;&#x308B;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x8AAD;&#x307F;&#x51FA;&#x3057;&#x3066;&#x3001;&#x305D;&#x306E;&#x4E2D;&#x8EAB;&#x3092;&#x9001;&#x4FE1;&#x3057;&#x3066;&#x3044;&#x308B;&#x306E;&#x304B;&#x3082;&#x3057;&#x308C;&#x306A;&#x3044;&#x3057;&#x3001;</li>
+<li>&#x3042;&#x308B;&#x3044;&#x306F;&#x5B9F;&#x4F53;&#x3068;&#x3057;&#x3066;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306F;Web&#x30B5;&#x30FC;&#x30D0;&#x306E;&#x8A18;&#x61B6;&#x88C5;&#x7F6E;&#x306B;&#x306F;&#x5B58;&#x5728;&#x305B;&#x305A;&#x3001;&#x8981;&#x6C42;&#x3055;&#x308C;&#x305F;&#x3068;&#x304D;&#x306B;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x304C;&#x90FD;&#x5EA6;&#x751F;&#x6210;&#x3057;&#x3066;&#x3044;&#x308B;&#x306E;&#x304B;&#x3082;&#x3057;&#x308C;&#x306A;&#x3044;</li>
+<li>&#x3053;&#x306E;2&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x306F;&#x3069;&#x3061;&#x3089;&#x3082;&#x3042;&#x308A;&#x3046;&#x308B;&#x304C;&#x3001; <strong>&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8;&#x304B;&#x3089;&#x898B;&#x305F;&#x5834;&#x5408;&#x306F;&#x533A;&#x5225;&#x3067;&#x304D;&#x306A;&#x3044;</strong><ul>
+<li>&#x7D50;&#x5C40;&#x306E;&#x6240;&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8;&#x306B;&#x9001;&#x308A;&#x5C4A;&#x3051;&#x3089;&#x308C;&#x308B;&#x306E;&#x306F;&#x30D0;&#x30A4;&#x30CA;&#x30EA;&#x30C7;&#x30FC;&#x30BF;&#x306B;&#x3059;&#x304E;&#x305A;&#x3001;
+Web&#x30D6;&#x30E9;&#x30A6;&#x30B6;&#x7B49;&#x304C;&#x305D;&#x308C;&#x3092;&#x610F;&#x5473;&#x3042;&#x308B;&#x60C5;&#x5831;&#x3068;&#x3057;&#x3066;&#x89E3;&#x91C8;&#x3067;&#x304D;&#x308B;&#x9650;&#x308A;&#x306B;&#x304A;&#x3044;&#x3066;&#x306F;&#x5E73;&#x7B49;&#x306B;&#x6271;&#x308F;&#x308C;&#x308B;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<blockquote>
+<ul>
+<li><code>https://dev.to</code>&#x3068;&#x3044;&#x3046;&#x5358;&#x4E00;&#x306E;URL&#x3092;&#x8981;&#x6C42;&#x3057;&#x305F;&#x3060;&#x3051;&#x306A;&#x306E;&#x306B;&#x3001;&#x5927;&#x91CF;&#x306E;&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x304C;&#x4ED8;&#x968F;&#x3057;&#x3066;&#x767A;&#x751F;&#x3057;&#x3066;&#x3044;&#x308B;</li>
+</ul>
+</blockquote>
+<ul>
+<li>&#x3053;&#x308C;&#x306F;HTML&#x6587;&#x66F8;&#x3001;&#x304A;&#x3088;&#x3073;&#x305D;&#x308C;&#x3092;&#x89E3;&#x91C8;&#x3057;&#x3066;&#x63CF;&#x753B;&#x3059;&#x308B;&#x6A5F;&#x80FD;&#x306E;&#x4E00;&#x74B0;&#x3068;&#x3057;&#x3066;&#x3001;
+&#x300C;&#x305D;&#x306E;&#x6587;&#x66F8;&#x81EA;&#x4F53;&#x3068;&#x306F;&#x5225;&#x3067;&#x5B58;&#x5728;&#x3059;&#x308B;&#x4F55;&#x3089;&#x304B;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x300D;&#x3092;&#x8FFD;&#x52A0;&#x3067;&#x53D6;&#x5F97;&#x3067;&#x304D;&#x308B;&#x6A5F;&#x80FD;&#x306B;&#x3088;&#x308B;<ul>
+<li>&#x305F;&#x3068;&#x3048;&#x3070;CSS, JS, &#x753B;&#x50CF;, &#x52D5;&#x753B;, &#x5225;&#x306E;HTML&#x306A;&#x3069;&#x3001;&#x69D8;&#x3005;&#x306A;&#x3082;&#x306E;&#x3092;&#x5BFE;&#x8C61;&#x306B;&#x3067;&#x304D;&#x308B;</li>
+<li>(&quot;Type&quot;&#x5217;&#x3092;&#x773A;&#x3081;&#x3066;&#x307F;&#x3088;&#x3046;)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<blockquote>
+<ul>
+<li><strong>13ms&#x3068;&#x3044;&#x3046;&#x901F;&#x3055;</strong> &#x3067;<code>dev.to</code>&#x306B;&#x5BFE;&#x3059;&#x308B;&#x5192;&#x982D;&#x306E;&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x304C;&#x5B8C;&#x4E86;&#x3057;&#x3066;&#x3044;&#x308B;</li>
+</ul>
+</blockquote>
+<ul>
+<li><p>&#x3053;&#x3053;&#x3067;&#x4EE5;&#x4E0B;&#x3092;&#x601D;&#x3044;&#x51FA;&#x3057;&#x3066;&#x6B32;&#x3057;&#x3044;:</p>
+<blockquote>
+<ul>
+<li>&#x5F7C;&#x3089;&#x306F;<a href="https://dev.to/about" target="_blank"><strong>New York City&#x3092;&#x62E0;&#x70B9;&#x3068;&#x3057;&#x3066;&#x3044;&#x308B;</strong></a></li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<hr>
+<p><img src="tokyo_ny.png" alt="Tokyo to NY"></p>
+<ul>
+<li>&#x7D04;10,000km</li>
+</ul>
+<hr>
+<ul>
+<li>&#x30A4;&#x30F3;&#x30BF;&#x30FC;&#x30CD;&#x30C3;&#x30C8;&#x3092;&#x6210;&#x308A;&#x7ACB;&#x305F;&#x305B;&#x3066;&#x3044;&#x308B;&#x901A;&#x4FE1;&#x56DE;&#x7DDA;&#x7DB2;&#x306E;&#x6839;&#x5E79;&#x90E8;&#x5206;&#x306F;&#x5149;&#x30D5;&#x30A1;&#x30A4;&#x30D0;&#x30FC;&#x30B1;&#x30FC;&#x30D6;&#x30EB;&#x304B;&#x3089;&#x306A;&#x308B;</li>
+<li>&#x3064;&#x307E;&#x308A;1&#x672C;&#x306E;&#x30B1;&#x30FC;&#x30D6;&#x30EB;&#x5185;&#x3067;&#x306E;&#x4F1D;&#x9001;&#x901F;&#x5EA6;&#x306F;&#x5149;&#x901F;&#x304C;&#x4E0A;&#x9650;&#x3068;&#x306A;&#x308B;(&#x7D04;300,000km/s)&#x304C;&#x3001;
+&#x5F53;&#x7136;&#x306A;&#x304C;&#x3089;&#x30B1;&#x30FC;&#x30D6;&#x30EB;&#x5185;&#x90E8;&#x3067;&#x53CD;&#x5C04;&#x30FB;&#x5C48;&#x6298;&#x3092;&#x7E70;&#x308A;&#x8FD4;&#x3059;&#x306E;&#x3067;&#x3001;&#x76F4;&#x7DDA;&#x3068;&#x306F;&#x306A;&#x3089;&#x306A;&#x3044;<ul>
+<li>&#x5B9F;&#x7528;&#x4E0A;&#x306F;200,000km/s&#x7A0B;&#x5EA6;&#x3092;&#x4E0A;&#x9650;&#x3068;&#x3059;&#x308B;&#x3089;&#x3057;&#x3044;</li>
+</ul>
+</li>
+<li>&#x305D;&#x3057;&#x3066;&#x3001;&#x6975;&#x3081;&#x3066;&#x77ED;&#x3044;&#x6642;&#x9593;&#x5358;&#x4F4D;&#x306E;&#x5149;&#x306E;on/off&#x3092;&#x5143;&#x306B;&#x3001;0&#x3068;1&#x304B;&#x3089;&#x306A;&#x308B;&#x30D0;&#x30A4;&#x30CA;&#x30EA;&#x30C7;&#x30FC;&#x30BF;&#x3092;&#x8868;&#x73FE;&#x3059;&#x308B;<ul>
+<li>&#x3053;&#x306E;&#x3078;&#x3093;&#x3042;&#x307E;&#x308A;&#x306B;&#x5927;&#x96D1;&#x628A;&#x3060;&#x304C;&#x3001;&#x672C;&#x6587;&#x66F8;&#x306E;&#x5BFE;&#x8C61;&#x3068;&#x3059;&#x308B;&#x30EC;&#x30A4;&#x30E4;&#x3067;&#x306F;&#x306A;&#x3044;&#x306E;&#x3067;&#x7AEF;&#x6298;&#x308B;</li>
+<li><a href="https://www.wikiwand.com/en/Submarine_communications_cable" target="_blank">Submarine communications cable</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>&#x753B;&#x50CF;&#x3092;&#x3088;&#x304F;&#x898B;&#x308B;&#x3068;&#x3001;<code>dev.to</code>&#x304C;&#x9001;&#x4FE1;&#x3057;&#x305F;&#x30C7;&#x30FC;&#x30BF;&#x306E;&#x30B5;&#x30A4;&#x30BA;&#x306F;19.6KB&#x3068;&#x306A;&#x3063;&#x3066;&#x3044;&#x308B;</li>
+<li>&#x4EEE;&#x306B;NY&#x306E;The Practical Dev&#x793E;&#x307E;&#x3067;&#x306E;&#x9593;&#x306B;&#x3001;&#x3053;&#x306E;&#x7D04;20KB(160KBits)&#x3092;
+&#x3044;&#x3063;&#x307A;&#x3093;&#x306B;&#x9001;&#x53D7;&#x3067;&#x304D;&#x308B;&#x3060;&#x3051;&#x306E;&#x5E2F;&#x57DF;&#x5E45;&#x3092;&#x5B9F;&#x73FE;&#x3059;&#x308B;&#x5149;&#x30D5;&#x30A1;&#x30A4;&#x30D0;&#x30FC;&#x30B1;&#x30FC;&#x30D6;&#x30EB;&#x304C;&#x76F4;&#x901A;&#x3067;&#x5F15;&#x304B;&#x308C;&#x3066;&#x3044;&#x308B;&#x3068;&#x3057;&#x3066;&#x3082;&#x3001;
+200,000km/s&#x3054;&#x3068;&#x304D;&#x3067;&#x306F;50ms&#x3082;&#x304B;&#x304B;&#x3063;&#x3066;&#x3057;&#x307E;&#x3046;&#xFF01;</li>
+<li>&#x3069;&#x3046;&#x3084;&#x3089;&#x3001;<code>dev.to</code>&#x306B;&#x5BFE;&#x3059;&#x308B;&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x306B;&#x5FDC;&#x7B54;&#x3057;&#x305F;Web&#x30B5;&#x30FC;&#x30D0;&#x306F;&#x3001;<strong>NY&#x3067;&#x306F;&#x306A;&#x3044;&#x3001;&#x3082;&#x3063;&#x3068;&#x6771;&#x4EAC;&#x306B;&#x8FD1;&#x3044;&#x5834;&#x6240;&#x306B;&#x3042;&#x308B;&#x3089;&#x3057;&#x3044;</strong></li>
+<li>&#x5F53;&#x7136;&#x3068;&#x3044;&#x3048;&#x3070;&#x5F53;&#x7136;&#x3060;&#x304C;&#x3001;&#x30A4;&#x30F3;&#x30BF;&#x30FC;&#x30CD;&#x30C3;&#x30C8;&#x3068;&#x305D;&#x306E;&#x4E0A;&#x306B;&#x6210;&#x308A;&#x7ACB;&#x3064;Web&#x306F;&#x3001;&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8;&#x3068;&#x30B5;&#x30FC;&#x30D0;&#x3001;<strong>&#x3069;&#x3061;&#x3089;&#x3082;&#x7269;&#x7406;&#x7684;&#x306A;&#x5834;&#x6240;&#x306B;&#x675F;&#x7E1B;&#x3055;&#x308C;&#x306A;&#x3044;</strong><ul>
+<li>&#x30A2;&#x30E1;&#x30EA;&#x30AB;&#x306E;&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x3067;&#x3082;&#x3001;&#x65E5;&#x672C;&#x56FD;&#x5185;&#x306B;Web&#x30B5;&#x30FC;&#x30D0;&#x3092;&#x7F6E;&#x3044;&#x3066;&#x4F55;&#x3089;&#x554F;&#x984C;&#x306A;&#x3044;</li>
+<li>&#x305D;&#x308C;&#x3069;&#x3053;&#x308D;&#x304B;&#x3001;<strong>&#x30A2;&#x30E1;&#x30EA;&#x30AB;&#x306E;&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8;&#x306F;&#x30A2;&#x30E1;&#x30EA;&#x30AB;&#x306E;Web&#x30B5;&#x30FC;&#x30D0;&#x306B;&#x5FDC;&#x7B54;&#x3055;&#x305B;&#x3001;&#x65E5;&#x672C;&#x306E;&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8;&#x306F;&#x65E5;&#x672C;&#x306E;Web&#x30B5;&#x30FC;&#x30D0;&#x306B;&#x5FDC;&#x7B54;&#x3055;&#x305B;&#x305F;&#x3063;&#x3066;&#x826F;&#x3044;</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<blockquote>
+<ul>
+<li><strong>&#x3055;&#x3063;&#x304D;&#x306E;&#x753B;&#x50CF;&#x3068;&#x4E2D;&#x8EAB;&#x304C;&#x9055;&#x3046;</strong></li>
+</ul>
+</blockquote>
+<ul>
+<li>&#x5358;&#x7D14;&#x306B;&#x8003;&#x3048;&#x308C;&#x3070;&#x3001;&#x5185;&#x5BB9;&#x304C;Web&#x30B5;&#x30FC;&#x30D0;&#x5074;&#x3067;&#x66F4;&#x65B0;&#x3055;&#x308C;&#x305F;&#x3068;&#x63A8;&#x6E2C;&#x3067;&#x304D;&#x308B;</li>
+<li><p>&#x4E00;&#x65B9;&#x3001;&#x65E2;&#x51FA;&#x306E;&#x5185;&#x5BB9;&#x3092;&#x601D;&#x3044;&#x51FA;&#x3059;&#x3068;&#x3001;&#x5225;&#x306E;&#x5B9F;&#x73FE;&#x65B9;&#x6CD5;&#x3082;&#x8003;&#x3048;&#x3089;&#x308C;&#x308B;</p>
+<blockquote>
+<ul>
+<li>&#x3042;&#x308B;&#x3044;&#x306F;&#x5B9F;&#x4F53;&#x3068;&#x3057;&#x3066;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306F;Web&#x30B5;&#x30FC;&#x30D0;&#x306E;&#x8A18;&#x61B6;&#x88C5;&#x7F6E;&#x306B;&#x306F;&#x5B58;&#x5728;&#x305B;&#x305A;&#x3001;&#x8981;&#x6C42;&#x3055;&#x308C;&#x305F;&#x3068;&#x304D;&#x306B;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x304C;&#x90FD;&#x5EA6;&#x751F;&#x6210;&#x3057;&#x3066;&#x3044;&#x308B;&#x306E;&#x304B;&#x3082;&#x3057;&#x308C;&#x306A;&#x3044;</li>
+</ul>
+</blockquote>
+</li>
+<li><p>&#x3042;&#x308B;URL&#x304C;&#x3001;&#x63D0;&#x4F9B;&#x8005;&#x5074;&#x3067;&#x660E;&#x793A;&#x7684;&#x306B;&#x66F4;&#x65B0;&#x3055;&#x308C;&#x306A;&#x3044;&#x9650;&#x308A;&#x3001;&#x300C;&#x8AB0;&#x306B;&#x5BFE;&#x3057;&#x3066;&#x3082;&#x300D;&#x300C;&#x5168;&#x304F;&#x540C;&#x3058;&#x5185;&#x5BB9;&#x3092;&#x300D;&#x300C;&#x8FD4;&#x3057;&#x7D9A;&#x3051;&#x308B;&#x300D;&#x5834;&#x5408;&#x3001;&#x3053;&#x308C;&#x3092; <strong>&#x9759;&#x7684;; static</strong> &#x306A;&#x5185;&#x5BB9;&#x3068;&#x3044;&#x3046;</p>
+</li>
+<li>&#x53CD;&#x5BFE;&#x306B;&#x3001;&#x300C;&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8;&#x306B;&#x3088;&#x3063;&#x3066;&#x300D;&#x3042;&#x308B;&#x3044;&#x306F;&#x300C;&#x30BF;&#x30A4;&#x30DF;&#x30F3;&#x30B0;&#x306B;&#x3088;&#x3063;&#x3066;&#x300D;&#x3001;&#x300C;&#x7570;&#x306A;&#x308B;&#x5185;&#x5BB9;&#x3092;&#x8FD4;&#x3059;&#x300D;&#x5834;&#x5408;&#x3001; <strong>&#x52D5;&#x7684;; dynamic</strong> &#x3067;&#x3042;&#x308B;&#x3068;&#x3044;&#x3046;<ul>
+<li>&#x3053;&#x308C;&#x3089;&#x306E;&#x8A00;&#x8449;&#x306B;&#x306F;&#x6CE8;&#x610F;&#x304C;&#x5FC5;&#x8981;&#x3067;&#x3001;&#x7D44;&#x307F;&#x5408;&#x308F;&#x305B;&#x3082;&#x3042;&#x308A;&#x3046;&#x308B;&#x3057;&#x3001;&#x300C;&#x5909;&#x5316;&#x300D;&#x304C;&#x3069;&#x306E;&#x30EC;&#x30A4;&#x30E4;&#x3067;&#x884C;&#x308F;&#x308C;&#x3066;&#x3044;&#x308B;&#x304B;&#x3082;&#x5834;&#x5408;&#x306B;&#x3088;&#x3063;&#x3066;&#x7570;&#x306A;&#x308B;</li>
+<li>&#x305F;&#x3068;&#x3048;&#x3070;&#x3001;&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x9001;&#x4FE1;&#x8005;&#x306B;&#x3088;&#x3063;&#x3066;&#x9001;&#x4FE1;&#x5185;&#x5BB9;&#x3092;Web&#x30B5;&#x30FC;&#x30D0;&#x5074;&#x3067;&#x5909;&#x3048;&#x308B;&#x3088;&#x3046;&#x306A;&#x30B1;&#x30FC;&#x30B9;&#x3082;&#x3042;&#x308C;&#x3070;&#x3001;
+JavaScript&#x3092;&#x5229;&#x7528;&#x3057;&#x3066;&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8;&#x5074;&#x3067;&#x5185;&#x5BB9;&#x3092;&#x5909;&#x52D5;&#x3055;&#x305B;&#x308B;&#x3053;&#x3068;&#x3082;&#x3042;&#x308A;&#x3001;&#x3069;&#x3061;&#x3089;&#x3082;&#x300C;&#x52D5;&#x7684;&#x300D;&#x3068;&#x8A00;&#x3044;&#x3046;&#x308B;</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><p><code>dev.to</code>&#x306F;&#x300C;&#x7206;&#x901F;&#x5316;&#x300D;&#x306E;&#x305F;&#x3081;&#x306B;&#x3042;&#x3089;&#x3086;&#x308B;&#x7B56;&#x3092;&#x8B1B;&#x3058;&#x3066;&#x3044;&#x308B;&#x3002;&#x524D;&#x9805;&#x306E;&#x3001;</p>
+<blockquote>
+<ul>
+<li>&#x305D;&#x308C;&#x3069;&#x3053;&#x308D;&#x304B;&#x3001;<strong>&#x30A2;&#x30E1;&#x30EA;&#x30AB;&#x306E;&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8;&#x306F;&#x30A2;&#x30E1;&#x30EA;&#x30AB;&#x306E;Web&#x30B5;&#x30FC;&#x30D0;&#x306B;&#x5FDC;&#x7B54;&#x3055;&#x305B;&#x3001;&#x65E5;&#x672C;&#x306E;&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8;&#x306F;&#x65E5;&#x672C;&#x306E;Web&#x30B5;&#x30FC;&#x30D0;&#x306B;&#x5FDC;&#x7B54;&#x3055;&#x305B;&#x305F;&#x3063;&#x3066;&#x826F;&#x3044;</strong></li>
+</ul>
+</blockquote>
+<ul>
+<li>&#x3053;&#x306E;&#x624B;&#x6CD5;&#x3068;&#x3082;&#x7D44;&#x307F;&#x5408;&#x308F;&#x305B;&#x3066;&#x3001;&#x300C;&#x3069;&#x3046;&#x3057;&#x3066;&#x3082;&#x9045;&#x304F;&#x306A;&#x308B;&#x90E8;&#x5206;&#x3092;&#x30E6;&#x30FC;&#x30B6;&#x306B;&#x6C17;&#x3065;&#x304B;&#x305B;&#x306A;&#x3044;(<strong>&#x975E;&#x540C;&#x671F;</strong> &#x306B;&#x51E6;&#x7406;&#x3059;&#x308B;)&#x300D;&#x3067;&#x3042;&#x3063;&#x305F;&#x308A;&#x3001;
+&#x300C;&#x4E00;&#x5EA6;&#x751F;&#x6210;&#x3057;&#x305F;&#x52D5;&#x7684;&#x306A;&#x5185;&#x5BB9;&#x3092;&#x3042;&#x308B;&#x7A0B;&#x5EA6;&#x306E;&#x671F;&#x9593;&#x4F7F;&#x3044;&#x307E;&#x308F;&#x3059;(<strong>&#x30AD;&#x30E3;&#x30C3;&#x30B7;&#x30E5;; cache</strong> &#x3059;&#x308B;)&#x300D;&#x3067;&#x3042;&#x3063;&#x305F;&#x308A;&#x3068;&#x3044;&#x3063;&#x305F;&#x5DE5;&#x592B;&#x3092;&#x884C;&#x3046;</li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="recap.html" class="navigation navigation-prev " aria-label="Previous page: 復習: インターネットとWeb">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="app_server.html" class="navigation navigation-next " aria-label="Next page: アプリケーションサーバ, 「動的生成」">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"dev.to part 2","level":"1.2.4","depth":2,"next":{"title":"アプリケーションサーバ, 「動的生成」","level":"1.2.5","depth":2,"path":"basics/app_server.md","ref":"basics/app_server.md","articles":[]},"previous":{"title":"復習: インターネットとWeb","level":"1.2.3","depth":2,"path":"basics/recap.md","ref":"basics/recap.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"basics/dev_to2.md","mtime":"2018-05-05T23:12:56.392Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-05T23:36:11.796Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
