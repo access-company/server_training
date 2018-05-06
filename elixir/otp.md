@@ -60,3 +60,82 @@ iex(1)> :observer.start()
 - `myapp`はまだ`escript`としてしか実装しておらず、特に状態を持たせようともしていなかったため、
   「アプリケーション」として定義していないのです
 - 定義してみましょう
+- Note: ちなみにここからは、少し高度な話になっていきます
+    - Erlang/Elixirで一般的に開発を行うにあたっては重要かつ面白い部分ですが、
+      実はAntikytheraでは相当部分を一般の開発者から隠蔽しており、普段はあまり触れない部分かもしれません
+
+---
+
+- 以下のように編集していきましょう
+
+> `mix.exs`
+
+```diff
+diff --git a/myapp/mix.exs b/myapp/mix.exs
+index dfa8fc7..589379e 100644
+--- a/myapp/mix.exs
++++ b/myapp/mix.exs
+@@ -15,6 +15,7 @@ defmodule Myapp.Mixfile do
+   # Run "mix help compile.app" to learn about applications.
+   def application do
+     [
++      mod: {Myapp, []},
+       extra_applications: [:logger]
+     ]
+   end
+```
+
+> `lib/myapp.exs`
+
+```diff
+diff --git a/myapp/lib/myapp.ex b/myapp/lib/myapp.ex
+index feeef2c..a2441ed 100644
+--- a/myapp/lib/myapp.ex
++++ b/myapp/lib/myapp.ex
+@@ -3,6 +3,12 @@ defmodule Myapp do
+   Documentation for Myapp.
+   """
+
++  use Application
++
++  def start(_type, _args) do
++    Myapp.Superviser.start_link()
++  end
++
+   alias Hipchat.ApiClient
+   alias Hipchat.Httpc.Response
+   alias Hipchat.V2.Rooms
+```
+
+- そしてSupervisor moduleを追加します
+
+> `lib/myapp/supervisor.ex`
+
+```elixir
+defmodule Myapp.Supervisor do
+  use Supervisor
+
+  def start_link() do
+    Supervisor.start_link(__MODULE__, nil, name: __MODULE__)
+  end
+
+  def init(_arg) do
+    Supervisor.init([], strategy: :one_for_one)
+  end
+end
+```
+
+- この状態で保存し、再び`iex -S mix`で起動、observerを見てみましょう
+
+[![supervisor](sup.png)](sup.png)
+
+- おめでとう！ `myapp`はOTPアプリケーションとなり、プロセスツリーを手に入れました
+- 今後、`myapp`が実行時に何か状態を持ちたいということになったなら、
+    - `Myapp.Supervisor`配下に、状態保持用のプロセスを生やす
+    - そのプロセスに対し、メッセージパッシングで値を出し入れするようなAPIを定義する
+    - アプリケーション内外から、そのAPIを使ってプロセスにアクセスし、状態を利用する
+- といった流れになります。このあたりをより深く知りたいと思ったら、
+    - [Official Introduction](https://elixir-lang.org/getting-started/introduction.html)や
+      [Elixir School](https://elixirschool.com/ja/lessons/basics/basics/)を更に読み進めてみましょう
+    - Erlang関連の入門書([すごE](http://amzn.asia/9Vo8clh)など)もおすすめです。英語で良ければWeb版もあります
+    - 慣れてきたら、Antikytheraのソースコードを読んでみるのもいいかも
