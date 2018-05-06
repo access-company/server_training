@@ -7,6 +7,7 @@
   "author": "ymtszw <yu.matsuzawa@access-company.com>",
   "private": true,
   "scripts": {
+    "start": "gitbook serve . localdocs/",
     "build": "gitbook build . docs/"
   },
   "dependencies": {
