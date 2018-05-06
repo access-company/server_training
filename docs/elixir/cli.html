@@ -57,6 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="otp.html" />
+    
     
     <link rel="prev" href="deps.html" />
     
@@ -341,6 +343,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.8" data-path="otp.html">
+            
+                <a href="otp.html">
+            
+                    
+                    実習: OTPに触れる
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -453,7 +468,7 @@ $ echo &quot;&lt;&#x30B3;&#x30D4;&#x30FC;&#x3057;&#x305F;&#x30C8;&#x30FC;&#x30AF
 <li>&#x30D9;&#x30FC;&#x30B9;&#x304C;&#x7528;&#x610F;&#x3067;&#x304D;&#x305F;&#x3089;&#x3001;<code>main/1</code>&#x306E;&#x4E2D;&#x8EAB;&#x3092;&#x5F90;&#x3005;&#x306B;&#x5B9F;&#x88C5;&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;<ul>
 <li>&#x4E0A;&#x3067;&#x4F5C;&#x3063;&#x305F;&#x30C8;&#x30FC;&#x30AF;&#x30F3;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304B;&#x3089;API&#x30C8;&#x30FC;&#x30AF;&#x30F3;&#x3092;&#x8AAD;&#x307F;&#x8FBC;&#x3080;</li>
 <li>&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x30E9;&#x30A4;&#x30F3;&#x304B;&#x3089;&#x306E;&#x5F15;&#x6570;(&#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;&#x5185;&#x5BB9;)&#x3092;&#x53D7;&#x3051;&#x53D6;&#x308B;</li>
-<li>(&#x5BFE;&#x8C61;&#x3068;&#x3059;&#x308B;HipChat room&#x306E;ID&#x3092;&#x8ABF;&#x3079;&#x3066;&#x304A;&#x304F;)</li>
+<li>(&#x5BFE;&#x8C61;&#x3068;&#x3059;&#x308B;HipChat room&#x306E;ID&#x3092;&#x8ABF;&#x3079;&#x3066;&#x304A;&#x304F;&#x3002;&#x3053;&#x308C;&#x3082;&#x5F15;&#x6570;&#x3068;&#x3057;&#x3066;&#x53D7;&#x3051;&#x53D6;&#x3063;&#x3066;&#x3082;&#x826F;&#x3044;)</li>
 <li>&#x4E21;&#x8005;&#x3092;&#x7D44;&#x307F;&#x5408;&#x308F;&#x305B;&#x3066;&#x3001;<code>hipchat_elixir</code>&#x304C;&#x63D0;&#x4F9B;&#x3059;&#x308B;module&#x306E;&#x95A2;&#x6570;&#x3092;&#x4F7F;&#x3063;&#x3066;&#x5B9F;&#x969B;&#x306B;&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x3092;&#x9001;&#x308B;</li>
 </ul>
 </li>
@@ -469,6 +484,7 @@ $ echo &quot;&lt;&#x30B3;&#x30D4;&#x30FC;&#x3057;&#x305F;&#x30C8;&#x30FC;&#x30AF
 <ul>
 <li>&#x3082;&#x3057;&#x3042;&#x307E;&#x308A;&#x306B;&#x3082;&#x7C21;&#x5358;&#x3059;&#x304E;&#x308B;&#x3068;&#x3044;&#x3046;&#x4EBA;&#x304C;&#x3044;&#x305F;&#x3089;&#x3001;&#x3069;&#x3093;&#x3069;&#x3093;&#x6539;&#x9020;&#x3057;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;</li>
 <li>&#x4F8B;&#x3048;&#x3070;&#x3053;&#x3093;&#x306A;&#x306E;&#x3069;&#x3046;&#x3067;&#x3057;&#x3087;&#x3046;<ul>
+<li>&#x5F15;&#x6570;&#x306E;&#x6570;&#x304C;&#x9593;&#x9055;&#x3063;&#x3066;&#x3044;&#x308B;&#x306A;&#x3089;&#x3001;&#x6B63;&#x3057;&#x3044;&quot;Usage&quot;&#x3092;&#x8868;&#x793A;&#x3059;&#x308B;</li>
 <li>&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x30E9;&#x30A4;&#x30F3;&#x5F15;&#x6570;&#x3067;&#x306A;&#x304F;&#x3001;&#x6A19;&#x6E96;&#x5165;&#x529B;&#x3067;&#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;&#x3092;&#x53D7;&#x3051;&#x53D6;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066;&#x307F;&#x308B;</li>
 <li>&#x6295;&#x7A3F;&#x3059;&#x308B;&#x3060;&#x3051;&#x3067;&#x306A;&#x304F;&#x3001;&#x5C65;&#x6B74;&#x3092;&#x53D6;&#x5F97;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066;&#x307F;&#x308B;<ul>
 <li>API&#x30C8;&#x30FC;&#x30AF;&#x30F3;&#x306E;Scopes&#x306B;&quot;View Messages&quot;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;</li>
@@ -476,6 +492,7 @@ $ echo &quot;&lt;&#x30B3;&#x30D4;&#x30FC;&#x3057;&#x305F;&#x30C8;&#x30FC;&#x30AF
 </li>
 <li>&#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;&#x3092;&#x30D1;&#x30A4;&#x30D7;&#x3067;&#x53D7;&#x3051;&#x3089;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066;&#x307F;&#x308B;(&#x7B46;&#x8005;&#x306F;&#x3053;&#x308C;&#x3092;<code>escript</code>&#x3067;&#x3084;&#x3063;&#x305F;&#x3053;&#x3068;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#xFF01; &#x3067;&#x304D;&#x308B;&#x304B;&#x306A;&#xFF1F;)</li>
 <li>&#x300C;&#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;&#x300D;&#x3060;&#x3051;&#x3067;&#x306A;&#x304F;&#x300C;&#x901A;&#x77E5;&#x300D;&#x3082;&#x9001;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066;&#x307F;&#x308B;<ul>
+<li>HTML&#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;&#x3092;&#x9001;&#x308C;&#x305F;&#x308A;&#x3057;&#x307E;&#x3059;</li>
 <li>API&#x30C8;&#x30FC;&#x30AF;&#x30F3;&#x306E;Scopes&#x306B;&quot;Send Notification&quot;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;</li>
 </ul>
 </li>
@@ -509,10 +526,14 @@ $ echo &quot;&lt;&#x30B3;&#x30D4;&#x30FC;&#x3057;&#x305F;&#x30C8;&#x30FC;&#x30AF
 
             
                 
-                <a href="deps.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 実習: パッケージの導入">
+                <a href="deps.html" class="navigation navigation-prev " aria-label="Previous page: 実習: パッケージの導入">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="otp.html" class="navigation navigation-next " aria-label="Next page: 実習: OTPに触れる">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -521,7 +542,7 @@ $ echo &quot;&lt;&#x30B3;&#x30D4;&#x30FC;&#x3057;&#x305F;&#x30C8;&#x30FC;&#x30AF
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"実習: CLIを作ってみる","level":"1.3.7","depth":2,"previous":{"title":"実習: パッケージの導入","level":"1.3.6","depth":2,"path":"elixir/deps.md","ref":"elixir/deps.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","livereload"],"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"elixir/cli.md","mtime":"2018-05-06T19:16:05.326Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-06T16:12:42.972Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"実習: CLIを作ってみる","level":"1.3.7","depth":2,"next":{"title":"実習: OTPに触れる","level":"1.3.8","depth":2,"path":"elixir/otp.md","ref":"elixir/otp.md","articles":[]},"previous":{"title":"実習: パッケージの導入","level":"1.3.6","depth":2,"path":"elixir/deps.md","ref":"elixir/deps.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","livereload"],"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"elixir/cli.md","mtime":"2018-05-06T20:22:34.015Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-06T20:21:13.410Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
