@@ -238,6 +238,90 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3" data-path="../elixir/elixir.html">
+            
+                <a href="../elixir/elixir.html">
+            
+                    
+                    Elixir
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../elixir/requirements.html">
+            
+                <a href="../elixir/requirements.html">
+            
+                    
+                    前提
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../elixir/what.html">
+            
+                <a href="../elixir/what.html">
+            
+                    
+                    Elixir とは
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../elixir/why.html">
+            
+                <a href="../elixir/why.html">
+            
+                    
+                    なぜElixirか
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../elixir/syntax.html">
+            
+                <a href="../elixir/syntax.html">
+            
+                    
+                    基礎: 文法等
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../elixir/mix.html">
+            
+                <a href="../elixir/mix.html">
+            
+                    
+                    実習: Mix project, 初めてのテスト
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
@@ -326,7 +410,7 @@ origin&#x306B;&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x3092;&#x8EE2;&#x9001;&#
 <li>&#x3068;&#x306F;&#x3044;&#x3048;&#x3001;&#x305F;&#x3060;1&#x53F0;&#x306E;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x30B5;&#x30FC;&#x30D0;&#x3084;&#x3001;&#x305F;&#x3060;1&#x53F0;&#x306E;DB&#x3060;&#x3051;&#x3067;&#x3069;&#x308C;&#x3060;&#x3051;&#x306E;&#x30E6;&#x30FC;&#x30B6;&#x3092;&#x634C;&#x3051;&#x308B;&#x3060;&#x308D;&#x3046;&#x304B;<ul>
 <li>&#x5F53;&#x7136;&#x30DE;&#x30B7;&#x30F3;&#x6027;&#x80FD;&#x306B;&#x3082;&#x3088;&#x308B;&#x304C;&#x3001;2000&#x5E74;&#x4EE3;&#x524D;&#x534A;&#x306B;&#x306F;<strong>C10k(10,000 connections/clients)&#x554F;&#x984C;</strong>&#x3068;&#x3057;&#x3066;&#x8B70;&#x8AD6;&#x3055;&#x308C;&#x305F;<ul>
 <li>1&#x53F0;&#x306E;&#x30DE;&#x30B7;&#x30F3;&#x4E0A;&#x3067;&#x7A3C;&#x50CD;&#x3059;&#x308B;&#x30B5;&#x30FC;&#x30D0;&#x3067;&#x634C;&#x3051;&#x308B;&#x30E6;&#x30FC;&#x30B6;&#x6570;&#x306B;&#x306F;&#x9650;&#x754C;&#x304C;&#x3042;&#x308B;&#x3057;&#x3001;</li>
-<li>&#x30DE;&#x30B7;&#x30F3;&#x306E;&#x5358;&#x4F53;&#x6027;&#x80FD;&#x3092;&#x4E0A;&#x3052;&#x308B;&#x306E;&#x306B;&#x3082;&#x9650;&#x754C;&#x304C;&#x3042;&#x308B;&#x3057;&#x3001;</li>
+<li>&#x30DE;&#x30B7;&#x30F3;&#x306E;&#x5358;&#x4F53;&#x6027;&#x80FD;&#x3092;&#x4E0A;&#x3052;&#x308B;(<strong>&#x5782;&#x76F4;&#x7684;</strong>, <strong>&#x30B9;&#x30B1;&#x30FC;&#x30EB;&#x30A2;&#x30C3;&#x30D7;; scale-up</strong>)&#x306E;&#x306B;&#x3082;&#x9650;&#x754C;&#x304C;&#x3042;&#x308B;&#x3057;&#x3001;</li>
 <li>&#x3069;&#x3093;&#x306A;&#x306B;&#x6027;&#x80FD;&#x304C;&#x4E0A;&#x304C;&#x3063;&#x3066;&#x3082;&#x3001;&#x6025;&#x306A;&#x8CA0;&#x8377;&#x4E0A;&#x6607;&#x3084;&#x30CF;&#x30FC;&#x30C9;&#x30A6;&#x30A7;&#x30A2;&#x306E;&#x6545;&#x969C;&#x304B;&#x3089;&#x306F;&#x9003;&#x308C;&#x3089;&#x308C;&#x306A;&#x3044;</li>
 </ul>
 </li>
@@ -335,7 +419,14 @@ origin&#x306B;&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x3092;&#x8EE2;&#x9001;&#
 </ul>
 </li>
 <li>&#x7B2C;&#x4E00;&#x6B21;&#x7684;&#x306A;&#x3001;&#x57FA;&#x5E79;&#x3068;&#x306A;&#x308B;&#x51E6;&#x7406;&#x62C5;&#x5F53;&#x90E8;&#x5206;&#x306B;&#x3082;&#x3001;&#x51E6;&#x7406;&#x306E; <strong>&#x5206;&#x6563;; distribution</strong> &#x3084;&#x3001;
-&#x30CF;&#x30FC;&#x30C9;&#x30A6;&#x30A7;&#x30A2;&#x7684;&#x30FB;&#x30BD;&#x30D5;&#x30C8;&#x30A6;&#x30A7;&#x30A2;&#x7684; <strong>&#x5197;&#x9577;&#x5316;; redundancy</strong> &#x306B;&#x3088;&#x308B; <strong>&#x53EF;&#x7528;&#x6027;; availability</strong> &#x306E;&#x5411;&#x4E0A;&#x304C;&#x6C42;&#x3081;&#x3089;&#x308C;&#x59CB;&#x3081;&#x308B;</li>
+&#x30CF;&#x30FC;&#x30C9;&#x30A6;&#x30A7;&#x30A2;&#x7684;&#x30FB;&#x30BD;&#x30D5;&#x30C8;&#x30A6;&#x30A7;&#x30A2;&#x7684; <strong>&#x5197;&#x9577;&#x5316;; redundancy</strong> &#x306B;&#x3088;&#x308B; <strong>&#x53EF;&#x7528;&#x6027;; availability</strong> &#x306E;&#x5411;&#x4E0A;&#x304C;&#x6C42;&#x3081;&#x3089;&#x308C;&#x59CB;&#x3081;&#x308B;<ul>
+<li>&#x30DE;&#x30B7;&#x30F3;&#x5358;&#x4F53;&#x6027;&#x80FD;&#x3092;&#x4E0A;&#x3052;&#x308B;&#x306E;&#x3067;&#x306A;&#x304F;&#x3001; <strong>&#x30DE;&#x30B7;&#x30F3;&#x3092;&#x5897;&#x3084;&#x3059;</strong>(<strong>&#x6C34;&#x5E73;&#x7684;</strong>, <strong>&#x30B9;&#x30B1;&#x30FC;&#x30EB;&#x30A2;&#x30A6;&#x30C8;; scale-out</strong>)&#x3053;&#x3068;&#x3067;&#x5168;&#x4F53;&#x6027;&#x80FD;&#x304C;&#x4E0A;&#x304C;&#x308B;&#x3068;&#x5B09;&#x3057;&#x3044;<ul>
+<li>&#x30B9;&#x30B1;&#x30FC;&#x30EB;&#x30A2;&#x30A6;&#x30C8;&#x3057;&#x3084;&#x3059;&#x3044;(&#x6C34;&#x5E73;&#x65B9;&#x5411;&#x306E; <strong>&#x30B9;&#x30B1;&#x30FC;&#x30E9;&#x30D3;&#x30EA;&#x30C6;&#x30A3;; scalability</strong> &#x306B;&#x512A;&#x308C;&#x308B;)&#x5206;&#x6563;&#x30B7;&#x30B9;&#x30C6;&#x30E0;&#x306F;&#x3001;
+&#x30B5;&#x30FC;&#x30D3;&#x30B9;&#x306E;&#x6210;&#x9577;&#x3084;&#x77ED;&#x671F;&#x30FB;&#x9577;&#x671F;&#x306E;&#x9700;&#x8981;&#x5909;&#x52D5;&#x306B;&#x4F34;&#x3046;&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8;&#x6570;&#x306E;&#x5909;&#x52D5;&#x306B;&#x5BFE;&#x5FDC;&#x3057;&#x3084;&#x3059;&#x3044;</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <hr>
 <ul>
@@ -422,7 +513,7 @@ origin&#x306B;&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x3092;&#x8EE2;&#x9001;&#
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"「キャッシュ」そして「分散」","level":"1.2.8","depth":2,"next":{"title":"結び","level":"1.2.9","depth":2,"path":"basics/conclusion.md","ref":"basics/conclusion.md","articles":[]},"previous":{"title":"「リソース」, データベース","level":"1.2.7","depth":2,"path":"basics/database.md","ref":"basics/database.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"basics/distribution.md","mtime":"2018-05-05T23:17:40.424Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-05T23:36:11.796Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"「キャッシュ」そして「分散」","level":"1.2.8","depth":2,"next":{"title":"結び","level":"1.2.9","depth":2,"path":"basics/conclusion.md","ref":"basics/conclusion.md","articles":[]},"previous":{"title":"「リソース」, データベース","level":"1.2.7","depth":2,"path":"basics/database.md","ref":"basics/database.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","livereload"],"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"basics/distribution.md","mtime":"2018-05-06T00:02:51.444Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-06T16:12:42.972Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -430,6 +521,10 @@ origin&#x306B;&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x3092;&#x8EE2;&#x9001;&#
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
