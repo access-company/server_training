@@ -38,7 +38,36 @@ $ cd ~/myapp
 
 > `mix.exs`
 
-[import, lang:"elixir", mix.exs](../myapp/mix.exs)
+```elixir
+defmodule Myapp.Mixfile do
+  use Mix.Project
+
+  def project do
+    [
+      app: :myapp,
+      version: "0.1.0",
+      elixir: "~> 1.5",
+      start_permanent: Mix.env == :prod,
+      deps: deps()
+    ]
+  end
+
+  # Run "mix help compile.app" to learn about applications.
+  def application do
+    [
+      extra_applications: [:logger]
+    ]
+  end
+
+  # Run "mix help deps" to learn about dependencies.
+  defp deps do
+    [
+      # {:dep_from_hexpm, "~> 0.3.0"},
+      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
+    ]
+  end
+end
+```
 
 - このファイル自体が[**モジュール; module**](https://elixirschool.com/ja/lessons/basics/modules/)を定義しています。(`Myapp.Mixfile`)
     - Elixirのmodule名はこのように`.`区切りで名前空間を構成できます
@@ -68,7 +97,26 @@ $ cd ~/myapp
 
 > `lib/myapp.ex`
 
-[import, lang:"elixir", myapp.ex](../myapp/lib/myapp.ex)
+```elixir
+defmodule Myapp do
+  @moduledoc """
+  Documentation for Myapp.
+  """
+
+  @doc """
+  Hello world.
+
+  ## Examples
+
+      iex> Myapp.hello
+      :world
+
+  """
+  def hello do
+    :world
+  end
+end
+```
 
 - デフォルトでは、`lib/`以下のファイルが主たるソースコードとなります。今は`lib/myapp.ex`のみ
     - ここにあなたのアプリケーションで実行したい内容を実装していきます
@@ -105,7 +153,16 @@ Randomized with seed 285458
 
 > `test/myapp_test.exs`
 
-[import, lang:"elixir", myapp_test.exs](../myapp/test/myapp_test.exs)
+```elixir
+defmodule MyappTest do
+  use ExUnit.Case
+  doctest Myapp
+
+  test "greets the world" do
+    assert Myapp.hello() == :world
+  end
+end
+```
 
 - `test "greets the world" do`の行は、専用の構文のようにも見えますが、実は`test/2`という**マクロ; macro**です
     - Elixirではマクロを使ってDSLを作ることができます
