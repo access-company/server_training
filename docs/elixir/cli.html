@@ -1,0 +1,564 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>実習: CLIを作ってみる · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="deps.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Server Development Tutorial
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../basics/basics.html">
+            
+                <a href="../basics/basics.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../basics/requirements.html">
+            
+                <a href="../basics/requirements.html">
+            
+                    
+                    前提
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../basics/dev_to1.html">
+            
+                <a href="../basics/dev_to1.html">
+            
+                    
+                    dev.to part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../basics/recap.html">
+            
+                <a href="../basics/recap.html">
+            
+                    
+                    復習: インターネットとWeb
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../basics/dev_to2.html">
+            
+                <a href="../basics/dev_to2.html">
+            
+                    
+                    dev.to part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../basics/app_server.html">
+            
+                <a href="../basics/app_server.html">
+            
+                    
+                    アプリケーションサーバ, 「動的生成」
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../basics/api_design.html">
+            
+                <a href="../basics/api_design.html">
+            
+                    
+                    API設計, 「状態」
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../basics/database.html">
+            
+                <a href="../basics/database.html">
+            
+                    
+                    「リソース」, データベース
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../basics/distribution.html">
+            
+                <a href="../basics/distribution.html">
+            
+                    
+                    「キャッシュ」そして「分散」
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../basics/conclusion.html">
+            
+                <a href="../basics/conclusion.html">
+            
+                    
+                    結び
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="elixir.html">
+            
+                <a href="elixir.html">
+            
+                    
+                    Elixir
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="requirements.html">
+            
+                <a href="requirements.html">
+            
+                    
+                    前提
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="what.html">
+            
+                <a href="what.html">
+            
+                    
+                    Elixir とは
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="why.html">
+            
+                <a href="why.html">
+            
+                    
+                    なぜElixirか
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="syntax.html">
+            
+                <a href="syntax.html">
+            
+                    
+                    基礎: 文法等
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="mix.html">
+            
+                <a href="mix.html">
+            
+                    
+                    実習: Mix project, 初めてのテスト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="deps.html">
+            
+                <a href="deps.html">
+            
+                    
+                    実習: パッケージの導入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.7" data-path="cli.html">
+            
+                <a href="cli.html">
+            
+                    
+                    実習: CLIを作ってみる
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >実習: CLIを作ってみる</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x5B9F;&#x7FD2;-cli&#x3092;&#x4F5C;&#x3063;&#x3066;&#x307F;&#x308B;">&#x5B9F;&#x7FD2;: CLI&#x3092;&#x4F5C;&#x3063;&#x3066;&#x307F;&#x308B;</h2>
+<ul>
+<li>&#x305B;&#x3063;&#x304B;&#x304F;&#x306A;&#x306E;&#x3067;&#x3001;&#x5B9F;&#x969B;&#x306B;&#x4F55;&#x304B;&#x5F79;&#x306B;&#x7ACB;&#x3064;&#x3082;&#x306E;&#x3092;&#x4F5C;&#x3063;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;</li>
+<li>&#x3053;&#x3053;&#x304B;&#x3089;&#x306F;&#x307E;&#x3068;&#x307E;&#x3063;&#x305F;&#x6F14;&#x7FD2;&#x6642;&#x9593;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;</li>
+<li>1&#x6642;&#x9593;30&#x5206;&#x4F4D;&#x3092;&#x60F3;&#x5B9A;&#x3002;&#x9032;&#x6357;&#x304C;&#x826F;&#x3051;&#x308C;&#x3070;&#x3055;&#x3055;&#x3063;&#x3068;OTP&#x306E;&#x8A71;&#x3078;</li>
+</ul>
+<h3 id="&#x304A;&#x984C;-hipchat&#x306B;&#x6295;&#x7A3F;&#x3059;&#x308B;cli">&#x304A;&#x984C;: HipChat&#x306B;&#x6295;&#x7A3F;&#x3059;&#x308B;CLI</h3>
+<ul>
+<li>Command Line Interface; CLI&#x3001;&#x8981;&#x306F;&#x30BF;&#x30FC;&#x30DF;&#x30CA;&#x30EB;&#x304B;&#x3089;&#x4F7F;&#x3048;&#x308B;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x3067;&#x3059;<ul>
+<li><code>mix</code>&#x3082;CLI&#x3068;&#x3044;&#x3048;&#x307E;&#x3059;</li>
+</ul>
+</li>
+<li>HipChat&#x306F;&#x666E;&#x901A;Web&#x30D6;&#x30E9;&#x30A6;&#x30B6;&#x304B;&#x3089;&#x4F7F;&#x3044;&#x307E;&#x3059;&#x304C;&#x3001;HipChat&#x306F;API&#x3092;&#x63D0;&#x4F9B;&#x3057;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#x3001;
+&#x3053;&#x308C;&#x3092;&#x7D4C;&#x7531;&#x3057;&#x3066;&#x30BF;&#x30FC;&#x30DF;&#x30CA;&#x30EB;&#x304B;&#x3089;&#x6295;&#x7A3F;&#x3067;&#x304D;&#x308B;&#x30C4;&#x30FC;&#x30EB;&#x3092;&#x4F5C;&#x3063;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;</li>
+</ul>
+<h3 id="&#x5FC5;&#x8981;&#x306A;&#x3082;&#x306E;">&#x5FC5;&#x8981;&#x306A;&#x3082;&#x306E;</h3>
+<ul>
+<li>HipChat&#x306E;API&#x306F;&#x3001;<a href="../basics/api_design.html">RESTful API</a>&#x3067;&#x3059;&#x3002;HTTP 1.1&#x3067;&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x3092;&#x9001;&#x308C;&#x306A;&#x3051;&#x308C;&#x3070;&#x306A;&#x308A;&#x307E;&#x305B;&#x3093;<ul>
+<li>&#x3068;&#x3044;&#x3063;&#x3066;&#x3082;&#x3001;HTTP&#x306E;&#x30AF;&#x30E9;&#x30A4;&#x30A2;&#x30F3;&#x30C8;&#x30B5;&#x30A4;&#x30C9;&#x30B9;&#x30BF;&#x30C3;&#x30AF;&#x3092;&#x307E;&#x308B;&#x3063;&#x3068;&#x5B9F;&#x88C5;&#x3059;&#x308B;&#x306E;&#x306F;&#x9AA8;&#x304C;&#x6298;&#x308C;&#x307E;&#x3059;&#x306D;</li>
+<li>&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x3092;&#x4F7F;&#x3044;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x624B;&#x524D;&#x5473;&#x564C;&#x3067;&#x3059;&#x304C;&#x4ECA;&#x56DE;&#x306F;<a href="https://github.com/ymtszw/hipchat_elixir" target="_blank">ymtszw/hipchat_elixir</a>&#x3092;&#x4F7F;&#x3044;&#x307E;&#x3059;</li>
+</ul>
+</li>
+<li><p>API&#x306F;&#x3001;&#x3069;&#x3093;&#x306A;HTTP&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x3067;&#x3082;&#x53D7;&#x3051;&#x4ED8;&#x3051;&#x3066;&#x304F;&#x308C;&#x308B;&#x308F;&#x3051;&#x3067;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;&#x767B;&#x9332;&#x6E08;&#x307F;&#x306E;&#x30E6;&#x30FC;&#x30B6;&#x3067;&#x3042;&#x308B;&#x3053;&#x3068;&#x3092;&#x8A3C;&#x660E;&#x3059;&#x308B;&#x8A8D;&#x8A3C;&#x60C5;&#x5831;&#x304C;&#x5FC5;&#x8981;&#x3067;&#x3059;</p>
+<ul>
+<li><a href="https://access-jp.hipchat.com/account/api" target="_blank">HipChat&#x306E;API Access&#x30DA;&#x30FC;&#x30B8;</a>&#x3092;&#x958B;&#x304D;&#x307E;&#x3059;<ul>
+<li>&#x30ED;&#x30B0;&#x30A4;&#x30F3;or&#x30D1;&#x30B9;&#x30EF;&#x30FC;&#x30C9;&#x518D;&#x5165;&#x529B;&#x304C;&#x6C42;&#x3081;&#x3089;&#x308C;&#x305F;&#x3089;&#x3001;&#x5165;&#x529B;&#x3057;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;</li>
+</ul>
+</li>
+<li>&quot;Create new token&quot;&#x6B04;&#x3067;&#x3001;<ul>
+<li>Label&#x6B04;&#x3092;&#x9069;&#x5F53;&#x306B;&#x5165;&#x529B;&#x3002;&quot;HipChatCLI&quot;&#x306A;&#x3069;</li>
+<li>Scopes&#x6B04;&#x306E;&quot;Send Message&quot;&#x3092;&#x9078;&#x629E;</li>
+<li>&quot;Create&quot;</li>
+</ul>
+</li>
+<li>&#x751F;&#x6210;&#x3055;&#x308C;&#x305F;&quot;Token&quot;&#x6587;&#x5B57;&#x5217;&#x3092;&#x30B3;&#x30D4;&#x30FC;</li>
+<li><p>API&#x30C8;&#x30FC;&#x30AF;&#x30F3;&#x306E;&#x305F;&#x3050;&#x3044;&#x306F;<strong>&#x79D8;&#x5BC6;&#x60C5;&#x5831;</strong>&#x3067;&#x3059;</p>
+<ul>
+<li>&#x4ED6;&#x4EBA;&#x306B;&#x77E5;&#x3089;&#x308C;&#x3066;&#x5229;&#x7528;&#x3055;&#x308C;&#x308B;&#x3079;&#x304D;&#x3067;&#x306A;&#x3044;&#x306E;&#x3067;&#x3001;&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x306B;&#x306F;&#x542B;&#x3081;&#x3066;&#x306F;&#x3044;&#x3051;&#x307E;&#x305B;&#x3093;</li>
+<li><p>&#x3053;&#x3053;&#x3067;&#x306F;&#x3001;<code>~/.config/hipchat_cli/token</code>&#x306E;&#x3088;&#x3046;&#x306A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306B;&#x4FDD;&#x5B58;&#x3057;&#x3066;&#x304A;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;</p>
+<pre><code>$ mkdir -p ~/.config/hipchat_cli
+$ echo &quot;&lt;&#x30B3;&#x30D4;&#x30FC;&#x3057;&#x305F;&#x30C8;&#x30FC;&#x30AF;&#x30F3;&gt;&quot; &gt; ~/.config/hipchat_cli/token
+</code></pre></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x6D41;&#x308C;">&#x6D41;&#x308C;</h3>
+<ul>
+<li>Elixir&#x3067;CLI&#x3092;&#x4F5C;&#x308B;&#x5834;&#x5408;&#x306F;&#x3001;<a href="https://hexdocs.pm/mix/master/Mix.Tasks.Escript.Build.html" target="_blank"><code>escript</code></a>&#x3068;&#x3044;&#x3046;&#x4ED5;&#x7D44;&#x307F;&#x3092;&#x4F7F;&#x3046;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;<ul>
+<li>Web&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x958B;&#x767A;&#x3067;&#x306F;&#x305D;&#x308C;&#x307B;&#x3069;&#x767B;&#x5834;&#x3057;&#x307E;&#x305B;&#x3093;&#x304C;</li>
+</ul>
+</li>
+<li>&#x307E;&#x305A;&#x306F;&#x5148;&#x7A0B;&#x7528;&#x610F;&#x3057;&#x305F;mix project&#x3092;&#x3001;<code>escript</code>&#x3068;&#x3057;&#x3066;&#x30D3;&#x30EB;&#x30C9;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x307E;&#x3059;<ul>
+<li>&#x5FC5;&#x8981;&#x306B;&#x5FDC;&#x3058;&#x3066;&#x3001;module&#x3084;&#x95A2;&#x6570;&#x3092;&#x65B0;&#x305F;&#x306B;&#x4F5C;&#x3063;&#x305F;&#x308A;&#x3001;<code>mix.exs</code>&#x306B;&#x8A2D;&#x5B9A;&#x3092;&#x8FFD;&#x52A0;&#x3057;&#x305F;&#x308A;&#x3057;&#x307E;&#x3059;</li>
+<li><code>main/1</code>&#x3068;&#x3044;&#x3046;&#x95A2;&#x6570;&#x3092;&#x6301;&#x3063;&#x305F;module&#x304C;&#x5FC5;&#x8981;&#x306B;&#x306A;&#x308B;&#x3067;&#x3057;&#x3087;&#x3046;</li>
+</ul>
+</li>
+<li>&#x6700;&#x521D;&#x306F;&#x3001;&#x5358;&#x306B;&quot;Hello world&quot;&#x306A;&#x3069;&#x306E;&#x6587;&#x5B57;&#x5217;&#x3092;&#x8868;&#x793A;&#x3057;&#x3066;&#x7D42;&#x4E86;&#x3059;&#x308B;&#x3060;&#x3051;&#x3001;&#x3068;&#x3044;&#x3063;&#x305F;&#x5185;&#x5BB9;&#x304B;&#x3089;&#x59CB;&#x3081;&#x3066;&#x3001;&#x9069;&#x5B9C;<code>git commit</code>&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;</li>
+<li>&#x30D9;&#x30FC;&#x30B9;&#x304C;&#x7528;&#x610F;&#x3067;&#x304D;&#x305F;&#x3089;&#x3001;<code>main/1</code>&#x306E;&#x4E2D;&#x8EAB;&#x3092;&#x5F90;&#x3005;&#x306B;&#x5B9F;&#x88C5;&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;<ul>
+<li>&#x4E0A;&#x3067;&#x4F5C;&#x3063;&#x305F;&#x30C8;&#x30FC;&#x30AF;&#x30F3;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x304B;&#x3089;API&#x30C8;&#x30FC;&#x30AF;&#x30F3;&#x3092;&#x8AAD;&#x307F;&#x8FBC;&#x3080;</li>
+<li>&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x30E9;&#x30A4;&#x30F3;&#x304B;&#x3089;&#x306E;&#x5F15;&#x6570;(&#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;&#x5185;&#x5BB9;)&#x3092;&#x53D7;&#x3051;&#x53D6;&#x308B;</li>
+<li>(&#x5BFE;&#x8C61;&#x3068;&#x3059;&#x308B;HipChat room&#x306E;ID&#x3092;&#x8ABF;&#x3079;&#x3066;&#x304A;&#x304F;)</li>
+<li>&#x4E21;&#x8005;&#x3092;&#x7D44;&#x307F;&#x5408;&#x308F;&#x305B;&#x3066;&#x3001;<code>hipchat_elixir</code>&#x304C;&#x63D0;&#x4F9B;&#x3059;&#x308B;module&#x306E;&#x95A2;&#x6570;&#x3092;&#x4F7F;&#x3063;&#x3066;&#x5B9F;&#x969B;&#x306B;&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x3092;&#x9001;&#x308B;</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x6F14;&#x7FD2;-&#x4F5C;&#x3063;&#x3066;&#x307F;&#x3088;&#x3046;">&#x6F14;&#x7FD2;: &#x4F5C;&#x3063;&#x3066;&#x307F;&#x3088;&#x3046;</h3>
+<ul>
+<li>&#x8A70;&#x307E;&#x3063;&#x305F;&#x3089;&#x3069;&#x3093;&#x3069;&#x3093;&#x8CEA;&#x554F;&#x30FB;&#x30A2;&#x30E9;&#x30FC;&#x30C8;&#x3092;&#x4E0A;&#x3052;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002;&#x5FC5;&#x8981;&#x305D;&#x3046;&#x3067;&#x3042;&#x308C;&#x3070;&#x9069;&#x5B9C;&#x30D2;&#x30F3;&#x30C8;&#x3001;&#x53E9;&#x304D;&#x53F0;&#x3092;&#x63D0;&#x793A;&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;</li>
+<li>&#x3053;&#x306E;&#x5185;&#x5BB9;&#x3067;&#x3042;&#x308C;&#x3070;&#x3001;&#x305D;&#x308C;&#x307B;&#x3069;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x91CF;&#x306B;&#x306F;&#x306A;&#x3089;&#x306A;&#x3044;&#x306F;&#x305A;&#x3067;&#x3059;</li>
+<li>&#x6A21;&#x7BC4;&#x89E3;&#x7B54;&#x3068;&#x3044;&#x3046;&#x307B;&#x3069;&#x3067;&#x3082;&#x306A;&#x3044;&#x3067;&#x3059;&#x304C;&#x3001;&#x52D5;&#x4F5C;&#x3059;&#x308B;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x5225;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306B;&#x30A2;&#x30C3;&#x30D7;&#x3057;&#x3066;&#x304A;&#x304D;&#x307E;&#x3059;</li>
+<li>&#x3044;&#x3044;&#x6642;&#x9593;&#x304C;&#x305F;&#x3063;&#x305F;&#x3089;&#x3001;&#x305D;&#x3061;&#x3089;&#x306E;&#x30D6;&#x30E9;&#x30F3;&#x30C1;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x3068;&#x898B;&#x6BD4;&#x3079;&#x3064;&#x3064;&#x3001;&#x632F;&#x308A;&#x8FD4;&#x308A;&#x307E;&#x3059;</li>
+</ul>
+<hr>
+<ul>
+<li>&#x3082;&#x3057;&#x3042;&#x307E;&#x308A;&#x306B;&#x3082;&#x7C21;&#x5358;&#x3059;&#x304E;&#x308B;&#x3068;&#x3044;&#x3046;&#x4EBA;&#x304C;&#x3044;&#x305F;&#x3089;&#x3001;&#x3069;&#x3093;&#x3069;&#x3093;&#x6539;&#x9020;&#x3057;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;</li>
+<li>&#x4F8B;&#x3048;&#x3070;&#x3053;&#x3093;&#x306A;&#x306E;&#x3069;&#x3046;&#x3067;&#x3057;&#x3087;&#x3046;<ul>
+<li>&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x30E9;&#x30A4;&#x30F3;&#x5F15;&#x6570;&#x3067;&#x306A;&#x304F;&#x3001;&#x6A19;&#x6E96;&#x5165;&#x529B;&#x3067;&#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;&#x3092;&#x53D7;&#x3051;&#x53D6;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066;&#x307F;&#x308B;</li>
+<li>&#x6295;&#x7A3F;&#x3059;&#x308B;&#x3060;&#x3051;&#x3067;&#x306A;&#x304F;&#x3001;&#x5C65;&#x6B74;&#x3092;&#x53D6;&#x5F97;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066;&#x307F;&#x308B;<ul>
+<li>API&#x30C8;&#x30FC;&#x30AF;&#x30F3;&#x306E;Scopes&#x306B;&quot;View Messages&quot;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;</li>
+</ul>
+</li>
+<li>&#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;&#x3092;&#x30D1;&#x30A4;&#x30D7;&#x3067;&#x53D7;&#x3051;&#x3089;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066;&#x307F;&#x308B;(&#x7B46;&#x8005;&#x306F;&#x3053;&#x308C;&#x3092;<code>escript</code>&#x3067;&#x3084;&#x3063;&#x305F;&#x3053;&#x3068;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#xFF01; &#x3067;&#x304D;&#x308B;&#x304B;&#x306A;&#xFF1F;)</li>
+<li>&#x300C;&#x30E1;&#x30C3;&#x30BB;&#x30FC;&#x30B8;&#x300D;&#x3060;&#x3051;&#x3067;&#x306A;&#x304F;&#x300C;&#x901A;&#x77E5;&#x300D;&#x3082;&#x9001;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066;&#x307F;&#x308B;<ul>
+<li>API&#x30C8;&#x30FC;&#x30AF;&#x30F3;&#x306E;Scopes&#x306B;&quot;Send Notification&quot;&#x3092;&#x8FFD;&#x52A0;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="deps.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 実習: パッケージの導入">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"実習: CLIを作ってみる","level":"1.3.7","depth":2,"previous":{"title":"実習: パッケージの導入","level":"1.3.6","depth":2,"path":"elixir/deps.md","ref":"elixir/deps.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["include-codeblock","livereload"],"pluginsConfig":{"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"elixir/cli.md","mtime":"2018-05-06T19:16:05.326Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-06T16:12:42.972Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
