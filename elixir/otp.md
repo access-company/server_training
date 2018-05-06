@@ -139,3 +139,18 @@ end
       [Elixir School](https://elixirschool.com/ja/lessons/basics/basics/)を更に読み進めてみましょう
     - Erlang関連の入門書([すごE](http://amzn.asia/9Vo8clh)など)もおすすめです。英語で良ければWeb版もあります
     - 慣れてきたら、Antikytheraのソースコードを読んでみるのもいいかも
+
+---
+
+### 発展: OTPと戯れる
+
+- だいぶ進んだ内容に入ってきたので、この部分はおまけとしました。更にOTPの挙動を見てみたい場合は時間のあるときにやってみましょう
+    - もしやってみた場合は、ぜひコードを拝見させてください。わからないことがあったときも遠慮なくどうぞ
+- `Myapp.Supervisor`に子プロセス(Workerプロセス)を生やしてみる
+    - [`GenServer`](https://elixirschool.com/ja/lessons/advanced/otp-concurrency/#genserver)
+      を使えばWorkerプロセスの挙動を定義するmoduleは比較的簡単に作れます
+- 子プロセスを殺してみる
+    - このあたりは`iex -S mix`からいじってみるのが簡単です
+    - プロセスのPIDを特定するには、`Process.whereis/1`でregistered nameから解決するか、
+      `Supervisor.which_children/1`でSupervisorの子プロセスリストから調べる方法があります
+- 逆に、Superviseされていないプロセスを起動してみる
