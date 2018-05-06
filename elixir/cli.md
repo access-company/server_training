@@ -2,7 +2,11 @@
 
 - せっかくなので、実際に何か役に立つものを作ってみましょう
 - ここからはまとまった演習時間になります
-- 1時間30分位を想定。進捗が良ければささっとOTPの話へ
+- 1時間30分位を想定。進捗があまりにも良ければ切り上げてOTPの話へ
+- **作ったmix projectは、GitHubにrepositoryをつくってpushし、以下のissueにリンクを投稿しておいてください**
+    - https://github.com/access-company/server_training/issues/3
+    - 終了後、ざっと確認＆フォローアップします
+    - 上記issueに質問等を投稿してもらっても構いません
 
 ### お題: HipChatに投稿するCLI
 
