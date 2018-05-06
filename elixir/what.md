@@ -51,6 +51,6 @@
     - `mix` - ビルドツール兼タスクランナー
     - `iex` - REPL
     - `ex_unit` - テストライブラリ
-- hex.pm - パッケージ管理
+- [hex.pm](https://hex.pm) - パッケージ管理
 - `ex_doc` - ドキュメント生成ツール
-    - hexdocs.pm - オンラインドキュメント
+    - [hexdocs.pm](https://hexdocs.pm) - オンラインドキュメント

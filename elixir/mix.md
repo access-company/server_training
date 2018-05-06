@@ -44,7 +44,6 @@ $ cd ~/myapp
     - Elixirのmodule名はこのように`.`区切りで名前空間を構成できます
 - `Myapp.Mixfile.project/0`という[関数](https://elixirschool.com/ja/lessons/basics/functions/#%E5%90%8D%E5%89%8D%E4%BB%98%E3%81%8D%E9%96%A2%E6%95%B0)が、
   主たる設定情報を宣言しています
-    - `/0`というのはErlang/Elixirの関数を指し示すときに使う表記法です。`/`のあとに引数の数を付けます
     - `def`で定義されているのは **公開; public/exposed** 関数で、別のmoduleから呼び出して使えます
     - `defp`で定義されているのは **非公開; private** 関数で、同一module内部からしか使えません
 - `project/0`関数は[**リスト; list**](https://elixirschool.com/ja/lessons/basics/collections/#%E3%83%AA%E3%82%B9%E3%83%88)を返しますが、
@@ -190,3 +189,15 @@ Randomized with seed 762492
     - [四則演算など](https://elixirschool.com/ja/lessons/basics/basics/#%E5%9F%BA%E6%9C%AC%E7%9A%84%E3%81%AA%E6%BC%94%E7%AE%97)、単純なコードでOKです
 2. 何か間違ったコードを書いてみてください。 **コンパイラがどのようなエラーを表示してくるか** 見ておきましょう
     - 俗にコンパイラに**怒られる**といいます
+3. REPL(`iex`)の使い方も練習しておきましょう。ターミナルから以下のようにします
+
+  ```
+  $ iex
+  Erlang/OTP 20 [erts-9.2] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threads:10] [hipe] [kernel-poll:false]
+
+  Interactive Elixir (1.5.3) - press Ctrl+C to exit (type h() ENTER for help)
+  iex(1)>
+  ```
+
+    - ソースコードなしでもElixirコードを試せます
+    - Mix project内部では、`iex -S mix`とターミナルから入力すると、そのプロジェクトのmoduleもREPLから利用できます
