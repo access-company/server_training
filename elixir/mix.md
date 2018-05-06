@@ -125,6 +125,7 @@ Randomized with seed 285458
       iex> Myapp.hello
       :world
       ```
+- とりあえずこの時点で`git commit`しておきましょう
 
 ### 失敗させてみよう
 

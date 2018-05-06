@@ -17,3 +17,4 @@
     - [なぜElixirか](elixir/why.md)
     - [基礎: 文法等](elixir/syntax.md)
     - [実習: Mix project, 初めてのテスト](elixir/mix.md)
+    - [実習: パッケージの導入](elixir/deps.md)
