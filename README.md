@@ -1,7 +1,7 @@
 # Server Development Tutorial
 
 - [Web Server Basics](basics/basics.md)
-- Elixir Basics
+- [Elixir Basics](elixir/elixir.md)
 
 ## 静的ページ生成・更新
 
