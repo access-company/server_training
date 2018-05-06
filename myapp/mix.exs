@@ -15,6 +15,7 @@ defmodule Myapp.Mixfile do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
+      mod: {Myapp, []},
       extra_applications: [:logger]
     ]
   end

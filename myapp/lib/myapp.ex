@@ -3,6 +3,12 @@ defmodule Myapp do
   Documentation for Myapp.
   """
 
+  use Application
+
+  def start(_type, _args) do
+    Myapp.Supervisor.start_link()
+  end
+
   alias Hipchat.ApiClient
   alias Hipchat.Httpc.Response
   alias Hipchat.V2.Rooms
