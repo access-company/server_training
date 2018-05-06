@@ -16,13 +16,15 @@ index 881a5a9..d5b8dd5 100644
    defp deps do
      [
 -      # {:dep_from_hexpm, "~> 0.3.0"},
-+      {:mix_test_watch, "0.6.0"},
++      {:mix_test_watch, "0.6.0", [only: :dev, runtime: false]},
        # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
      ]
    end
 ```
 
 - 保存して、ターミナルから以下のコマンドを実行します
+    - `[only: :dev, runtime: false]`というおまじないは、コンパイル次環境変数によって導入したパッケージの挙動を制御するものです
+    - もし興味が湧いたら、[こちらから](https://hexdocs.pm/mix/Mix.Tasks.Deps.html)
 
 ```
 $ mix deps.get
