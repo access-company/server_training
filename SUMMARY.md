@@ -19,3 +19,4 @@
     - [実習: Mix project, 初めてのテスト](elixir/mix.md)
     - [実習: パッケージの導入](elixir/deps.md)
     - [実習: CLIを作ってみる](elixir/cli.md)
+    - [実習: OTPに触れる](elixir/otp.md)
