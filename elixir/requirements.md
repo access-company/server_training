@@ -11,12 +11,22 @@
 ```
 $ git clone https://github.com/asdf-vm/asdf.git ~/.asdf
 $ source ~/.asdf/asdf.sh
+$ brew coreutils automake autoconf openssl libyaml readline libxslt libtool unixodbc wxmac
 $ asdf plugin-add erlang
 $ asdf plugin-add elixir
 $ asdf install erlang x.y.z && asdf global erlang x.y.z
 (ここ、それなりに時間がかかるはず)
 $ asdf install elixir i.j.k && asdf global elixir i.j.k
 ```
+
+- openssl等は必須となります。忘れがちなので注意！
+    - opensslなしでErlangをインストールしてしまい、あとから`ssl`関連のエラーが発生した場合はErlangを再インストールして下さい
+
+      ```
+      $ brew coreutils automake autoconf openssl libyaml readline libxslt libtool unixodbc wxmac
+      $ asdf uninstall erlang x.y.z
+      $ asdf install erlang x.y.z
+      ```
 
 ## ターミナル、エディタ
 
