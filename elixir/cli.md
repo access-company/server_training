@@ -45,53 +45,53 @@
 - まずは先程用意したmix projectを、`escript`としてビルドできるようにします
     - `mix.exs`に追加する設定は以下のような内容。詳しくは[document](https://hexdocs.pm/mix/master/Mix.Tasks.Escript.Build.html)を読んでみましょう
 
-    ```diff
-    diff --git b/myapp/mix.exs a/myapp/mix.exs
-    index d5b8dd5..589379e 100644
-    --- b/myapp/mix.exs
-    +++ a/myapp/mix.exs
-    @@ -7,13 +7,15 @@ defmodule Myapp.Mixfile do
-           version: "0.1.0",
-           elixir: "~> 1.5",
-           start_permanent: Mix.env == :prod,
-    -      deps: deps()
-    +      deps: deps(),
-    +      escript: [main_module: Myapp],
-         ]
-       end
-    @@ -21,7 +23,9 @@ defmodule Myapp.Mixfile do
-       # Run "mix help deps" to learn about dependencies.
-       defp deps do
-         [
-    -      {:mix_test_watch, "0.6.0"},
-    +      {:mix_test_watch, "0.6.0", [only: :dev, runtime: false]},
-    +      {:hipchat_elixir, "0.2.3"},
-    +      {:poison, "2.2.0"},
-           # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
-         ]
-       end
-    ```
+```diff
+diff --git b/myapp/mix.exs a/myapp/mix.exs
+index d5b8dd5..589379e 100644
+--- b/myapp/mix.exs
++++ a/myapp/mix.exs
+@@ -7,13 +7,15 @@ defmodule Myapp.Mixfile do
+       version: "0.1.0",
+       elixir: "~> 1.5",
+       start_permanent: Mix.env == :prod,
+-      deps: deps()
++      deps: deps(),
++      escript: [main_module: Myapp],
+     ]
+   end
+@@ -21,7 +23,9 @@ defmodule Myapp.Mixfile do
+   # Run "mix help deps" to learn about dependencies.
+   defp deps do
+     [
+-      {:mix_test_watch, "0.6.0"},
++      {:mix_test_watch, "0.6.0", [only: :dev, runtime: false]},
++      {:hipchat_elixir, "0.2.3"},
++      {:poison, "2.2.0"},
+       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
+     ]
+   end
+```
 
 - `:main_module`に指定したmoduleは、`main/1`という関数を導入する必要があります
     - 最初は、単に"Hello world"などの文字列を表示して終了するだけ、といった内容から始めて、適宜`git commit`しながら進めていきましょう
     - 引数は`main/1`の引数には、「コマンドライン引数がリストとして」入ってきます
 
-    ```diff
-    diff --git b/myapp/lib/myapp.ex a/myapp/lib/myapp.ex
-    index 6ea9d42..e6d7e1d 100644
-    --- b/myapp/lib/myapp.ex
-    +++ a/myapp/lib/myapp.ex
-    @@ -3,6 +3,27 @@ defmodule Myapp do
-       Documentation for Myapp.
-       """
-    +
-    +  def main(_) do
-    +    IO.puts("Hello world")
-    +  end
-    +
-       @doc """
-       Hello world.
-    ```
+```diff
+diff --git b/myapp/lib/myapp.ex a/myapp/lib/myapp.ex
+index 6ea9d42..e6d7e1d 100644
+--- b/myapp/lib/myapp.ex
++++ a/myapp/lib/myapp.ex
+@@ -3,6 +3,27 @@ defmodule Myapp do
+   Documentation for Myapp.
+   """
++
++  def main(_) do
++    IO.puts("Hello world")
++  end
++
+   @doc """
+   Hello world.
+```
 
 - 必要な設定と関数のベースが用意できたら、`mix escript.build`で実行ファイルを生成できます
 
