@@ -20,6 +20,7 @@
 - HipChatのAPIは、[RESTful API](../basics/api_design.md)です。HTTP 1.1でリクエストを送れなければなりません
     - といっても、HTTPのクライアントサイドスタックをまるっと実装するのは骨が折れますね
     - ライブラリを使いましょう。手前味噌ですが今回は[ymtszw/hipchat_elixir](https://github.com/ymtszw/hipchat_elixir)を使います
+        - 一部APIがJSONしか受け付けないので、[devinus/poison](https://github.com/devinus/poison)も導入しておく
 - APIは、どんなHTTPリクエストでも受け付けてくれるわけではありません。登録済みのユーザであることを証明する認証情報が必要です
     - [HipChatのAPI Accessページ](https://access-jp.hipchat.com/account/api)を開きます
         - ログインorパスワード再入力が求められたら、入力してください
@@ -42,10 +43,69 @@
 - ElixirでCLIを作る場合は、[`escript`](https://hexdocs.pm/mix/master/Mix.Tasks.Escript.Build.html)という仕組みを使うことができます
     - Webアプリケーション開発ではそれほど登場しませんが
 - まずは先程用意したmix projectを、`escript`としてビルドできるようにします
-    - 必要に応じて、moduleや関数を新たに作ったり、`mix.exs`に設定を追加したりします
-    - `main/1`という関数を持ったmoduleが必要になるでしょう
-- 最初は、単に"Hello world"などの文字列を表示して終了するだけ、といった内容から始めて、適宜`git commit`していきましょう
-- ベースが用意できたら、`main/1`の中身を徐々に実装していきます
+    - `mix.exs`に追加する設定は以下のような内容。詳しくは[document](https://hexdocs.pm/mix/master/Mix.Tasks.Escript.Build.html)を読んでみましょう
+
+    ```diff
+    diff --git b/myapp/mix.exs a/myapp/mix.exs
+    index d5b8dd5..589379e 100644
+    --- b/myapp/mix.exs
+    +++ a/myapp/mix.exs
+    @@ -7,13 +7,15 @@ defmodule Myapp.Mixfile do
+           version: "0.1.0",
+           elixir: "~> 1.5",
+           start_permanent: Mix.env == :prod,
+    -      deps: deps()
+    +      deps: deps(),
+    +      escript: [main_module: Myapp],
+         ]
+       end
+    @@ -21,7 +23,9 @@ defmodule Myapp.Mixfile do
+       # Run "mix help deps" to learn about dependencies.
+       defp deps do
+         [
+    -      {:mix_test_watch, "0.6.0"},
+    +      {:mix_test_watch, "0.6.0", [only: :dev, runtime: false]},
+    +      {:hipchat_elixir, "0.2.3"},
+    +      {:poison, "2.2.0"},
+           # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
+         ]
+       end
+    ```
+
+- `:main_module`に指定したmoduleは、`main/1`という関数を導入する必要があります
+    - 最初は、単に"Hello world"などの文字列を表示して終了するだけ、といった内容から始めて、適宜`git commit`しながら進めていきましょう
+    - 引数は`main/1`の引数には、「コマンドライン引数がリストとして」入ってきます
+
+    ```diff
+    diff --git b/myapp/lib/myapp.ex a/myapp/lib/myapp.ex
+    index 6ea9d42..e6d7e1d 100644
+    --- b/myapp/lib/myapp.ex
+    +++ a/myapp/lib/myapp.ex
+    @@ -3,6 +3,27 @@ defmodule Myapp do
+       Documentation for Myapp.
+       """
+    +
+    +  def main(_) do
+    +    IO.puts("Hello world")
+    +  end
+    +
+       @doc """
+       Hello world.
+    ```
+
+- 必要な設定と関数のベースが用意できたら、`mix escript.build`で実行ファイルを生成できます
+
+    ```
+    $ mix escript.build
+    Compiling 1 file (.ex)
+    Generated myapp app
+    Generated escript myapp with MIX_ENV=dev
+
+    $ ./myapp
+    Hello world
+    ```
+
+- ここまで来たら、`main/1`の中身を徐々に実装していきます
     - 上で作ったトークンファイルからAPIトークンを読み込む
     - コマンドラインからの引数(メッセージ内容)を受け取る
     - (対象とするHipChat roomのIDを調べておく。これも引数として受け取っても良い)
@@ -57,6 +117,8 @@
 - この内容であれば、それほどのコード量にはならないはずです
 - 模範解答というほどでもないですが、動作するコードを別ブランチにアップしておきます
 - いい時間がたったら、そちらのブランチのコードと見比べつつ、振り返ります
+    - https://github.com/access-company/server_training/blob/handson_example/myapp/mix.exs
+    - (次のページの内容も既に含んでいることに注意して下さい)
 
 ---
 
