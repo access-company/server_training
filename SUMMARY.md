@@ -17,6 +17,7 @@
   - [なぜ Elixir か](elixir/why.md)
   - [文法基礎](elixir/syntax.md)
   - [パターンマッチ](elixir/pattern_match.md)
+  - [文字列と Map](elixir/string_and_map.md)
   - [実習: Mix project, 初めてのテスト](elixir/mix.md)
   - [実習: パッケージの導入](elixir/deps.md)
   - [実習: CLI を作ってみる](elixir/cli.md)
