@@ -8,7 +8,7 @@ defmodule Myapp do
 
   ## Examples
 
-      iex> Myapp.hello
+      iex> Myapp.hello()
       :world
 
   """
