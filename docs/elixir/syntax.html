@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>基礎: 文法等 · GitBook</title>
+        <title>文法基礎 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="mix.html" />
+    <link rel="next" href="pattern_match.html" />
     
     
     <link rel="prev" href="why.html" />
@@ -147,7 +147,7 @@
                 <a href="../basics/recap.html">
             
                     
-                    復習: インターネットとWeb
+                    復習: インターネットと Web
             
                 </a>
             
@@ -186,7 +186,7 @@
                 <a href="../basics/api_design.html">
             
                     
-                    API設計, 「状態」
+                    API 設計, 「状態」
             
                 </a>
             
@@ -257,7 +257,7 @@
                 <a href="requirements.html">
             
                     
-                    前提
+                    環境構築
             
                 </a>
             
@@ -283,7 +283,7 @@
                 <a href="why.html">
             
                     
-                    なぜElixirか
+                    なぜ Elixir か
             
                 </a>
             
@@ -296,7 +296,7 @@
                 <a href="syntax.html">
             
                     
-                    基礎: 文法等
+                    文法基礎
             
                 </a>
             
@@ -304,12 +304,64 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.5" data-path="mix.html">
+        <li class="chapter " data-level="1.3.5" data-path="pattern_match.html">
+            
+                <a href="pattern_match.html">
+            
+                    
+                    パターンマッチ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="string_and_map.html">
+            
+                <a href="string_and_map.html">
+            
+                    
+                    文字列と Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="module_and_function.html">
+            
+                <a href="module_and_function.html">
+            
+                    
+                    モジュールと関数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="enum_and_pipe.html">
+            
+                <a href="enum_and_pipe.html">
+            
+                    
+                    Enum と|>
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="mix.html">
             
                 <a href="mix.html">
             
                     
-                    実習: Mix project, 初めてのテスト
+                    Mix project, 初めてのテスト
             
                 </a>
             
@@ -317,12 +369,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.6" data-path="deps.html">
+        <li class="chapter " data-level="1.3.10" data-path="deps.html">
             
                 <a href="deps.html">
             
                     
-                    実習: パッケージの導入
+                    発展: パッケージの導入
             
                 </a>
             
@@ -330,25 +382,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.7" data-path="cli.html">
-            
-                <a href="cli.html">
-            
-                    
-                    実習: CLIを作ってみる
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.8" data-path="otp.html">
+        <li class="chapter " data-level="1.3.11" data-path="otp.html">
             
                 <a href="otp.html">
             
                     
-                    実習: OTPに触れる
+                    発展: OTP に触れる
             
                 </a>
             
@@ -391,7 +430,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >基礎: 文法等</a>
+        <a href=".." >文法基礎</a>
     </h1>
 </div>
 
@@ -406,119 +445,167 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x57FA;&#x790E;-&#x6587;&#x6CD5;&#x7B49;">&#x57FA;&#x790E;: &#x6587;&#x6CD5;&#x7B49;</h2>
+                                <h2 id="&#x6587;&#x6CD5;&#x57FA;&#x790E;">&#x6587;&#x6CD5;&#x57FA;&#x790E;</h2>
 <ul>
-<li>&#x6587;&#x6CD5;&#x306E;&#x305F;&#x3050;&#x3044;&#x306F;&#x4EE5;&#x4E0B;&#x3092;&#x6559;&#x79D1;&#x66F8;&#x3068;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;<ul>
-<li><a href="https://elixir-lang.org/getting-started/introduction.html" target="_blank">Official Introduction</a></li>
+<li>&#x3053;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x306E;&#x76EE;&#x6A19;<ul>
+<li>&#x6587;&#x6CD5;&#x3092;&#x5B66;&#x3076;&#x305F;&#x3081;&#x306E;&#x5B66;&#x7FD2;&#x8CC7;&#x6599;&#x3092;&#x628A;&#x63E1;&#x3059;&#x308B;</li>
+<li><code>iex</code>&#x3067; Elixir &#x306E;&#x6587;&#x6CD5;&#x3084;&#x6A5F;&#x80FD;&#x3092;&#x8A66;&#x305B;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;</li>
+<li>&#x57FA;&#x672C;&#x7684;&#x306A;&#x5024;&#x306E;&#x7A2E;&#x985E;&#x3068;&#x305D;&#x306E;&#x8868;&#x73FE;&#x3092;&#x77E5;&#x308A;&#x3001;&#x8AAD;&#x307F;&#x66F8;&#x304D;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;</li>
+</ul>
+</li>
+<li>&#x6240;&#x8981;&#x6642;&#x9593;: 15 &#x5206;&#x7A0B;&#x5EA6;(<code>iex</code>&#x3092;&#x81EA;&#x7531;&#x306B;&#x89E6;&#x3063;&#x3066;&#x3082;&#x3089;&#x3046;&#x6642;&#x9593;&#x3092;&#x542B;&#x3080;)</li>
+</ul>
+<hr>
+<h3 id="&#x5B66;&#x7FD2;&#x8CC7;&#x6599;">&#x5B66;&#x7FD2;&#x8CC7;&#x6599;</h3>
+<ul>
+<li>&#x6587;&#x6CD5;&#x306F;&#x4EE5;&#x4E0B;&#x3092;&#x6559;&#x79D1;&#x66F8;&#x3068;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;<ul>
+<li><a href="https://elixir-lang.org/getting-started/introduction.html" target="_blank">Official Introduction</a><ul>
+<li>&#x3053;&#x306E;&#x30AC;&#x30A4;&#x30C9;&#x3092;&#x629C;&#x7C8B;&#x3057;&#x3066;&#x8AAC;&#x660E;&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;</li>
+</ul>
+</li>
 <li><a href="https://elixirschool.com/ja/lessons/basics/basics/" target="_blank">Elixir School</a> (&#x65E5;&#x672C;&#x8A9E;&#x3042;&#x308A;)</li>
-<li>Elixir&#x6A19;&#x6E96;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306E;<a href="https://hexdocs.pm/elixir/api-reference.html" target="_blank">API References</a></li>
+<li>Elixir &#x6A19;&#x6E96;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306E;<a href="https://hexdocs.pm/elixir/api-reference.html" target="_blank">API References</a></li>
+<li>&#x66F8;&#x7C4D;&#x3067;&#x306F;&#x3001;<a href="https://www.amazon.co.jp/dp/B01KFCXP04" target="_blank">&#x300E;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30DF;&#x30F3;&#x30B0; Elixir&#x300F;</a>&#x304C;&#x6A19;&#x6E96;&#x89E3;&#x8AAC;&#x66F8;&#x3067;&#x3059;<ul>
+<li> &#x30EA;&#x30F3;&#x30AF;&#x306F;&#x65E5;&#x672C;&#x8A9E;&#x7FFB;&#x8A33;&#x7248;&#x3067;&#x3001;Elixir 1.4 &#x304F;&#x3089;&#x3044;&#x306B;&#x6E96;&#x62E0;&#x3057;&#x3066;&#x3044;&#x305F;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;&#x3002;&#x5C11;&#x3057;&#x53E4;&#x3044;&#x3067;&#x3059;&#x304C;&#x30E1;&#x30B8;&#x30E3;&#x30FC;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x306F;&#x540C;&#x3058;&#x306A;&#x306E;&#x3067;&#x6587;&#x6CD5;&#x306F;&#x307B;&#x307C;&#x5171;&#x901A;&#x3067;&#x3059;</li>
+<li>&#x793E;&#x5185;&#x306B;&#x3082;&#x4F55;&#x518A;&#x304B;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;&#x5FC5;&#x8981;&#x3060;&#x3068;&#x601D;&#x3063;&#x305F;&#x3089;&#x914D;&#x5C5E;&#x6642;&#x306B;&#x8AB2;&#x9577;&#x306B;&#x8A00;&#x3044;&#x307E;&#x3057;&#x3087;&#x3046;(&#x56F3;&#x66F8;&#x8CBB;&#x3068;&#x3044;&#x3046;&#x4E88;&#x7B97;&#x304C;&#x3061;&#x3083;&#x3093;&#x3068;&#x3042;&#x308B;&#x306E;&#x3067;&#x3001;&#x305F;&#x3044;&#x3066;&#x3044;&#x3059;&#x3050;&#x8CB7;&#x3048;&#x307E;&#x3059;)</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>&#x672C;&#x6587;&#x66F8;&#x3067;&#x306F;&#x7279;&#x306B;&#x6291;&#x3048;&#x3066;&#x307B;&#x3057;&#x3044;&#x90E8;&#x5206;&#x3060;&#x3051;&#x660E;&#x793A;&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;</li>
-<li>&#x30B5;&#x30FC;&#x30D0;&#x5B9F;&#x7FD2;&#x3067;&#x306F;&#x307E;&#x3068;&#x307E;&#x3063;&#x305F;&#x6587;&#x91CF;&#x306E;Elixir&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x66F8;&#x304F;&#x6642;&#x9593;&#x304C;&#x78BA;&#x4FDD;&#x3057;&#x3066;&#x3042;&#x308B;&#x306E;&#x3067;&#x3001;
-<strong>&#x4ECA;&#x306E;&#x6BB5;&#x968E;&#x3067;&#x6587;&#x6CD5;&#x3092;&#x3059;&#x3079;&#x3066;&#x628A;&#x63E1;&#x3067;&#x304D;&#x306A;&#x304F;&#x3066;&#x3082;OK</strong></li>
+<li>&#x30B5;&#x30FC;&#x30D0;&#x5B9F;&#x7FD2;&#x3067;&#x306F;&#x307E;&#x3068;&#x307E;&#x3063;&#x305F;&#x6587;&#x91CF;&#x306E; Elixir &#x30B3;&#x30FC;&#x30C9;&#x3092;&#x66F8;&#x304F;&#x6642;&#x9593;&#x304C;&#x78BA;&#x4FDD;&#x3057;&#x3066;&#x3042;&#x308B;&#x306E;&#x3067;&#x3001;
+<strong>&#x4ECA;&#x306E;&#x6BB5;&#x968E;&#x3067;&#x6587;&#x6CD5;&#x3092;&#x3059;&#x3079;&#x3066;&#x628A;&#x63E1;&#x3067;&#x304D;&#x306A;&#x304F;&#x3066;&#x3082; OK</strong></li>
 <li>&#x3080;&#x3057;&#x308D;&#x30C4;&#x30FC;&#x30EB;&#x30C1;&#x30A7;&#x30FC;&#x30F3;&#x306E;&#x5229;&#x7528;&#x65B9;&#x6CD5;&#x3001;&#x5168;&#x4F53;&#x7684;&#x306A;&#x30EF;&#x30FC;&#x30AF;&#x30D5;&#x30ED;&#x30FC;&#x3092;&#x6291;&#x3048;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;</li>
 </ul>
-<h3 id="&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x30DE;&#x30C3;&#x30C1;">&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x30DE;&#x30C3;&#x30C1;</h3>
-<ul>
-<li>&#x4ED6;&#x306E;&#x8A00;&#x8A9E;&#x306B;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x304C;&#x3001;Elixir&#x306F;<a href="https://elixirschool.com/ja/lessons/basics/pattern-matching/" target="_blank"><strong>&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x30DE;&#x30C3;&#x30C1;</strong></a>&#x3068;&#x547C;&#x3070;&#x308C;&#x308B;&#x69CB;&#x6587;&#x304C;&#x5F37;&#x529B;&#x3067;&#x3059;</li>
-<li>&#x4E00;&#x65B9;&#x3067;&#x3001;&#x4ED6;&#x8A00;&#x8A9E;&#x304B;&#x3089;&#x79FB;&#x3063;&#x3066;&#x304F;&#x308B;&#x3068;&#x3068;&#x306B;&#x304B;&#x304F;&#x6DF7;&#x4E71;&#x3092;&#x304D;&#x305F;&#x3057;&#x3084;&#x3059;&#x3044;&#x90E8;&#x5206;&#x3067;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x306E;&#x3067;&#x3001;&#x6700;&#x521D;&#x306B;&#x3053;&#x3053;&#x3060;&#x3051;&#x89E6;&#x308C;&#x3066;&#x304A;&#x304D;&#x307E;&#x3059;</li>
-</ul>
 <hr>
+<h3 id="repl-iex">REPL: <code>iex</code></h3>
 <ul>
-<li>&#x4F8B;&#x3048;&#x3070;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;<a href="https://elixirschool.com/ja/lessons/basics/collections/#%E3%83%AA%E3%82%B9%E3%83%88" target="_blank"><strong>&#x30EA;&#x30B9;&#x30C8;; list</strong></a>&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;</li>
+<li>&#x307E;&#x305A; Elixir &#x306E; REPL &#x3067;&#x3042;&#x308B;<code>iex</code>&#x3092;&#x8D77;&#x52D5;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x30BF;&#x30FC;&#x30DF;&#x30CA;&#x30EB;&#x3092;&#x958B;&#x3044;&#x3066;&#x3001;<code>iex</code>&#x3068;&#x5165;&#x529B;&#x3057;&#x307E;&#x3059;</li>
 </ul>
-<pre><code class="lang-elixir">iex&gt; l = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
-[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
-</code></pre>
-<ul>
-<li>(<code>iex</code>&#x306F;Elixir&#x306E;REPL&#x3067;&#x3059;&#x3002;&#x30BF;&#x30FC;&#x30DF;&#x30CA;&#x30EB;&#x304B;&#x3089;<code>iex</code>&#x3068;&#x5B9F;&#x884C;&#x3059;&#x308C;&#x3070;&#x8D77;&#x52D5;&#x3067;&#x304D;&#x3001;Elixir&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x5B9F;&#x884C;&#x3067;&#x304D;&#x307E;&#x3059;)</li>
-<li><code>=</code>&#x304C;&#x3067;&#x3066;&#x304D;&#x307E;&#x3057;&#x305F;&#x304C;&#x3001;&#x305D;&#x3082;&#x305D;&#x3082;Elixir&#x3067;&#x306F;<code>=</code>&#x306F;<strong>&#x30DE;&#x30C3;&#x30C1;&#x6F14;&#x7B97;&#x5B50;</strong>&#x3067;&#x3059;&#x3002;&#x300C;&#x4EE3;&#x5165;&#x300D;&#x6F14;&#x7B97;&#x5B50;&#x3067;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;</li>
-<li>&#x3053;&#x3053;&#x3067;&#x306F;&#x5DE6;&#x8FBA;&#x306E;<code>l</code>&#x3068;&#x3044;&#x3046;&#x5909;&#x6570;&#x306B;&#x306F;&#x3044;&#x304B;&#x306A;&#x308B;&#x6761;&#x4EF6;&#x3082;&#x5B58;&#x5728;&#x3057;&#x306A;&#x3044;(&#x3044;&#x308F;&#x3070;&#x81EA;&#x7531;&#x5909;&#x6570;&#x3067;&#x3042;&#x308B;)&#x306E;&#x3067;&#x3001;
-&#x53F3;&#x8FBA;&#x306E;&#x30EA;&#x30B9;&#x30C8;&#x3092;&#x307E;&#x308B;&#x3054;&#x3068;&#x300C;&#x53D7;&#x3051;&#x53D6;&#x308B;&#x300D;&#x3088;&#x3046;&#x306A;&#x304B;&#x305F;&#x3061;&#x3067;&#x300C;&#x30DE;&#x30C3;&#x30C1;&#x300D;&#x3057;&#x307E;&#x3059;</li>
-<li>&#x3053;&#x306E;&#x6F14;&#x7B97;&#x306E;&#x7D50;&#x679C;&#x3068;&#x3057;&#x3066;&#x3001;<code>l</code>&#x306B;&#x306F;&#x53F3;&#x8FBA;&#x306E;&#x30EA;&#x30B9;&#x30C8;&#x304C;&#x4EE3;&#x5165;&#x3055;&#x308C;&#x305F;&#x3088;&#x3046;&#x306A;&#x683C;&#x597D;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;<ul>
-<li>&#x3064;&#x307E;&#x308A;<code>l</code>&#x306F;&#x53F3;&#x8FBA;&#x306E;&#x30EA;&#x30B9;&#x30C8;&#x3067;<strong>&#x675F;&#x7E1B;; bind</strong>&#x3055;&#x308C;&#x307E;&#x3057;&#x305F;&#x3002;&#x610F;&#x5473;(&#x5024;)&#x3092;&#x6301;&#x3061;&#x3001;&#x300C;&#x81EA;&#x7531;&#x300D;&#x3067;&#x306F;&#x306A;&#x304F;&#x306A;&#x3063;&#x305F;&#x306E;&#x3067;&#x3059;</li>
-</ul>
-</li>
-<li>&#x305D;&#x306E;&#x8A3C;&#x62E0;&#x306B;&#x3001;&#x3053;&#x3093;&#x306A;&#x3053;&#x3068;&#x3092;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;</li>
-</ul>
-<pre><code class="lang-elixir">iex&gt; [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>] = m
-** (CompileError) <span class="hljs-symbol">iex:</span><span class="hljs-number">1</span><span class="hljs-symbol">:</span> undefined function m/<span class="hljs-number">0</span>
-</code></pre>
-<ul>
-<li><code>m</code>&#x306F;&#x65B0;&#x3057;&#x3044;&#x5909;&#x6570;&#x3067;&#x3059;&#x304C;&#x3001;&#x3069;&#x3053;&#x306B;&#x3082;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x305B;&#x3093;&#x3002;Elixir&#x306F;&#x3053;&#x308C;&#x3092;<code>m/0</code>&#x3068;&#x3044;&#x3046;&#x95A2;&#x6570;&#x3068;&#x89E3;&#x91C8;&#x3057;&#x3088;&#x3046;&#x3068;&#x3057;&#x307E;&#x3057;&#x305F;&#x304C;&#x3001;&#x5F53;&#x7136;&#x898B;&#x3064;&#x304B;&#x3089;&#x306A;&#x3044;&#x306E;&#x3067;&#x30A8;&#x30E9;&#x30FC;&#x3067;&#x3059;<ul>
-<li><code>/0</code>&#x3068;&#x3044;&#x3046;&#x306E;&#x306F;Erlang/Elixir&#x306E;&#x95A2;&#x6570;&#x3092;&#x6307;&#x3057;&#x793A;&#x3059;&#x3068;&#x304D;&#x306B;&#x4F7F;&#x3046;&#x8868;&#x8A18;&#x6CD5;&#x3067;&#x3059;&#x3002;<code>/</code>&#x306E;&#x3042;&#x3068;&#x306B;&#x5F15;&#x6570;&#x306E;&#x6570;&#x3092;&#x4ED8;&#x3051;&#x307E;&#x3059;</li>
-</ul>
-</li>
-<li>&#x4E00;&#x65B9;&#x3001;</li>
-</ul>
-<pre><code class="lang-elixir">iex&gt; [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>] = l
-[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
-</code></pre>
-<ul>
-<li><strong><code>l</code>&#x3067;&#x3042;&#x308C;&#x3070;&#x3053;&#x306E;&#x5F0F;&#x306F;&#x6210;&#x308A;&#x7ACB;&#x3061;&#x307E;&#x3059;&#xFF01;</strong></li>
-<li><code>l</code>&#x306F;&#x3059;&#x3067;&#x306B;&#x30EA;&#x30B9;&#x30C8;&#x3067;&#x675F;&#x7E1B;&#x3055;&#x308C;&#x3066;&#x304A;&#x308A;&#x3001;&#x304B;&#x3064;&#x3001;&#x3053;&#x3053;&#x3067;&#x306E;&#x5DE6;&#x8FBA;&#x3068;&#x5185;&#x5BB9;&#x304C;&#x5168;&#x304F;&#x540C;&#x3058;&#x3060;&#x304B;&#x3089;&#x3067;&#x3059;</li>
-<li>&#x3053;&#x308C;&#x3067;&#x3001;Elixir&#x306E;<code>=</code>&#x304C;&#x300C;&#x4EE3;&#x5165;&#x300D;&#x3067;&#x306F;&#x306A;&#x304F;&#x3042;&#x304F;&#x307E;&#x3067;&#x300C;&#x30DE;&#x30C3;&#x30C1;&#x6F14;&#x7B97;&#x5B50;&#x300D;&#x3067;&#x3042;&#x308B;&#x3053;&#x3068;&#x304C;&#x306F;&#x3063;&#x304D;&#x308A;&#x3057;&#x307E;&#x3057;&#x305F;</li>
-</ul>
-<hr>
-<ul>
-<li>&#x30DE;&#x30C3;&#x30C1;&#x6F14;&#x7B97;&#x5B50;&#x306E;&#x5DE6;&#x8FBA;&#x3067;&#x306F;&#x3001;&#x69D8;&#x3005;&#x306A;&#x300C;&#x6761;&#x4EF6;&#x300D;&#x3092;&#x8868;&#x73FE;&#x3067;&#x304D;&#x307E;&#x3059;<ul>
-<li>&#x3059;&#x3067;&#x306B;&#x3001;&#x300C;&#x5168;&#x304F;&#x7121;&#x6761;&#x4EF6;&#x300D;(= &#x65B0;&#x3057;&#x3044;&#x5909;&#x6570;&#x306E;&#x5C0E;&#x5165;)&#x3068;&#x3001;&#x300C;(&#x4F55;&#x3089;&#x304B;&#x306E;&#x30EA;&#x30B9;&#x30C8;&#x306E;&#x3088;&#x3046;&#x306A;&#x3001;)&#x56FA;&#x5B9A;&#x306E;&#x5024;&#x300D;&#x3068;&#x3044;&#x3046;2&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x304C;&#x767B;&#x5834;&#x3057;&#x307E;&#x3057;&#x305F;</li>
-</ul>
-</li>
-<li>&#x305F;&#x3068;&#x3048;&#x3070;&#x3001;&#x300C;&#x7A7A;&#x3067;&#x306A;&#x3044;&#x30EA;&#x30B9;&#x30C8;&#x300D;&#x306E;&#x3088;&#x3046;&#x306A;&#x6761;&#x4EF6;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;</li>
-</ul>
-<pre><code class="lang-elixir">iex&gt; [head | tail] = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
-[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
-iex&gt; head
-<span class="hljs-number">1</span>
-iex&gt; tail
-[<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]
-</code></pre>
-<ul>
-<li><code>[head | tail]</code>&#x3068;&#x3044;&#x3046;&#x69CB;&#x6587;&#x306F;&#x3001;&#x7A7A;&#x3067;&#x306A;&#x3044;&#x30EA;&#x30B9;&#x30C8;&#x306B;&#x30DE;&#x30C3;&#x30C1;&#x3057;&#x3001;<ul>
-<li><code>head</code>&#x3092;&#x5148;&#x982D;&#x306E;&#x5024;</li>
-<li><code>tail</code>&#x3092;&#x5148;&#x982D;&#x3092;&#x8997;&#x3044;&#x305F;&#x30EA;&#x30B9;&#x30C8;</li>
-</ul>
-</li>
-<li>&#x3067;&#x305D;&#x308C;&#x305E;&#x308C;&#x675F;&#x7E1B;&#x3057;&#x307E;&#x3059;</li>
-<li>&#x7A7A;&#x306E;&#x30EA;&#x30B9;&#x30C8;&#x3092;&#x4E0E;&#x3048;&#x308C;&#x3070;&#x3001;</li>
-</ul>
-<pre><code class="lang-elixir">iex&gt; [head | tail] = []
-** (MatchError) no match of right hand side <span class="hljs-symbol">value:</span> []
-</code></pre>
-<ul>
-<li>&#x30A8;&#x30E9;&#x30FC;&#x3068;&#x306A;&#x308A;&#x307E;&#x3059;</li>
-<li>&#x307B;&#x304B;&#x306B;&#x3082;&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x30DE;&#x30C3;&#x30C1;&#x3067;&#x5229;&#x7528;&#x3067;&#x304D;&#x308B;&#x6761;&#x4EF6;&#x30FB;&#x675F;&#x7E1B;&#x306E;&#x8868;&#x8A18;&#x306F;&#x305F;&#x304F;&#x3055;&#x3093;&#x3042;&#x308A;&#x307E;&#x3059;&#x306E;&#x3067;&#x5F90;&#x3005;&#x306B;&#x6163;&#x308C;&#x3066;&#x3044;&#x3063;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;</li>
-</ul>
-<hr>
-<ul>
-<li>&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x30DE;&#x30C3;&#x30C1;&#x306F;&#x30DE;&#x30C3;&#x30C1;&#x6F14;&#x7B97;&#x5B50;<code>=</code>&#x4EE5;&#x5916;&#x306B;&#x3082;&#x3001;<ul>
-<li><code>case</code>&#x5F0F;</li>
-<li>&#x95A2;&#x6570;&#x306E;&#x5F15;&#x6570;&#x90E8;&#x5206;</li>
-</ul>
-</li>
-<li>&#x3067;&#x884C;&#x3046;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;&#x4F8B;&#x3048;&#x3070;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306A;&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x30DE;&#x30C3;&#x30C1;&#x306F;&#x983B;&#x51FA;&#x3067;&#x3059;</li>
-</ul>
-<pre><code class="lang-elixir"><span class="hljs-keyword">case</span> some_list <span class="hljs-keyword">do</span>
-    []         -&gt; <span class="hljs-string">&quot;empty!&quot;</span>
-    [head | <span class="hljs-number">_</span>] -&gt; <span class="hljs-string">&quot;first value: <span class="hljs-subst">#{head}</span>&quot;</span>
-<span class="hljs-keyword">end</span>
+<pre><code>$ iex
+Erlang/OTP 20 [erts-9.3.3.3] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:10] [hipe] [kernel-poll:false]
 
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">func</span></span>([]) <span class="hljs-keyword">do</span>
-    <span class="hljs-string">&quot;empty!&quot;</span>
-<span class="hljs-keyword">end</span>
-<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">func</span></span>([head | <span class="hljs-number">_</span>]) <span class="hljs-keyword">do</span>
-    <span class="hljs-string">&quot;first value: <span class="hljs-subst">#{head}</span>&quot;</span>
-<span class="hljs-keyword">end</span>
-</code></pre>
-<ul>
-<li>(&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x30DE;&#x30C3;&#x30C1;&#x3067;&#x3001;&#x30DE;&#x30C3;&#x30C1;&#x3057;&#x305F;&#x5024;&#x3092;&#x5909;&#x6570;&#x306B;&#x675F;&#x7E1B;&#x3057;&#x306A;&#x3044;&#x5834;&#x5408;&#x306F;<code>_</code>&#x3067;&#x59CB;&#x307E;&#x308B;&#x30D7;&#x30EC;&#x30FC;&#x30B9;&#x30DB;&#x30EB;&#x30C0;&#x5909;&#x6570;&#x304C;&#x4F7F;&#x3048;&#x307E;&#x3059;)</li>
-<li>&#x898B;&#x3066;&#x5206;&#x304B;&#x308B;&#x901A;&#x308A;&#x3001;<code>case</code>&#x6587;&#x3067;&#x306E;&#x30D1;&#x30BF;&#x30FC;&#x30F3;&#x30DE;&#x30C3;&#x30C1;&#x306F;<strong>&#x3053;&#x308C;&#x3059;&#x306A;&#x308F;&#x3061;&#x6761;&#x4EF6;&#x5206;&#x5C90;&#x306B;&#x307B;&#x304B;&#x306A;&#x308A;&#x307E;&#x305B;&#x3093;</strong><ul>
-<li>Elixir&#x3067;&#x306F;<strong>&#x771F;&#x507D;&#x5024;; boolean</strong>&#x3092;&#x6761;&#x4EF6;&#x3068;&#x3059;&#x308B;&#x5834;&#x5408;&#x306B;&#x306F;<code>if</code>&#x3092;&#x4F7F;&#x3044;&#x307E;&#x3059;&#x304C;&#x3001;
-&#x305D;&#x308C;&#x4EE5;&#x5916;&#x306E;&#x5024;&#x3092;&#x5BFE;&#x8C61;&#x306B;&#x6761;&#x4EF6;&#x5206;&#x5C90;&#x3059;&#x308B;&#x5834;&#x5408;&#x3001;<code>case</code>&#x304C;&#x6700;&#x3082;&#x983B;&#x7E41;&#x306B;&#x767B;&#x5834;&#x3057;&#x307E;&#x3059;</li>
+Interactive Elixir (1.7.4) - press Ctrl+C to exit (type h() ENTER for help)
+iex(1)&gt;
+</code></pre><ul>
+<li><strong>[&#x78BA;&#x8A8D;]</strong> &#x3053;&#x308C;&#x304C;&#x51FA;&#x6765;&#x306A;&#x3044;&#x5834;&#x5408;&#x3001;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x304C;&#x3046;&#x307E;&#x304F;&#x3044;&#x3063;&#x3066;&#x3044;&#x307E;&#x305B;&#x3093;&#x3002;&#x6642;&#x9593;&#x3092;&#x3068;&#x308B;&#x306E;&#x3067;&#x78BA;&#x8A8D;&#x3057;&#x307E;&#x3059;</li>
+<li>REPL &#x306F;&quot;Read-Eval-Print-Loop&quot;&#x306E;&#x7565;&#x3067;&#x3001;&#x5165;&#x529B;&#x3055;&#x308C;&#x305F;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30E9;&#x3068;&#x51E6;&#x7406;&#x7CFB;(Elixir &#x306E;&#x5834;&#x5408; Erlang VM)&#x304C;&#x90FD;&#x5EA6;&#x8A55;&#x4FA1;&#x3001;&#x7D50;&#x679C;&#x3092;&#x8FD4;&#x3059;&#x3001;&#x3068;&#x3044;&#x3046;&#x52D5;&#x4F5C;&#x3092;&#x7E70;&#x308A;&#x8FD4;&#x3057;&#x307E;&#x3059;<ul>
+<li>&#x4ED6;&#x306E;&#x8A00;&#x8A9E;&#x306B;&#x3082;&#x3088;&#x304F;&#x3042;&#x308A;&#x307E;&#x3059;</li>
 </ul>
 </li>
+<li>&#x4E00;&#x822C;&#x7684;&#x306B;&#x306F;&#x6587;&#x6CD5;&#x306E;&#x30C6;&#x30B9;&#x30C8;&#x3084;&#x3061;&#x3087;&#x3063;&#x3068;&#x3057;&#x305F;&#x52D5;&#x4F5C;&#x78BA;&#x8A8D;&#x306A;&#x3069;&#x306B;&#x4F7F;&#x3046;&#x3053;&#x3068;&#x304C;&#x591A;&#x3044;&#x3067;&#x3059;<ul>
+<li>&#x4E00;&#x90E8;&#x306E;&#x8A00;&#x8A9E;&#x3067;&#x306F; REPL &#x3067;&#x306E;&#x8A55;&#x4FA1;&#x3092;&#x4E2D;&#x5FC3;&#x306B;&#x958B;&#x767A;&#x3059;&#x308B;&#x3082;&#x306E;&#x3082;&#x3042;&#x3063;&#x305F;&#x308A;&#x3057;&#x307E;&#x3059;</li>
+</ul>
+</li>
+<li>&#x6700;&#x5F8C;&#x306E;&#x65B9;&#x3067;&#x3001;&#x672C;&#x683C;&#x7684;&#x306A;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3092;&#x7ACB;&#x3061;&#x4E0A;&#x3052;&#x308B;&#x65B9;&#x6CD5;&#x3082;&#x89E3;&#x8AAC;&#x3057;&#x307E;&#x3059;&#x304C;&#x3001;&#x307E;&#x305A;&#x306F;<code>iex</code>&#x3067;&#x6587;&#x6CD5;&#x7B49;&#x3092;&#x8A66;&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;</li>
+<li>REPL &#x3092;&#x7D42;&#x4E86;&#x3055;&#x305B;&#x308B;&#x306B;&#x306F;&#x3001;<code>Ctrl + c</code>&#x3092;<strong>2 &#x56DE;</strong>&#x5165;&#x529B;&#x3057;&#x307E;&#x3059;</li>
+</ul>
+<hr>
+<h3 id="&#x57FA;&#x672C;&#x7684;&#x306A;&#x5024;">&#x57FA;&#x672C;&#x7684;&#x306A;&#x5024;</h3>
+<p>&#x8CC7;&#x6599;: <a href="https://elixir-lang.org/getting-started/basic-types.html" target="_blank">Basic types - Elixir</a></p>
+<ul>
+<li>&#x57FA;&#x672C;&#x7684;&#x306A;&#x5024;&#x306E;&#x7A2E;&#x985E;(&#x578B;)&#x306F;&#x4EE5;&#x4E0B;</li>
+</ul>
+<pre><code class="lang-elixir">iex&gt; <span class="hljs-number">1</span>          <span class="hljs-comment"># integer</span>
+iex&gt; <span class="hljs-number">0x1F</span>       <span class="hljs-comment"># integer</span>
+iex&gt; <span class="hljs-number">1.0</span>        <span class="hljs-comment"># float</span>
+iex&gt; <span class="hljs-keyword">true</span>       <span class="hljs-comment"># boolean</span>
+iex&gt; <span class="hljs-symbol">:atom</span>      <span class="hljs-comment"># atom / symbol</span>
+iex&gt; <span class="hljs-string">&quot;elixir&quot;</span>   <span class="hljs-comment"># string</span>
+iex&gt; [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>]  <span class="hljs-comment"># list</span>
+iex&gt; {<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>}  <span class="hljs-comment"># tuple</span>
+</code></pre>
+<ul>
+<li>&#x9069;&#x5F53;&#x306B;<code>iex</code>&#x306B;&#x6253;&#x3061;&#x8FBC;&#x3093;&#x3067;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;</li>
+<li>&#x6587;&#x6CD5;(&#x8A18;&#x53F7;)&#x3092;&#x9593;&#x9055;&#x3048;&#x308B;&#x3068;<code>iex</code>&#x304C;&#x3069;&#x3046;&#x53CD;&#x5FDC;&#x3059;&#x308B;&#x304B;&#x3082;&#x898B;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;</li>
+<li>&#x4ED6;&#x306E;&#x8A00;&#x8A9E;&#x306B;&#x306A;&#x3044;&#x304B;&#x3082;&#x3057;&#x308C;&#x306A;&#x3044;&#x3082;&#x306E;&#x3092;&#x4EE5;&#x4E0B;&#x89E3;&#x8AAC;&#x3057;&#x307E;&#x3059;</li>
+</ul>
+<hr>
+<ul>
+<li><strong>Atom; &#x30A2;&#x30C8;&#x30E0;</strong>&#x306F;&#x3001;<code>:</code>&#x304B;&#x3089;&#x59CB;&#x307E;&#x308B;&#x540D;&#x524D;&#x4ED8;&#x304D;&#x306E;&#x5024;&#x3067;&#x3001;&#x5B9F;&#x4F53;&#x304C; VM &#x5185;&#x3067;&#x305F;&#x3060; 1 &#x3064;&#x3067;&#x3042;&#x308B;&#x3001;&#x3068;&#x3044;&#x3046;&#x7279;&#x5FB4;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;</li>
+<li>&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;&#x6642;(&#x30B3;&#x30FC;&#x30C7;&#x30A3;&#x30F3;&#x30B0;&#x6642;)&#x306B;&#x5B9A;&#x307E;&#x3063;&#x3066;&#x3044;&#x308B;&#x4F55;&#x3089;&#x304B;&#x306E;&#x5B9A;&#x6570;&#x3092;&#x8868;&#x73FE;&#x3059;&#x308B;&#x306E;&#x306B;&#x4F7F;&#x3046;&#x3053;&#x3068;&#x304C;&#x591A;&#x3044;&#x3067;&#x3059;</li>
+<li>&#x5B9F;&#x4F53;&#x304C;&#x305F;&#x3060; 1 &#x3064;&#x306A;&#x306E;&#x3067;&#x3001;&#x540C;&#x3058; Atom &#x3092;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x5185;&#x306E;&#x8907;&#x6570;&#x7B87;&#x6240;&#x3067;&#x4F7F;&#x3063;&#x3066;&#x3082;&#x5024;&#x306F;&#x30B3;&#x30D4;&#x30FC;&#x3055;&#x308C;&#x305A;&#x3001;&#x65E2;&#x5B58;&#x306E; Atom &#x306B;&#x5BFE;&#x3059;&#x308B;&#x53C2;&#x7167;&#x306E;&#x307F;&#x304C;&#x5897;&#x3048;&#x307E;&#x3059;</li>
+<li>&#x4E00;&#x5EA6;&#x751F;&#x6210;&#x3055;&#x308C;&#x305F; Atom &#x306F; VM &#x304B;&#x3089;&#x6D88;&#x3048;&#x307E;&#x305B;&#x3093;(Garbage Collect &#x3055;&#x308C;&#x306A;&#x3044;)<ul>
+<li>&#x3088;&#x3063;&#x3066;&#x52D5;&#x7684;&#x306B; Atom &#x3092;&#x751F;&#x6210;&#x3059;&#x308B;&#x3079;&#x304D;&#x3067;&#x306F;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;&#x52D5;&#x7684;&#x306A;&#x5024;&#x306B;&#x306F; <strong>String; &#x6587;&#x5B57;&#x5217;</strong>&#x3092;&#x4F7F;&#x3044;&#x307E;&#x3059;</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><strong>Tuple; &#x30BF;&#x30D7;&#x30EB;</strong>&#x306F;&#x8907;&#x6570;&#x306E;&#x5024;&#x3092;&#x7D44;&#x307F;&#x5408;&#x308F;&#x305B;&#x305F;&#x5024;&#x3067;&#x3059;</li>
+<li>&#x7D44;&#x307F;&#x5408;&#x308F;&#x305B;&#x308B;&#x5024;&#x306E;&#x7A2E;&#x985E;(&#x578B;)&#x306F;&#x4F55;&#x3067;&#x3082;&#x69CB;&#x3044;&#x307E;&#x305B;&#x3093;&#x3002;&#x7D44;&#x307F;&#x5408;&#x308F;&#x305B;&#x308B;&#x6570;&#x3082;&#x3044;&#x304F;&#x3064;&#x3067;&#x3082;&#x69CB;&#x3044;&#x307E;&#x305B;&#x3093;</li>
+<li>&#x305F;&#x3060;&#x3057;<strong>List; &#x30EA;&#x30B9;&#x30C8;</strong>&#x3068;&#x9055;&#x3063;&#x3066;&#x3001;&#x300C;&#x7D44;&#x307F;&#x5408;&#x308F;&#x305B;&#x65B9;&#x300D;&#x3064;&#x307E;&#x308A; tuple &#x306E;&#x9577;&#x3055;&#x306F;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;&#x6642;(&#x30B3;&#x30FC;&#x30C7;&#x30A3;&#x30F3;&#x30B0;&#x6642;)&#x306B;&#x5B9A;&#x3081;&#x307E;&#x3059;&#x3002;
+&#x8A00;&#x3044;&#x63DB;&#x3048;&#x308B;&#x3068;&#x3001;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30DE;&#x304C;&#x4F55;&#x3089;&#x304B;&#x306E;&#x300C;&#x610F;&#x5473;&#x306E;&#x3042;&#x308B;&#x7D44;&#x307F;&#x5408;&#x308F;&#x305B;&#x300D;&#x3092;&#x8868;&#x73FE;&#x3059;&#x308B;&#x305F;&#x3081;&#x306B;&#x4F7F;&#x3046;&#x3082;&#x306E;&#x3067;&#x3059;<ul>
+<li>&#x4F8B;&#x3048;&#x3070; float &#x3092; 2 &#x3064;&#x7D44;&#x307F;&#x5408;&#x308F;&#x305B;&#x3066;&#x300C;&#x5EA7;&#x6A19;&#x300D;&#x3092;&#x8868;&#x73FE;&#x3057;&#x305F;&#x308A;</li>
+</ul>
+</li>
+<li>&#x9006;&#x306B;&#x3001;1 &#x3064;&#x306E;&#x7A2E;&#x985E;(&#x578B;)&#x306E;&#x5024;&#x304C;&#x3068;&#x306B;&#x304B;&#x304F; 0 &#x500B;&#x4EE5;&#x4E0A;&#x5B58;&#x5728;&#x3057;&#x3001;&#x305D;&#x306E;&#x6570;&#x304C;&#x5B9F;&#x884C;&#x6642;&#x306B;&#x5897;&#x3048;&#x305F;&#x308A;&#x6E1B;&#x3063;&#x305F;&#x308A;&#x3059;&#x308B;&#x5834;&#x5408;&#x3001;List &#x3092;&#x4F7F;&#x3044;&#x307E;&#x3059;</li>
+</ul>
+<hr>
+<ul>
+<li>&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;&#x6642;(&#x30B3;&#x30FC;&#x30C7;&#x30A3;&#x30F3;&#x30B0;&#x6642;)&#x306B;&#x6027;&#x8CEA;(&#x30B5;&#x30A4;&#x30BA;&#x3084;&#x5185;&#x5BB9;)&#x3092;&#x5B9A;&#x3081;&#x308B;&#x5024;&#x304B;&#x3001;&#x5B9F;&#x884C;&#x6642;&#x306B;&#x305D;&#x308C;&#x3089;&#x304C;&#x5909;&#x5316;&#x3057;&#x3046;&#x308B;&#x5024;&#x304B;&#x3001;
+&#x3068;&#x3044;&#x3046;&#x70B9;&#x306F;&#x3069;&#x3093;&#x306A;&#x8A00;&#x8A9E;&#x3067;&#x3082;&#x610F;&#x8B58;&#x3059;&#x308B;&#x5FC5;&#x8981;&#x306E;&#x3042;&#x308B;&#x3053;&#x3068;&#x3067;&#x3059;&#x306E;&#x3067;&#x899A;&#x3048;&#x3066;&#x304A;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;</li>
+</ul>
+<hr>
+<h3 id="&#x95A2;&#x6570;&#x7121;&#x540D;&#x95A2;&#x6570;">&#x95A2;&#x6570;(&#x7121;&#x540D;&#x95A2;&#x6570;)</h3>
+<p>&#x8CC7;&#x6599;: <a href="https://elixir-lang.org/getting-started/basic-types.html#anonymous-functions" target="_blank">Anonymous Functions</a></p>
+<ul>
+<li>&#x95A2;&#x6570;&#x306B;&#x306F;&#x3001;&#x3069;&#x3053;&#x3067;&#x3082;&#x66F8;&#x3051;&#x308B;&#x7121;&#x540D;&#x95A2;&#x6570;; anonymous function &#x3068;&#x3001;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;; module &#x306B;&#x6240;&#x5C5E;&#x3055;&#x305B;&#x308B;&#x5FC5;&#x8981;&#x304C;&#x3042;&#x308B;&#x540D;&#x524D;&#x4ED8;&#x304D;&#x95A2;&#x6570;; named function &#x304C;&#x3042;&#x308A;&#x307E;&#x3059;</li>
+<li>REPL &#x3067;&#x306F;&#x7121;&#x540D;&#x95A2;&#x6570;&#x3092;&#x3055;&#x3063;&#x3068;&#x8A66;&#x305B;&#x307E;&#x3059;</li>
+</ul>
+<pre><code class="lang-elixir">iex&gt; add = <span class="hljs-keyword">fn</span> a, b -&gt; a + b <span class="hljs-keyword">end</span>
+<span class="hljs-comment">#Function&lt;12.71889879/2 in :erl_eval.expr/5&gt;</span>
+iex&gt; add.(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>)
+<span class="hljs-number">3</span>
+</code></pre>
+<ul>
+<li><code>fn</code> ~ <code>-&gt;</code> ~ <code>end</code>&#x3068;&#x3044;&#x3046;&#x6587;&#x6CD5;&#x3067;&#x3059;<ul>
+<li>&#x5F15;&#x6570;&#x90E8;&#x5206;&#x306F;<code>()</code>&#x3092;&#x3064;&#x3051;&#x3066;&#x3082;&#x3064;&#x3051;&#x306A;&#x304F;&#x3066;&#x3082;&#x3044;&#x3044;&#x3053;&#x3068;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x3064;&#x307E;&#x308A;<code>fn(a, b) -&gt; a + b end</code>&#x3068;&#x3082;&#x66F8;&#x3051;&#x307E;&#x3059;</li>
+<li><code>#Function&lt;12.71889879/2 in :erl_eval.expr/5&gt;</code>&#x306A;&#x3069;&#x3068;&#x8A00;&#x308F;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x304C;&#x3001;&#x8B58;&#x5225;&#x7528;&#x306E;&#x30CF;&#x30C3;&#x30B7;&#x30E5;&#x5024;&#x3092;&#x4E0E;&#x3048;&#x3089;&#x308C;&#x305F;&#x7121;&#x540D;&#x95A2;&#x6570;&#x3067;&#x3042;&#x308B;&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;&#x3067;&#x3059;</li>
+<li><code>/2</code>&#x3068;&#x3044;&#x3046;&#x306E;&#x306F; Erlang/Elixir &#x306E;&#x95A2;&#x6570;&#x3092;&#x6307;&#x3057;&#x793A;&#x3059;&#x3068;&#x304D;&#x306B;&#x4F7F;&#x3046;&#x8868;&#x8A18;&#x6CD5;&#x3067;&#x3059;&#x3002;<code>/</code>&#x306E;&#x3042;&#x3068;&#x306B;&#x5F15;&#x6570;&#x306E;&#x6570;&#x3092;&#x4ED8;&#x3051;&#x307E;&#x3059;</li>
+</ul>
+</li>
+<li>&#x5909;&#x6570;&#x306B;&#x675F;&#x7E1B;&#x3057;&#x3001;&#x547C;&#x3073;&#x51FA;&#x3059;&#x3053;&#x3068;&#x304C;&#x51FA;&#x6765;&#x307E;&#x3059;<ul>
+<li>(&#x304A;&#x307E;&#x3051;&#x30AF;&#x30A4;&#x30BA;) &#x5909;&#x6570;&#x306B;&#x675F;&#x7E1B;&#x3057;&#x306A;&#x3044;&#x3067;&#x547C;&#x3073;&#x51FA;&#x3059;&#x3053;&#x3068;&#x3082;&#x51FA;&#x6765;&#x307E;&#x3059;&#x3002;&#x3069;&#x3046;&#x66F8;&#x304F;&#x3067;&#x3057;&#x3087;&#x3046;&#xFF1F;</li>
+</ul>
+</li>
+<li>&#x7121;&#x540D;&#x95A2;&#x6570;&#x3092;&#x547C;&#x3073;&#x51FA;&#x3059;&#x306E;&#x306F;<code>.()</code>&#x3068;&#x3044;&#x3046;&#x3061;&#x3087;&#x3063;&#x3068;&#x7279;&#x5FB4;&#x7684;&#x306A;&#x6587;&#x6CD5;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;<ul>
+<li>&#x540D;&#x524D;&#x4ED8;&#x304D;&#x95A2;&#x6570;&#x547C;&#x3073;&#x51FA;&#x3057;&#x306E;<code>()</code>&#x3092;&#x7701;&#x7565;&#x3067;&#x304D;&#x308B;&#x3068;&#x3044;&#x3046; Elixir &#x306E;&#x6587;&#x6CD5;&#x6A5F;&#x80FD;&#x304B;&#x3089;&#x751F;&#x3058;&#x308B;&#x66D6;&#x6627;&#x6027;&#x3092;&#x56DE;&#x907F;&#x3059;&#x308B;&#x305F;&#x3081;&#x306E;&#x63AA;&#x7F6E;&#x3067;&#x3059;</li>
+</ul>
+</li>
+<li>&#x5F15;&#x6570;&#x540D;&#x3055;&#x3048;&#x3082;&#x7701;&#x7565;&#x3059;&#x308B;&#x66F8;&#x304D;&#x65B9;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;</li>
+</ul>
+<pre><code class="lang-elixir">iex&gt; fun = &amp;(&amp;<span class="hljs-number">1</span> + <span class="hljs-number">1</span>)
+<span class="hljs-comment">#Function&lt;6.71889879/1 in :erl_eval.expr/5&gt;</span>
+iex&gt; fun.(<span class="hljs-number">1</span>)
+<span class="hljs-number">2</span>
+</code></pre>
+<ul>
+<li><code>&amp;()</code>&#x3067;  &#x56F2;&#x307F;&#x3001;&#x5F15;&#x6570;&#x306F;<code>&amp;n</code>&#x3067; 1 &#x304B;&#x3089;&#x9806;&#x306B;&#x53C2;&#x7167;&#x3057;&#x307E;&#x3059;&#x3002;&#x3042;&#x3068;&#x3067;&#x9AD8;&#x968E;&#x95A2;&#x6570;&#x306E;&#x8A71;&#x304C;&#x51FA;&#x3066;&#x304D;&#x307E;&#x3059;&#x304C;&#x3001;&#x305D;&#x3053;&#x3067;&#x3053;&#x306E;&#x7701;&#x7565;&#x8A18;&#x6CD5;&#x3092;&#x4F7F;&#x3046;&#x3053;&#x3068;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;</li>
+</ul>
+<hr>
+<ul>
+<li>&#x3044;&#x308D;&#x3044;&#x308D;&#x4F5C;&#x3063;&#x3066;&#x904A;&#x3093;&#x3067;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;</li>
+<li>&#x540D;&#x524D;&#x4ED8;&#x304D;&#x95A2;&#x6570;&#x3068;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x306B;&#x3064;&#x3044;&#x3066;&#x306F;&#x5F8C;&#x3067;&#x89E6;&#x308C;&#x307E;&#x3059;</li>
+</ul>
+<hr>
+<h3 id="&#x6F14;&#x7B97;&#x5B50;-operators">&#x6F14;&#x7B97;&#x5B50;; Operators</h3>
+<p>&#x8CC7;&#x6599;: <a href="https://elixir-lang.org/getting-started/basic-operators.html" target="_blank">Basic operators - Elixir</a></p>
+<ul>
+<li>&#x3059;&#x3067;&#x306B;<code>+</code>&#x304C;&#x4E0A;&#x306E;&#x4F8B;&#x3067;&#x3067;&#x3066;&#x304D;&#x3066;&#x3044;&#x307E;&#x3059;&#x304C;&#x3001;&#x6F14;&#x7B97;&#x5B50;(&#x4E2D;&#x7F6E;&#x6F14;&#x7B97;&#x5B50;; infix operators)&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;</li>
+<li>&#x30EA;&#x30B9;&#x30C8;&#x306E;&#x7D50;&#x5408;</li>
+</ul>
+<pre><code class="lang-elixir">iex&gt; [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>] ++ [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]
+[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>]
+</code></pre>
+<ul>
+<li>&#x6587;&#x5B57;&#x5217;&#x306E;&#x9023;&#x7D50;</li>
+</ul>
+<pre><code class="lang-elixir">iex&gt; <span class="hljs-string">&quot;foo&quot;</span> &lt;&gt; <span class="hljs-string">&quot;bar&quot;</span>
+<span class="hljs-string">&quot;foobar&quot;</span>
+</code></pre>
+<ul>
+<li>&#x4E2D;&#x7F6E;&#x6F14;&#x7B97;&#x5B50;&#x3082;&#x5B9F;&#x4F53;&#x306F;&#x95A2;&#x6570;&#x3067;&#x3001;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;&#x3067;&#x306F;<a href="https://hexdocs.pm/elixir/Kernel.html#++/2" target="_blank"><code>++/2</code></a>&#x306E;&#x3088;&#x3046;&#x306B;&#x53C2;&#x7167;&#x3057;&#x307E;&#x3059;</li>
 </ul>
 
                                 
@@ -547,12 +634,12 @@ iex&gt; tail
 
             
                 
-                <a href="why.html" class="navigation navigation-prev " aria-label="Previous page: なぜElixirか">
+                <a href="why.html" class="navigation navigation-prev " aria-label="Previous page: なぜ Elixir か">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="mix.html" class="navigation navigation-next " aria-label="Next page: 実習: Mix project, 初めてのテスト">
+                <a href="pattern_match.html" class="navigation navigation-next " aria-label="Next page: パターンマッチ">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -563,7 +650,7 @@ iex&gt; tail
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"基礎: 文法等","level":"1.3.4","depth":2,"next":{"title":"実習: Mix project, 初めてのテスト","level":"1.3.5","depth":2,"path":"elixir/mix.md","ref":"elixir/mix.md","articles":[]},"previous":{"title":"なぜElixirか","level":"1.3.3","depth":2,"path":"elixir/why.md","ref":"elixir/why.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"elixir/syntax.md","mtime":"2018-05-24T09:53:26.913Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-24T10:55:31.054Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"文法基礎","level":"1.3.4","depth":2,"next":{"title":"パターンマッチ","level":"1.3.5","depth":2,"path":"elixir/pattern_match.md","ref":"elixir/pattern_match.md","articles":[]},"previous":{"title":"なぜ Elixir か","level":"1.3.3","depth":2,"path":"elixir/why.md","ref":"elixir/why.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"elixir/syntax.md","mtime":"2019-05-13T10:50:13.979Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-13T11:22:47.044Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

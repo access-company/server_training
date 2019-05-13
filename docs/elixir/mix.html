@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>実習: Mix project, 初めてのテスト · GitBook</title>
+        <title>Mix project, 初めてのテスト · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -60,7 +60,7 @@
     <link rel="next" href="deps.html" />
     
     
-    <link rel="prev" href="syntax.html" />
+    <link rel="prev" href="enum_and_pipe.html" />
     
 
     </head>
@@ -147,7 +147,7 @@
                 <a href="../basics/recap.html">
             
                     
-                    復習: インターネットとWeb
+                    復習: インターネットと Web
             
                 </a>
             
@@ -186,7 +186,7 @@
                 <a href="../basics/api_design.html">
             
                     
-                    API設計, 「状態」
+                    API 設計, 「状態」
             
                 </a>
             
@@ -257,7 +257,7 @@
                 <a href="requirements.html">
             
                     
-                    前提
+                    環境構築
             
                 </a>
             
@@ -283,7 +283,7 @@
                 <a href="why.html">
             
                     
-                    なぜElixirか
+                    なぜ Elixir か
             
                 </a>
             
@@ -296,7 +296,7 @@
                 <a href="syntax.html">
             
                     
-                    基礎: 文法等
+                    文法基礎
             
                 </a>
             
@@ -304,12 +304,64 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.5" data-path="mix.html">
+        <li class="chapter " data-level="1.3.5" data-path="pattern_match.html">
+            
+                <a href="pattern_match.html">
+            
+                    
+                    パターンマッチ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="string_and_map.html">
+            
+                <a href="string_and_map.html">
+            
+                    
+                    文字列と Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="module_and_function.html">
+            
+                <a href="module_and_function.html">
+            
+                    
+                    モジュールと関数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="enum_and_pipe.html">
+            
+                <a href="enum_and_pipe.html">
+            
+                    
+                    Enum と|>
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.9" data-path="mix.html">
             
                 <a href="mix.html">
             
                     
-                    実習: Mix project, 初めてのテスト
+                    Mix project, 初めてのテスト
             
                 </a>
             
@@ -317,12 +369,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.6" data-path="deps.html">
+        <li class="chapter " data-level="1.3.10" data-path="deps.html">
             
                 <a href="deps.html">
             
                     
-                    実習: パッケージの導入
+                    発展: パッケージの導入
             
                 </a>
             
@@ -330,25 +382,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.7" data-path="cli.html">
-            
-                <a href="cli.html">
-            
-                    
-                    実習: CLIを作ってみる
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.3.8" data-path="otp.html">
+        <li class="chapter " data-level="1.3.11" data-path="otp.html">
             
                 <a href="otp.html">
             
                     
-                    実習: OTPに触れる
+                    発展: OTP に触れる
             
                 </a>
             
@@ -391,7 +430,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >実習: Mix project, 初めてのテスト</a>
+        <a href=".." >Mix project, 初めてのテスト</a>
     </h1>
 </div>
 
@@ -406,18 +445,34 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x5B9F;&#x7FD2;-mix-project-&#x521D;&#x3081;&#x3066;&#x306E;&#x30C6;&#x30B9;&#x30C8;">&#x5B9F;&#x7FD2;: Mix project, &#x521D;&#x3081;&#x3066;&#x306E;&#x30C6;&#x30B9;&#x30C8;</h2>
+                                <h2 id="mix-project-&#x521D;&#x3081;&#x3066;&#x306E;&#x30C6;&#x30B9;&#x30C8;">Mix project, &#x521D;&#x3081;&#x3066;&#x306E;&#x30C6;&#x30B9;&#x30C8;</h2>
 <ul>
-<li>&#x6587;&#x6CD5;&#x3092;&#x773A;&#x3081;&#x308B;&#x3088;&#x308A;&#x3082;&#x524D;&#x306B;&#x3001;<ul>
-<li>&#x66F8;&#x3044;&#x305F;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x7BA1;&#x7406;&#x3057;&#x3084;&#x3059;&#x3044;&#x74B0;&#x5883;&#x3092;&#x6574;&#x3048;&#x3001;</li>
-<li>&#x300C;&#x30C6;&#x30B9;&#x30C8;&#x300D;&#x3092;&#x66F8;&#x3044;&#x3066;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;&#x30FB;&#x5B9F;&#x884C;&#x3092;&#x7E70;&#x308A;&#x8FD4;&#x305B;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;</li>
+<li>&#x3053;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x306E;&#x76EE;&#x6A19;<ul>
+<li>Mix &#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3092;&#x4F5C;&#x3063;&#x3066;&#x307F;&#x3066;&#x3001;&#x57FA;&#x672C;&#x7684;&#x306A;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x69CB;&#x9020;&#x3092;&#x628A;&#x63E1;&#x3057;&#x3001;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x8AAD;&#x3081;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;</li>
+<li>&#x30C6;&#x30B9;&#x30C8;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x8AAD;&#x307F;&#x3001;&#x66F8;&#x304D;&#x3001;&#x5B9F;&#x884C;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;</li>
 </ul>
 </li>
-<li>Elixir&#x306E;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x306F;&#x516C;&#x5F0F;&#x30C4;&#x30FC;&#x30EB;&#x306E;<code>mix</code>&#x3092;&#x4F7F;&#x3063;&#x3066;Mix project&#x3068;&#x3057;&#x3066;&#x7BA1;&#x7406;&#x3059;&#x308B;&#x306E;&#x304C;&#x4E00;&#x822C;&#x7684;&#x3067;&#x3059;</li>
+<li>&#x6240;&#x8981;&#x6642;&#x9593;: 20 &#x5206;&#x7A0B;&#x5EA6;(Mix project &#x306E;&#x4E2D;&#x8EAB;&#x3092;&#x81EA;&#x7531;&#x306B;&#x3044;&#x3058;&#x3063;&#x3066;&#x3082;&#x3089;&#x3046;&#x6642;&#x9593;&#x3092;&#x542B;&#x3080;)<ul>
+<li>&#x3053;&#x3053;&#x307E;&#x3067;&#x7D2F;&#x7A4D;&#x3067; 2 &#x6642;&#x9593;&#x7A0B;&#x5EA6;</li>
 </ul>
+</li>
+</ul>
+<hr>
+<p>&#x8CC7;&#x6599;: <a href="https://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html" target="_blank">Introduction to Mix - Elixir</a></p>
+<ul>
+<li>&#x696D;&#x52D9;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x306F;&#x305F;&#x3044;&#x3066;&#x3044;&#x4F55;&#x3089;&#x304B;&#x306E;&#x5F62;(&#x307B;&#x307C;<code>git</code>)&#x3067;&#x30D0;&#x30FC;&#x30B8;&#x30E7;&#x30F3;&#x7BA1;&#x7406;&#x3055;&#x308C;&#x308B;&#x3053;&#x3068;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;&#x304C;&#x3001;
+&#x305D;&#x306E;&#x305F;&#x3081;&#x306B;&#x306F;&#x958B;&#x767A;&#x8A00;&#x8A9E;&#x3054;&#x3068;&#x306B;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306B;&#x5FC5;&#x8981;&#x306A;&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3084;&#x8A2D;&#x5B9A;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x306A;&#x3069;&#x3092;&#x7BA1;&#x7406;&#x3067;&#x304D;&#x308B;&#x5358;&#x4F4D;&#x304C;&#x5FC5;&#x8981;&#x3067;&#x3059;</li>
+<li>Elixir &#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306F;&#x516C;&#x5F0F;&#x30C4;&#x30FC;&#x30EB;&#x306E;<code>mix</code>&#x3092;&#x4F7F;&#x3063;&#x3066; Mix project &#x3068;&#x3044;&#x3046;&#x5358;&#x4F4D;&#x3067;&#x7BA1;&#x7406;&#x3059;&#x308B;&#x306E;&#x304C;&#x4E00;&#x822C;&#x7684;&#x3067;&#x3059;</li>
+<li>&#x30B3;&#x30FC;&#x30C9;&#x306E;&#x30C6;&#x30B9;&#x30C8;&#x3082;<code>mix</code>&#x3067;&#x5B9F;&#x884C;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;</li>
+</ul>
+<hr>
 <h3 id="mix-project">Mix project</h3>
-<pre><code>$ mix new ~/myapp
+<ul>
+<li><code>mix</code>&#x30B3;&#x30DE;&#x30F3;&#x30C9;&#x3067;&#x65B0;&#x3057;&#x3044;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3092;&#x4F5C;&#x308C;&#x307E;&#x3059;&#x3002;&#x9069;&#x5F53;&#x306A;&#x4F5C;&#x696D;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x5185;&#x3067;&#x5B9F;&#x884C;&#x3057;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;</li>
+</ul>
+<pre><code>$ mix new myapp
 * creating README.md
+* creating .formatter.exs
 * creating .gitignore
 * creating mix.exs
 * creating config
@@ -431,29 +486,28 @@
 Your Mix project was created successfully.
 You can use &quot;mix&quot; to compile it, test it, and more:
 
-    cd /Users/yumatsuzawa/myapp
+    cd myapp
     mix test
 
 Run &quot;mix help&quot; for more commands.
-
-$ cd ~/myapp
+$ cd myapp
 </code></pre><ul>
-<li>&#x30D1;&#x30B9;&#x306F;&#x9069;&#x5F53;&#x306B;&#x5909;&#x3048;&#x3066;OK&#x3067;&#x3059;</li>
-<li>&#x74B0;&#x5883;&#x69CB;&#x7BC9;&#x304C;&#x6B63;&#x3057;&#x304F;&#x3067;&#x304D;&#x3066;&#x3044;&#x306A;&#x3044;&#x3068;&#x3053;&#x306E;&#x6642;&#x70B9;&#x3067;&#x4F55;&#x304B;&#x554F;&#x984C;&#x304C;&#x8D77;&#x3053;&#x308B;&#x304B;&#x3082;&#x3057;&#x308C;&#x307E;&#x305B;&#x3093;&#x3002;&#x30A2;&#x30E9;&#x30FC;&#x30C8;&#x3092;&#x4E0A;&#x3052;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;</li>
+<li>&#x30D1;&#x30B9;&#x3084;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x540D;&#x306F;&#x9069;&#x5F53;&#x306B;&#x5909;&#x3048;&#x3066; OK &#x3067;&#x3059;</li>
+<li><strong>[&#x78BA;&#x8A8D;]</strong> &#x3053;&#x3061;&#x3089;&#x3082;&#x30A4;&#x30F3;&#x30B9;&#x30C8;&#x30FC;&#x30EB;&#x304C;&#x6B63;&#x3057;&#x304F;&#x3067;&#x304D;&#x3066;&#x3044;&#x306A;&#x3044;&#x3068;&#x3053;&#x306E;&#x6642;&#x70B9;&#x3067;&#x4F55;&#x304B;&#x554F;&#x984C;&#x304C;&#x8D77;&#x3053;&#x308A;&#x307E;&#x3059;</li>
 </ul>
-<h4 id="&#x4E2D;&#x8EAB;&#x3092;&#x3061;&#x3087;&#x3063;&#x3068;&#x78BA;&#x8A8D;">&#x4E2D;&#x8EAB;&#x3092;&#x3061;&#x3087;&#x3063;&#x3068;&#x78BA;&#x8A8D;</h4>
-<blockquote>
-<p><code>mix.exs</code></p>
-</blockquote>
-<pre><code class="lang-elixir"><span class="hljs-class"><span class="hljs-keyword">defmodule</span> <span class="hljs-title">Myapp</span></span>.Mixfile <span class="hljs-keyword">do</span>
+<hr>
+<ul>
+<li><code>mix.exs</code>&#x306E;&#x4E2D;&#x8EAB;&#x3092;&#x898B;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;</li>
+</ul>
+<pre><code class="lang-elixir"><span class="hljs-class"><span class="hljs-keyword">defmodule</span> <span class="hljs-title">Myapp</span></span>.MixProject <span class="hljs-keyword">do</span>
   <span class="hljs-keyword">use</span> Mix.Project
 
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">project</span></span> <span class="hljs-keyword">do</span>
     [
       <span class="hljs-symbol">app:</span> <span class="hljs-symbol">:myapp</span>,
       <span class="hljs-symbol">version:</span> <span class="hljs-string">&quot;0.1.0&quot;</span>,
-      <span class="hljs-symbol">elixir:</span> <span class="hljs-string">&quot;~&gt; 1.5&quot;</span>,
-      <span class="hljs-symbol">start_permanent:</span> Mix.env == <span class="hljs-symbol">:prod</span>,
+      <span class="hljs-symbol">elixir:</span> <span class="hljs-string">&quot;~&gt; 1.7&quot;</span>,
+      <span class="hljs-symbol">start_permanent:</span> Mix.env() == <span class="hljs-symbol">:prod</span>,
       <span class="hljs-symbol">deps:</span> deps()
     ]
   <span class="hljs-keyword">end</span>
@@ -475,42 +529,27 @@ $ cd ~/myapp
 <span class="hljs-keyword">end</span>
 </code></pre>
 <ul>
-<li>&#x3053;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x81EA;&#x4F53;&#x304C;<a href="https://elixirschool.com/ja/lessons/basics/modules/" target="_blank"><strong>&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;; module</strong></a>&#x3092;&#x5B9A;&#x7FA9;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;(<code>Myapp.Mixfile</code>)<ul>
-<li>Elixir&#x306E;module&#x540D;&#x306F;&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;<code>.</code>&#x533A;&#x5207;&#x308A;&#x3067;&#x540D;&#x524D;&#x7A7A;&#x9593;&#x3092;&#x69CB;&#x6210;&#x3067;&#x304D;&#x307E;&#x3059;</li>
+<li>&#x3053;&#x306E;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x81EA;&#x4F53;&#x304C;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x3092;&#x5B9A;&#x7FA9;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;(<code>Myapp.MixProject</code>)<ul>
+<li>&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x540D;&#x306F;&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;<code>.</code>&#x533A;&#x5207;&#x308A;&#x3067;&#x540D;&#x524D;&#x7A7A;&#x9593;&#x3092;&#x69CB;&#x6210;&#x3067;&#x304D;&#x307E;&#x3059;</li>
+<li><code>mix</code>&#x3067;&#x306F;&#x3001;&#x8A2D;&#x5B9A;&#x60C5;&#x5831;&#x3082;&#x3053;&#x306E;&#x3088;&#x3046;&#x306B; Elixir &#x30B3;&#x30FC;&#x30C9;&#x3067;&#x5B9A;&#x7FA9;&#x3057;&#x307E;&#x3059;<ul>
+<li><code>use Mix.Project</code>&#x3068;&#x3044;&#x3046;&#x5BA3;&#x8A00;&#x306B;&#x3088;&#x308A;&#x3001;<code>mix</code>&#x306B;&#x5FC5;&#x8981;&#x306A;&#x60C5;&#x5831;&#x3092;&#x4E0E;&#x3048;&#x308B;&#x305F;&#x3081;&#x306E;&#x624B;&#x7D9A;&#x304D;&#x304C;&#x88CF;&#x3067;&#x884C;&#x308F;&#x308C;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3059;</li>
+<li>&#x3061;&#x3087;&#x3063;&#x3068;&#x5177;&#x4F53;&#x7684;&#x306B;&#x8A00;&#x3046;&#x3068;&#x3001;<code>mix</code>&#x81EA;&#x8EAB;&#x3082;&#x5B9F;&#x884C;&#x3055;&#x308C;&#x308B;&#x3068; Erlang VM &#x5185;&#x3067;&#x8D77;&#x52D5;&#x3055;&#x308C;&#x308B;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306A;&#x306E;&#x3067;&#x3059;&#x304C;&#x3001;
+&#x305D;&#x3053;&#x306B;&#x3053;&#x306E;<code>mix.exs</code>&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3068;<code>Myapp.MixProject</code>&#x3068;&#x3044;&#x3046;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x306E;&#x5B58;&#x5728;&#x3092;&#x767B;&#x9332;&#x3057;&#x3001;
+&#x305D;&#x306E;&#x5F8C;&#x306E;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;&#x7B49;&#x306E;&#x51E6;&#x7406;&#x306B;&#x304A;&#x3044;&#x3066;&#x3066;&#x5FC5;&#x8981;&#x306A;&#x60C5;&#x5831;&#x3092;&#x53CE;&#x96C6;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;</li>
 </ul>
 </li>
-<li><code>Myapp.Mixfile.project/0</code>&#x3068;&#x3044;&#x3046;<a href="https://elixirschool.com/ja/lessons/basics/functions/#%E5%90%8D%E5%89%8D%E4%BB%98%E3%81%8D%E9%96%A2%E6%95%B0" target="_blank">&#x95A2;&#x6570;</a>&#x304C;&#x3001;
-&#x4E3B;&#x305F;&#x308B;&#x8A2D;&#x5B9A;&#x60C5;&#x5831;&#x3092;&#x5BA3;&#x8A00;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;<ul>
-<li><code>def</code>&#x3067;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x306E;&#x306F; <strong>&#x516C;&#x958B;; public/exposed</strong> &#x95A2;&#x6570;&#x3067;&#x3001;&#x5225;&#x306E;module&#x304B;&#x3089;&#x547C;&#x3073;&#x51FA;&#x3057;&#x3066;&#x4F7F;&#x3048;&#x307E;&#x3059;</li>
-<li><code>defp</code>&#x3067;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x306E;&#x306F; <strong>&#x975E;&#x516C;&#x958B;; private</strong> &#x95A2;&#x6570;&#x3067;&#x3001;&#x540C;&#x4E00;module&#x5185;&#x90E8;&#x304B;&#x3089;&#x3057;&#x304B;&#x4F7F;&#x3048;&#x307E;&#x305B;&#x3093;</li>
 </ul>
 </li>
-<li><p><code>project/0</code>&#x95A2;&#x6570;&#x306F;<a href="https://elixirschool.com/ja/lessons/basics/collections/#%E3%83%AA%E3%82%B9%E3%83%88" target="_blank"><strong>&#x30EA;&#x30B9;&#x30C8;; list</strong></a>&#x3092;&#x8FD4;&#x3057;&#x307E;&#x3059;&#x304C;&#x3001;
-&#x3061;&#x3087;&#x3063;&#x3068;&#x7279;&#x6B8A;&#x306A;<a href="https://elixirschool.com/ja/lessons/basics/collections/#%E3%82%AD%E3%83%BC%E3%83%AF%E3%83%BC%E3%83%89%E3%83%AA%E3%82%B9%E3%83%88" target="_blank"><strong>Keyword List, Keywords</strong></a>&#x3068;&#x3044;&#x3046;&#x3082;&#x306E;&#x306B;&#x306A;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;</p>
+<li><code>Myapp.MixProject.project/0</code>&#x3068;&#x3044;&#x3046;&#x95A2;&#x6570;&#x304C;&#x3001;&#x4E3B;&#x305F;&#x308B;&#x8A2D;&#x5B9A;&#x60C5;&#x5831;&#x3092;&#x5BA3;&#x8A00;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;<ul>
+<li><code>project/0</code>&#x95A2;&#x6570;&#x306F;&#x3059;&#x3067;&#x306B;&#x7D39;&#x4ECB;&#x3057;&#x305F; keyword list &#x3092;&#x8FD4;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;</li>
+</ul>
+</li>
+<li>&#x751F;&#x6210;&#x3057;&#x305F;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x304C; Erlang VM &#x5185;&#x3067;<code>:myapp</code>&#x3068;&#x3044;&#x3046;&#x540D;&#x524D;&#x3092;&#x6301;&#x3064;&#x3088;&#x3046;&#x3001;<code>app: :myapp</code>&#x3068;&#x3044;&#x3046;&#x9805;&#x76EE;&#x3067;&#x540D;&#x524D;&#x3092;&#x5B9A;&#x7FA9;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;</li>
+</ul>
+<hr>
 <ul>
-<li>&#x30EA;&#x30B9;&#x30C8;&#x306F;&#x3001; <strong>&#x914D;&#x5217;; array</strong> &#x3068;&#x306F;&#x5FAE;&#x5999;&#x306B;&#x9055;&#x3044;&#x307E;&#x3059;(&#x5177;&#x4F53;&#x7684;&#x306B;&#x306F;&#x5185;&#x90E8;&#x5B9F;&#x88C5;&#x304C;&#x7570;&#x306A;&#x308B;)&#x304C;&#x3001;&#x5F79;&#x5272;&#x3068;&#x3057;&#x3066;&#x306F;&#x4F3C;&#x3066;&#x3044;&#x307E;&#x3059;</li>
-<li>Keywords&#x306F;&#x8981;&#x306F;Key-value pairs&#x3067;&#x3059;</li>
-<li><p>Keywords&#x306E;&#x5B9F;&#x4F53;&#x306F;&#x6700;&#x521D;&#x306E;&#x8981;&#x7D20;&#x304C;<a href="https://elixirschool.com/ja/lessons/basics/basics/#%E3%82%A2%E3%83%88%E3%83%A0" target="_blank"><strong>&#x30A2;&#x30C8;&#x30E0;; atom</strong></a>
-&#x3067;&#x3042;&#x308B;&#x3088;&#x3046;&#x306A;<a href="https://elixirschool.com/ja/lessons/basics/collections/#%E3%82%BF%E3%83%97%E3%83%AB" target="_blank"><strong>&#x30BF;&#x30D7;&#x30EB;; tuple</strong></a>&#x306E;&#x30EA;&#x30B9;&#x30C8;&#x3067;&#x3059;</p>
-<ul>
-<li><p>&#x3057;&#x305F;&#x304C;&#x3063;&#x3066;&#x3001;</p>
-<pre><code class="lang-elixir">[{<span class="hljs-symbol">:key1</span>, <span class="hljs-string">&quot;value1&quot;</span>}, {<span class="hljs-symbol">:key2</span>, <span class="hljs-string">&quot;value2&quot;</span>}]
-</code></pre>
-</li>
-<li><p>&#x3068;&#x66F8;&#x3044;&#x3066;&#x3044;&#x304F;&#x306E;&#x304C;&#x6B63;&#x5F0F;&#x306A;&#x306E;&#x3067;&#x3059;&#x304C;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x7701;&#x7565;&#x3059;&#x308B;&#x8A18;&#x6CD5;&#x304C;&#x4F7F;&#x308F;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;</p>
-<pre><code class="lang-elixir">[<span class="hljs-symbol">key1:</span> <span class="hljs-string">&quot;value1&quot;</span>, <span class="hljs-symbol">key2:</span> <span class="hljs-string">&quot;value2&quot;</span>]
-</code></pre>
-</li>
+<li>&#x6B21;&#x306B;<code>lib/myapp.ex</code>&#x3092;&#x898B;&#x3066;&#x307F;&#x307E;&#x3059;</li>
 </ul>
-</li>
-</ul>
-</li>
-<li><p>&#x751F;&#x6210;&#x3057;&#x305F;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x304C;Erlang VM&#x5185;&#x3067;<code>:myapp</code>&#x3068;&#x3044;&#x3046;&#x540D;&#x524D;&#x3092;&#x6301;&#x3064;&#x3088;&#x3046;&#x3001;<code>app: :myapp</code>&#x3068;&#x3044;&#x3046;&#x9805;&#x76EE;&#x3067;&#x5B9A;&#x7FA9;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;</p>
-</li>
-</ul>
-<blockquote>
-<p><code>lib/myapp.ex</code></p>
-</blockquote>
 <pre><code class="lang-elixir"><span class="hljs-class"><span class="hljs-keyword">defmodule</span> <span class="hljs-title">Myapp</span></span> <span class="hljs-keyword">do</span>
   <span class="hljs-variable">@moduledoc</span> <span class="hljs-string">&quot;&quot;</span><span class="hljs-string">&quot;
   Documentation for Myapp.
@@ -521,7 +560,7 @@ $ cd ~/myapp
 
   ## Examples
 
-      iex&gt; Myapp.hello
+      iex&gt; Myapp.hello()
       :world
 
   &quot;</span><span class="hljs-string">&quot;&quot;</span>
@@ -535,26 +574,23 @@ $ cd ~/myapp
 <li>&#x3053;&#x3053;&#x306B;&#x3042;&#x306A;&#x305F;&#x306E;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x3067;&#x5B9F;&#x884C;&#x3057;&#x305F;&#x3044;&#x5185;&#x5BB9;&#x3092;&#x5B9F;&#x88C5;&#x3057;&#x3066;&#x3044;&#x304D;&#x307E;&#x3059;</li>
 </ul>
 </li>
-<li>Atom&#x3092;&#x8FD4;&#x3059;&#x3060;&#x3051;&#x306E;<code>hello/0</code>&#x304C;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x4EE5;&#x5916;&#x3067;&#x306F;&#x3001;<code>@moduledoc</code>&#x3068;<code>@doc</code>&#x3068;&#x3044;&#x3046;
-<a href="https://elixirschool.com/ja/lessons/basics/modules/#%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB%E3%81%AE%E5%B1%9E%E6%80%A7" target="_blank"><strong>module attributes</strong></a>&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;<ul>
-<li>&#x5B9A;&#x6570;&#x306A;&#x3069;&#x3001;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;&#x6642;&#x51E6;&#x7406;&#x306B;&#x7528;&#x3044;&#x308B;&#x5024;&#x3092;&#x683C;&#x7D0D;&#x3059;&#x308B;&#x306E;&#x304C;module attribute&#x3067;&#x3059;&#x304C;&#x3001;
-<code>@moduledoc</code>&#x3068;<code>@doc</code>&#x306F;&#x7279;&#x6B8A;&#x3067;&#x3001;&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;&#x3068;&#x3057;&#x3066;&#x6A5F;&#x80FD;&#x3057;&#x307E;&#x3059;</li>
-<li><code>ex_doc</code>&#x3068;&#x3044;&#x3046;&#x5225;&#x30C4;&#x30FC;&#x30EB;&#x3092;&#x4F7F;&#x3063;&#x3066;&#x3001;HTML&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;&#x306B;&#x6574;&#x5F62;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;</li>
+<li>&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x3067;&#x5B9F;&#x88C5;&#x3057;&#x3066;&#x3044;&#x308B;&#x30B3;&#x30FC;&#x30C9;&#x3092;<code>iex</code>&#x304B;&#x3089;&#x8A66;&#x3057;&#x3066;&#x307F;&#x305F;&#x3044;&#x5834;&#x5408;&#x306F;&#x3001;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x30C7;&#x30A3;&#x30EC;&#x30AF;&#x30C8;&#x30EA;&#x5185;&#x3067;<code>iex -S mix</code>&#x3092;&#x5B9F;&#x884C;&#x3057;&#x307E;&#x3059;&#x3002;
+&#x305D;&#x306E;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x304C;&#x3059;&#x3079;&#x3066; REPL &#x304B;&#x3089;&#x5229;&#x7528;&#x3067;&#x304D;&#x308B;&#x72B6;&#x614B;&#x3067;<code>iex</code>&#x304C;&#x7ACB;&#x3061;&#x4E0A;&#x304C;&#x308A;&#x307E;&#x3059;</li>
 </ul>
-</li>
-</ul>
+<hr>
 <h3 id="&#x521D;&#x3081;&#x3066;&#x306E;&#x30C6;&#x30B9;&#x30C8;">&#x521D;&#x3081;&#x3066;&#x306E;&#x30C6;&#x30B9;&#x30C8;</h3>
 <ul>
-<li>&#x8A66;&#x3057;&#x306B;&#x3053;&#x306E;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x3092;&#x5B9F;&#x884C;&#x3057;&#x3066;&#x307F;&#x305F;&#x304F;&#x306A;&#x3063;&#x305F;&#x3068;&#x304D;&#x3001;&#x3069;&#x3046;&#x3057;&#x305F;&#x3089;&#x3044;&#x3044;&#x3067;&#x3057;&#x3087;&#x3046;&#x304B;&#x3002;<ul>
+<li>&#x8A66;&#x3057;&#x306B;&#x3053;&#x306E;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x3092;&#x5B9F;&#x884C;&#x3057;&#x3066;&#x307F;&#x305F;&#x304F;&#x306A;&#x3063;&#x305F;&#x3068;&#x304D;&#x3001;&#x3069;&#x3046;&#x3057;&#x305F;&#x3089;&#x3044;&#x3044;&#x3067;&#x3057;&#x3087;&#x3046;&#x304B;&#x3002;
+<code>iex -S mix</code>&#x3067;&#x624B;&#x52D5;&#x3067;&#x8A66;&#x3057;&#x3066;&#x3082;&#x3044;&#x3044;&#x306E;&#x3067;&#x3059;&#x304C;&#x3001;&#x7E70;&#x308A;&#x8FD4;&#x3057;&#x5B9F;&#x884C;&#x3057;&#x3084;&#x3059;&#x3044;&#x5F62;&#x304C;&#x3044;&#x3044;&#x3067;&#x3059;&#x306D;<ul>
 <li>&#x307E;&#x3060;&#x3053;&#x306E;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x306F;&#x3001;&#x30BF;&#x30FC;&#x30DF;&#x30CA;&#x30EB;&#x3067;&#x5BFE;&#x8A71;&#x7684;&#x306B;&#x4F55;&#x304B;&#x3092;&#x51E6;&#x7406;&#x3059;&#x308B;&#x3068;&#x304B;&#x3001;
-HTTP&#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x3092;&#x51E6;&#x7406;&#x3059;&#x308B;&#x3060;&#x3068;&#x304B;&#x3044;&#x3063;&#x305F;&#x30EA;&#x30C3;&#x30C1;&#x306A;&#x6A5F;&#x80FD;&#x306F;&#x4F55;&#x4E00;&#x3064;&#x5B9F;&#x88C5;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x305B;&#x3093;</li>
+HTTP &#x30EA;&#x30AF;&#x30A8;&#x30B9;&#x30C8;&#x3092;&#x51E6;&#x7406;&#x3059;&#x308B;&#x3060;&#x3068;&#x304B;&#x3044;&#x3063;&#x305F;&#x30EA;&#x30C3;&#x30C1;&#x306A;&#x6A5F;&#x80FD;&#x306F;&#x4F55;&#x4E00;&#x3064;&#x5B9F;&#x88C5;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x305B;&#x3093;</li>
 <li>&#x3042;&#x308B;&#x306E;&#x306F;<code>Myapp.hello/0</code>&#x3060;&#x3051;&#x3067;&#x3059;</li>
 </ul>
 </li>
 <li>&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;&#x3001;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306E;&#x4E00;&#x90E8;&#x3060;&#x3051;&#x3057;&#x304B;&#x307E;&#x3060;&#x5B9F;&#x88C5;&#x3057;&#x3066;&#x3044;&#x306A;&#x3044;&#x3001;
 &#x3042;&#x308B;&#x3044;&#x306F;&#x958B;&#x767A;&#x3057;&#x3066;&#x3044;&#x308B;&#x306E;&#x306F;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x30D1;&#x30C3;&#x30B1;&#x30FC;&#x30B8;&#x3067;&#x3042;&#x3063;&#x3066;&#x3001;&#x5225;&#x306E;&#x30A2;&#x30D7;&#x30EA;&#x30B1;&#x30FC;&#x30B7;&#x30E7;&#x30F3;&#x306B;&#x7D44;&#x307F;&#x8FBC;&#x307E;&#x308C;&#x306A;&#x3044;&#x3068;&#x6A5F;&#x80FD;&#x3092;&#x679C;&#x305F;&#x3055;&#x306A;&#x3044;&#x3001;
 &#x3068;&#x3044;&#x3063;&#x305F;&#x72B6;&#x6CC1;&#x3067;&#x3082;&#x3001;<strong>&#x5B9F;&#x88C5;&#x3055;&#x308C;&#x3066;&#x3044;&#x308B;&#x7D30;&#x304B;&#x306A;&#x5358;&#x4F4D;&#x3060;&#x3051;&#x5B9F;&#x884C;&#x3057;&#x306A;&#x304C;&#x3089;&#x6319;&#x52D5;&#x3092;&#x78BA;&#x304B;&#x3081;&#x3089;&#x308C;&#x308B;</strong>&#x3001;&#x4FBF;&#x5229;&#x306A;&#x74B0;&#x5883;&#x3001;&#x30C4;&#x30FC;&#x30EB;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;</li>
-<li>&#x305D;&#x308C;&#x304C;<strong>&#x30C6;&#x30B9;&#x30C8;; test</strong>&#x3067;&#x3059;</li>
+<li>&#x305D;&#x308C;&#x304C;<strong>&#x30C6;&#x30B9;&#x30C8;; test</strong>&#x3067;&#x3059;&#x3002;<code>mix test</code>&#x3067;&#x5B9F;&#x884C;&#x3067;&#x304D;&#x307E;&#x3059;</li>
 </ul>
 <pre><code>$ mix test
 Compiling 1 file (.ex)
@@ -565,12 +601,11 @@ Finished in 0.04 seconds
 2 tests, 0 failures
 
 Randomized with seed 285458
-</code></pre><ul>
-<li>&#x300C;2&#x3064;&#x306E;&#x30C6;&#x30B9;&#x30C8;&#x304C;&#x5B9F;&#x884C;&#x3055;&#x308C;&#x305F;&#x300D;&#x3088;&#x3046;&#x3067;&#x3059;&#x304C;&#x3001;&#x4E00;&#x4F53;&#x4F55;&#x3092;&#x5B9F;&#x884C;&#x3057;&#x305F;&#x306E;&#x3067;&#x3057;&#x3087;&#x3046;&#x304B;&#x3002;&#x30C6;&#x30B9;&#x30C8;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x898B;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;</li>
+</code></pre><hr>
+<ul>
+<li>&#x300C;2 &#x3064;&#x306E;&#x30C6;&#x30B9;&#x30C8;&#x304C;&#x5B9F;&#x884C;&#x3055;&#x308C;&#x305F;&#x300D;&#x3088;&#x3046;&#x3067;&#x3059;&#x304C;&#x3001;&#x4E00;&#x4F53;&#x4F55;&#x3092;&#x5B9F;&#x884C;&#x3057;&#x305F;&#x306E;&#x3067;&#x3057;&#x3087;&#x3046;&#x304B;&#x3002;
+&#x30C6;&#x30B9;&#x30C8;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x3092;&#x898B;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;<code>test/myapp_test.exs</code>&#x3067;&#x3059;</li>
 </ul>
-<blockquote>
-<p><code>test/myapp_test.exs</code></p>
-</blockquote>
 <pre><code class="lang-elixir"><span class="hljs-class"><span class="hljs-keyword">defmodule</span> <span class="hljs-title">MyappTest</span></span> <span class="hljs-keyword">do</span>
   <span class="hljs-keyword">use</span> ExUnit.Case
   doctest Myapp
@@ -581,14 +616,14 @@ Randomized with seed 285458
 <span class="hljs-keyword">end</span>
 </code></pre>
 <ul>
-<li><code>test &quot;greets the world&quot; do</code>&#x306E;&#x884C;&#x306F;&#x3001;&#x5C02;&#x7528;&#x306E;&#x69CB;&#x6587;&#x306E;&#x3088;&#x3046;&#x306B;&#x3082;&#x898B;&#x3048;&#x307E;&#x3059;&#x304C;&#x3001;&#x5B9F;&#x306F;<code>test/2</code>&#x3068;&#x3044;&#x3046;<strong>&#x30DE;&#x30AF;&#x30ED;; macro</strong>&#x3067;&#x3059;<ul>
-<li>Elixir&#x3067;&#x306F;&#x30DE;&#x30AF;&#x30ED;&#x3092;&#x4F7F;&#x3063;&#x3066;DSL&#x3092;&#x4F5C;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;<ul>
+<li><code>test &quot;greets the world&quot; do</code>&#x306E;&#x884C;&#x306F;&#x3001;&#x5C02;&#x7528;&#x306E;&#x69CB;&#x6587;&#x306E;&#x3088;&#x3046;&#x306B;&#x3082;&#x898B;&#x3048;&#x307E;&#x3059;&#x304C;&#x3001;&#x5B9F;&#x306F;<code>test/2</code>&#x3068;&#x3044;&#x3046;&#x30DE;&#x30AF;&#x30ED;&#x3067;&#x3059;<ul>
+<li>Elixir &#x3067;&#x306F;&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;&#x30DE;&#x30AF;&#x30ED;&#x3092;&#x4F7F;&#x3063;&#x3066; DSL &#x3092;&#x4F5C;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x307E;&#x3059;<ul>
 <li>&#x305F;&#x3060;&#x3057;&#x3084;&#x308A;&#x3059;&#x304E;&#x308B;&#x3068;&#x30E6;&#x30FC;&#x30B6;&#x306B;&#x3068;&#x3063;&#x3066;&#x306F;&#x304B;&#x3048;&#x3063;&#x3066;&#x308F;&#x304B;&#x308A;&#x306B;&#x304F;&#x3044;&#x306E;&#x3067;&#x4E71;&#x7528;&#x306F;&#x7981;&#x7269;&#x3067;&#x3059;</li>
 </ul>
 </li>
 <li>&#x30DE;&#x30AF;&#x30ED;&#x3082;&#x95A2;&#x6570;&#x3068;&#x540C;&#x69D8;&#x306B;<code>test/2</code>&#x306A;&#x3069;&#x3068;&#x8868;&#x3057;&#x307E;&#x3059;</li>
-<li>&#x5B9F;&#x306F;Elixir&#x306E;&#x95A2;&#x6570;&#x3084;&#x30DE;&#x30AF;&#x30ED;&#x306F;<code>()</code>&#x3092;&#x7701;&#x7565;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x3001;&#x3053;&#x3053;&#x3067;&#x3082;&#x7701;&#x7565;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;<ul>
-<li>&#x4E00;&#x822C;&#x306B;&#x3001;&#x95A2;&#x6570;&#x3067;&#x306F;&#x7701;&#x7565;&#x3057;&#x307E;&#x305B;&#x3093;&#x3002;DSL&#x7684;&#x306B;&#x7528;&#x3044;&#x3089;&#x308C;&#x308B;&#x30DE;&#x30AF;&#x30ED;&#x3067;&#x306F;&#x7701;&#x7565;&#x3059;&#x308B;&#x3053;&#x3068;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;</li>
+<li>Elixir &#x306E;&#x95A2;&#x6570;&#x3084;&#x30DE;&#x30AF;&#x30ED;&#x306F;<code>()</code>&#x3092;&#x7701;&#x7565;&#x3059;&#x308B;&#x3053;&#x3068;&#x304C;&#x3067;&#x304D;&#x3001;&#x3053;&#x3053;&#x3067;&#x3082;&#x7701;&#x7565;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;<ul>
+<li>&#x4E00;&#x822C;&#x306B;&#x3001;&#x95A2;&#x6570;&#x3067;&#x306F;&#x7701;&#x7565;&#x3057;&#x307E;&#x305B;&#x3093;&#x3002;DSL &#x7684;&#x306B;&#x7528;&#x3044;&#x3089;&#x308C;&#x308B;&#x30DE;&#x30AF;&#x30ED;&#x3067;&#x306F;&#x7701;&#x7565;&#x3059;&#x308B;&#x3053;&#x3068;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;</li>
 </ul>
 </li>
 </ul>
@@ -600,7 +635,7 @@ Randomized with seed 285458
 </li>
 <li><p>&#x3082;&#x3046;&#x4E00;&#x3064;&#x306E;&#x30C6;&#x30B9;&#x30C8;&#x306F;&#x3001;&#x5B9F;&#x306F;<code>doctest Myapp</code>&#x3068;&#x3044;&#x3046;&#x884C;&#x3067;&#x6307;&#x793A;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;</p>
 <ul>
-<li>&#x3053;&#x308C;&#x306F;<code>Myapp</code> module&#x306E;&#x5B9A;&#x7FA9;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x4E2D;&#x306E;&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;&#x5185;&#x306B;&#x3001;
+<li>&#x3053;&#x308C;&#x306F;<code>Myapp</code> module &#x306E;&#x5B9A;&#x7FA9;&#x30D5;&#x30A1;&#x30A4;&#x30EB;&#x4E2D;&#x306E;&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;&#x5185;&#x306B;&#x3001;
 &#x6C7A;&#x307E;&#x3063;&#x305F;&#x5F62;&#x5F0F;&#x3067;&#x66F8;&#x304B;&#x308C;&#x305F;&#x5B9F;&#x884C;&#x53EF;&#x80FD;&#x306A;&#x30B3;&#x30FC;&#x30C9;&#x304C;&#x66F8;&#x304B;&#x308C;&#x3066;&#x3044;&#x308B;&#x5834;&#x5408;&#x3001;&#x305D;&#x308C;&#x3092;&#x5B9F;&#x884C;&#x3057;&#x3066;&#x7D50;&#x679C;&#x3092;&#x78BA;&#x304B;&#x3081;&#x307E;&#x3059;</li>
 <li><p>&#x8A72;&#x5F53;&#x7B87;&#x6240;&#x306F;&#x3053;&#x306E;&#x90E8;&#x5206;&#x3067;&#x3059;</p>
 <pre><code>iex&gt; Myapp.hello
@@ -608,8 +643,8 @@ Randomized with seed 285458
 </code></pre></li>
 </ul>
 </li>
-<li>&#x3068;&#x308A;&#x3042;&#x3048;&#x305A;&#x3053;&#x306E;&#x6642;&#x70B9;&#x3067;<code>git commit</code>&#x3057;&#x3066;&#x304A;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;</li>
 </ul>
+<hr>
 <h3 id="&#x5931;&#x6557;&#x3055;&#x305B;&#x3066;&#x307F;&#x3088;&#x3046;">&#x5931;&#x6557;&#x3055;&#x305B;&#x3066;&#x307F;&#x3088;&#x3046;</h3>
 <ul>
 <li>&quot;0 failures&quot;&#x3068;&#x51FA;&#x3066;&#x3044;&#x307E;&#x3057;&#x305F;&#x306E;&#x3067;&#x3001;&#x30C6;&#x30B9;&#x30C8;&#x3067;&#x306F;&#x4F55;&#x3082;&#x5931;&#x6557;&#x3057;&#x306A;&#x304B;&#x3063;&#x305F;&#x3088;&#x3046;&#x3067;&#x3059;</li>
@@ -650,42 +685,10 @@ Finished in 0.04 seconds
 
 Randomized with seed 762492
 </code></pre><ul>
-<li>&quot;1 failure&quot;&#x3068;&#x306A;&#x308A;&#x307E;&#x3057;&#x305F;&#x3002;doctest&#x306E;&#x65B9;&#x306F;&#x66F8;&#x304D;&#x63DB;&#x3048;&#x3066;&#x3044;&#x306A;&#x3044;&#x306E;&#x3067;&#x6210;&#x529F;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;</li>
+<li>&quot;1 failure&quot;&#x3068;&#x306A;&#x308A;&#x307E;&#x3057;&#x305F;&#x3002;doctest &#x306E;&#x65B9;&#x306F;&#x66F8;&#x304D;&#x63DB;&#x3048;&#x3066;&#x3044;&#x306A;&#x3044;&#x306E;&#x3067;&#x6210;&#x529F;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;</li>
 <li>&#x66F8;&#x304D;&#x63DB;&#x3048;&#x305F;&#x65B9;&#x306F;&#x3001;&#x300C;&#x5B9F;&#x88C5;&#x306F;<code>:world</code>&#x3092;&#x8FD4;&#x3059;&#x306E;&#x306B;&#x3001;&#x300D;&#x300C;&#x30C6;&#x30B9;&#x30C8;&#x30B3;&#x30FC;&#x30C9;&#x306F;<code>:goodbye</code>&#x3092;&#x671F;&#x5F85;&#x3057;&#x3066;&#x3044;&#x308B;&#x300D;&#x305F;&#x3081;&#x3001;&#x5931;&#x6557;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;</li>
 <li>&#x5931;&#x6557;&#x3057;&#x305F;&#x5834;&#x5408;&#x3001;&#x3069;&#x306E;&#x3088;&#x3046;&#x306A;&#x72B6;&#x6CC1;&#x3060;&#x3063;&#x305F;&#x306E;&#x304B;&#x3092;&#x6559;&#x3048;&#x3066;&#x304F;&#x308C;&#x308B;&#x3053;&#x3068;&#x3082;&#x308F;&#x304B;&#x308A;&#x307E;&#x3057;&#x305F;</li>
-<li>&#x30C6;&#x30B9;&#x30C8;&#x306F;&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;&#x3001; <strong>&#x3042;&#x306A;&#x305F;&#x306E;Elixir&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x3092;&#x7C21;&#x5358;&#x306B;&#x3001;&#x304B;&#x3064;&#x7E70;&#x308A;&#x8FD4;&#x3057;&#x4F55;&#x5EA6;&#x3067;&#x3082;&#x5B9F;&#x884C;&#x3055;&#x305B;&#x3089;&#x308C;&#x308B;&#x3001;&#x624B;&#x8EFD;&#x3067;&#x5B89;&#x5168;&#x306A;&#x74B0;&#x5883;&#x3001;&#x5FC3;&#x5F37;&#x3044;&#x5473;&#x65B9;</strong> &#x3067;&#x3059;</li>
-</ul>
-<h3 id="&#x3053;&#x3053;&#x307E;&#x3067;&#x306E;&#x30EF;&#x30FC;&#x30AF;&#x30D5;&#x30ED;&#x30FC;">&#x3053;&#x3053;&#x307E;&#x3067;&#x306E;&#x30EF;&#x30FC;&#x30AF;&#x30D5;&#x30ED;&#x30FC;</h3>
-<ul>
-<li>Mix project&#x3068;&#x3057;&#x3066;Elixir&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x306E;&#x7BA1;&#x7406;&#x5358;&#x4F4D;&#x3092;&#x898F;&#x5B9A;&#x3059;&#x308B;</li>
-<li>(&#x4E3B;&#x306B;<code>lib/</code>&#x4EE5;&#x4E0B;&#x306B;)module&#x3092;&#x5B9F;&#x88C5;&#x3057;&#x3066;&#x3044;&#x304F;</li>
-<li>&#x30C6;&#x30B9;&#x30C8;&#x30B3;&#x30FC;&#x30C9;&#x3067;&#x5B9F;&#x969B;&#x306E;&#x52D5;&#x304D;&#x3092;&#x78BA;&#x304B;&#x3081;&#x308B;</li>
-</ul>
-<h2 id="&#x6F14;&#x7FD2;-&#x3044;&#x3058;&#x3063;&#x3066;&#x307F;&#x3088;&#x3046;&#x6012;&#x3089;&#x305B;&#x3066;&#x307F;&#x3088;&#x3046;">&#x6F14;&#x7FD2;: &#x3044;&#x3058;&#x3063;&#x3066;&#x307F;&#x3088;&#x3046;/&#x6012;&#x3089;&#x305B;&#x3066;&#x307F;&#x3088;&#x3046;</h2>
-<ul>
-<li>&#x301C;10&#x5206;&#x307B;&#x3069;</li>
-<li><p>&#x4E9B;&#x7D30;&#x306A;&#x4E8B;&#x3067;&#x3082;&#x968F;&#x6642;&#x8CEA;&#x554F;&#x3057;&#x3066;OK&#x3067;&#x3059;</p>
-</li>
-<li><p>&#x30C6;&#x30B9;&#x30C8;&#x30B3;&#x30FC;&#x30C9;&#x3067;&#x3082;&#x3001;&#x5B9F;&#x88C5;&#x30B3;&#x30FC;&#x30C9;&#x3067;&#x3082;&#x69CB;&#x3044;&#x307E;&#x305B;&#x3093;&#x3002;&#x5C11;&#x3057;&#x3044;&#x3058;&#x3063;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;</p>
-<ul>
-<li><a href="https://elixirschool.com/ja/lessons/basics/basics/#%E5%9F%BA%E6%9C%AC%E7%9A%84%E3%81%AA%E6%BC%94%E7%AE%97" target="_blank">&#x56DB;&#x5247;&#x6F14;&#x7B97;&#x306A;&#x3069;</a>&#x3001;&#x5358;&#x7D14;&#x306A;&#x30B3;&#x30FC;&#x30C9;&#x3067;OK&#x3067;&#x3059;</li>
-</ul>
-</li>
-<li>&#x4F55;&#x304B;&#x9593;&#x9055;&#x3063;&#x305F;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x66F8;&#x3044;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;&#x3002; <strong>&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30E9;&#x304C;&#x3069;&#x306E;&#x3088;&#x3046;&#x306A;&#x30A8;&#x30E9;&#x30FC;&#x3092;&#x8868;&#x793A;&#x3057;&#x3066;&#x304F;&#x308B;&#x304B;</strong> &#x898B;&#x3066;&#x304A;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;<ul>
-<li>&#x4FD7;&#x306B;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30E9;&#x306B;<strong>&#x6012;&#x3089;&#x308C;&#x308B;</strong>&#x3068;&#x3044;&#x3044;&#x307E;&#x3059;</li>
-</ul>
-</li>
-<li><p>REPL(<code>iex</code>)&#x306E;&#x4F7F;&#x3044;&#x65B9;&#x3082;&#x7DF4;&#x7FD2;&#x3057;&#x3066;&#x304A;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x30BF;&#x30FC;&#x30DF;&#x30CA;&#x30EB;&#x304B;&#x3089;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x3057;&#x307E;&#x3059;</p>
-<pre><code>$ iex
-Erlang/OTP 20 [erts-9.2] [source] [64-bit] [smp:4:4] [ds:4:4:10] [async-threads:10] [hipe] [kernel-poll:false]
-
-Interactive Elixir (1.5.3) - press Ctrl+C to exit (type h() ENTER for help)
-iex(1)&gt;
-</code></pre><ul>
-<li>&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x306A;&#x3057;&#x3067;&#x3082;Elixir&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x8A66;&#x305B;&#x307E;&#x3059;</li>
-<li>Mix project&#x5185;&#x90E8;&#x3067;&#x306F;&#x3001;<code>iex -S mix</code>&#x3068;&#x30BF;&#x30FC;&#x30DF;&#x30CA;&#x30EB;&#x304B;&#x3089;&#x5165;&#x529B;&#x3059;&#x308B;&#x3068;&#x3001;&#x305D;&#x306E;&#x30D7;&#x30ED;&#x30B8;&#x30A7;&#x30AF;&#x30C8;&#x306E;module&#x3082;REPL&#x304B;&#x3089;&#x5229;&#x7528;&#x3067;&#x304D;&#x307E;&#x3059;</li>
-</ul>
-</li>
+<li>&#x30C6;&#x30B9;&#x30C8;&#x306F;&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;&#x3001; <strong>&#x3042;&#x306A;&#x305F;&#x306E; Elixir &#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x3092;&#x7C21;&#x5358;&#x306B;&#x3001;&#x304B;&#x3064;&#x7E70;&#x308A;&#x8FD4;&#x3057;&#x4F55;&#x5EA6;&#x3067;&#x3082;&#x5B9F;&#x884C;&#x3055;&#x305B;&#x3089;&#x308C;&#x308B;&#x3001;&#x624B;&#x8EFD;&#x3067;&#x5B89;&#x5168;&#x306A;&#x74B0;&#x5883;&#x3001;&#x5FC3;&#x5F37;&#x3044;&#x5473;&#x65B9;</strong> &#x3067;&#x3059;</li>
 </ul>
 
                                 
@@ -714,12 +717,12 @@ iex(1)&gt;
 
             
                 
-                <a href="syntax.html" class="navigation navigation-prev " aria-label="Previous page: 基礎: 文法等">
+                <a href="enum_and_pipe.html" class="navigation navigation-prev " aria-label="Previous page: Enum と|>">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="deps.html" class="navigation navigation-next " aria-label="Next page: 実習: パッケージの導入">
+                <a href="deps.html" class="navigation navigation-next " aria-label="Next page: 発展: パッケージの導入">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -730,7 +733,7 @@ iex(1)&gt;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"実習: Mix project, 初めてのテスト","level":"1.3.5","depth":2,"next":{"title":"実習: パッケージの導入","level":"1.3.6","depth":2,"path":"elixir/deps.md","ref":"elixir/deps.md","articles":[]},"previous":{"title":"基礎: 文法等","level":"1.3.4","depth":2,"path":"elixir/syntax.md","ref":"elixir/syntax.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"elixir/mix.md","mtime":"2018-05-24T09:53:26.911Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-24T10:55:31.054Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Mix project, 初めてのテスト","level":"1.3.9","depth":2,"next":{"title":"発展: パッケージの導入","level":"1.3.10","depth":2,"path":"elixir/deps.md","ref":"elixir/deps.md","articles":[]},"previous":{"title":"Enum と|>","level":"1.3.8","depth":2,"path":"elixir/enum_and_pipe.md","ref":"elixir/enum_and_pipe.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"elixir/mix.md","mtime":"2019-05-13T10:54:11.080Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-13T11:22:47.044Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
