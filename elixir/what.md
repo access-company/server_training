@@ -1,5 +1,9 @@
 ## Elixir とは
 
+- このページの目標
+  - キーワードの認識を通し、Elixir の特徴の大枠を掴む
+- 所要時間: 5 分程度
+
 - レッツゴー公式 => https://elixir-lang.org/
 
 > Elixir is a dynamic, functional language designed for building scalable and maintainable applications.
