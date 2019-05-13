@@ -19,6 +19,7 @@
   - [パターンマッチ](elixir/pattern_match.md)
   - [文字列と Map](elixir/string_and_map.md)
   - [モジュールと関数](elixir/module_and_function.md)
+  - [Enum と`|>`](elixir/enum_and_pipe.md)
   - [実習: Mix project, 初めてのテスト](elixir/mix.md)
   - [実習: パッケージの導入](elixir/deps.md)
   - [実習: CLI を作ってみる](elixir/cli.md)
