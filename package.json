@@ -8,7 +8,7 @@
   "private": true,
   "scripts": {
     "start": "gitbook serve . localdocs/",
-    "build": "gitbook build . docs/"
+    "build": "gitbook build . docs/; rm -rf docs/myapp/ docs/.gitignore docs/.tool-versions docs/package.json docs/yarn.lock"
   },
   "dependencies": {
     "gitbook-cli": "^2.3.2"
