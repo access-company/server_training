@@ -100,7 +100,7 @@ index 9688770..b4a2958 100644
 +  use Application
 +
 +  def start(_type, _args) do
-+    Myapp.Superviser.start_link()
++    Myapp.Supervisor.start_link()
 +  end
 
    @doc """
