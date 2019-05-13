@@ -113,6 +113,13 @@ iex> map.c
 ** (KeyError) key :c not found in: %{2 => :b, :a => 1}
 ```
 
+- 中身を更新する専用構文が用意されています
+
+```elixir
+iex> %{map | 2 => "two"}
+%{2 => "two", :a => 1}
+```
+
 ---
 
 - Map ではどんな値も Key にでき、どんな値も Value にできます
@@ -142,8 +149,8 @@ iex> %{key_with_one => 1} = %{:a => 1, 2 => :b}
 
 ---
 
-- Erlang/Elixir では、Key-Value Store のために keyword list というものも利用されます
-- これはその名の通り実体としてはリストで、中身が Key と Value を tuple で組み合わせた値になっているものです
+- Erlang/Elixir では、Key-Value Store のために keyword list というものも利用されます。資料リンク先には先にこちらが紹介されています
+- その名の通り実体としてはリストで、中身が Key と Value を tuple で組み合わせた値になっているものです
 
 ```elixir
 iex> list = [{:a, 1}, {:b, 2}]
@@ -157,8 +164,8 @@ iex> list[:a]
 - 専用の省略表記が用意されていることが、上の例からわかります
 - 値を読む際は、Map 同様`[]`構文が使えます
 - Key として Atom が使われている場合のみ、利用できます。というより、
-  「『Atom の Key と、任意の Value を組み合わせた tuple』のリスト」を keyword list という特別な名前で呼んでいるだけで、通常のリストと特に変わりません
+  「**『Atom の Key と、任意の Value を組み合わせた tuple』のリスト**」を keyword list という特別な名前で呼んでいるだけで、通常のリストと特に変わりません
 - Map の場合、Key は Unique でしたが、keyword list は単なる list なので Unique とは限りません
 - Keyword list は、関数のオプションを指定する場合や、ユーザから REST API 経由で受け取ったパラメータのうち、予め許可したものをリストに納める場合など、
-  「Key が予め特定種類に限られている」場合に利用するものです。
+  「Key が予め特定種類に限られている」場合に利用するものです
   - Key も実行時に変化するようなデータを扱う場合は Map を使用しましょう
