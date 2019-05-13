@@ -1,0 +1,646 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>モジュールと関数 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="enum_and_pipe.html" />
+    
+    
+    <link rel="prev" href="string_and_map.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Server Development Tutorial
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../basics/basics.html">
+            
+                <a href="../basics/basics.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../basics/requirements.html">
+            
+                <a href="../basics/requirements.html">
+            
+                    
+                    前提
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../basics/dev_to1.html">
+            
+                <a href="../basics/dev_to1.html">
+            
+                    
+                    dev.to part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../basics/recap.html">
+            
+                <a href="../basics/recap.html">
+            
+                    
+                    復習: インターネットと Web
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../basics/dev_to2.html">
+            
+                <a href="../basics/dev_to2.html">
+            
+                    
+                    dev.to part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../basics/app_server.html">
+            
+                <a href="../basics/app_server.html">
+            
+                    
+                    アプリケーションサーバ, 「動的生成」
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../basics/api_design.html">
+            
+                <a href="../basics/api_design.html">
+            
+                    
+                    API 設計, 「状態」
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../basics/database.html">
+            
+                <a href="../basics/database.html">
+            
+                    
+                    「リソース」, データベース
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../basics/distribution.html">
+            
+                <a href="../basics/distribution.html">
+            
+                    
+                    「キャッシュ」そして「分散」
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../basics/conclusion.html">
+            
+                <a href="../basics/conclusion.html">
+            
+                    
+                    結び
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="elixir.html">
+            
+                <a href="elixir.html">
+            
+                    
+                    Elixir
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="requirements.html">
+            
+                <a href="requirements.html">
+            
+                    
+                    環境構築
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="what.html">
+            
+                <a href="what.html">
+            
+                    
+                    Elixir とは
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="why.html">
+            
+                <a href="why.html">
+            
+                    
+                    なぜ Elixir か
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="syntax.html">
+            
+                <a href="syntax.html">
+            
+                    
+                    文法基礎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="pattern_match.html">
+            
+                <a href="pattern_match.html">
+            
+                    
+                    パターンマッチ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="string_and_map.html">
+            
+                <a href="string_and_map.html">
+            
+                    
+                    文字列と Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.7" data-path="module_and_function.html">
+            
+                <a href="module_and_function.html">
+            
+                    
+                    モジュールと関数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="enum_and_pipe.html">
+            
+                <a href="enum_and_pipe.html">
+            
+                    
+                    Enum と|>
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="mix.html">
+            
+                <a href="mix.html">
+            
+                    
+                    Mix project, 初めてのテスト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="deps.html">
+            
+                <a href="deps.html">
+            
+                    
+                    発展: パッケージの導入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="otp.html">
+            
+                <a href="otp.html">
+            
+                    
+                    発展: OTP に触れる
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >モジュールと関数</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x3068;&#x95A2;&#x6570;">&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x3068;&#x95A2;&#x6570;</h2>
+<ul>
+<li>&#x3053;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x306E;&#x76EE;&#x6A19;<ul>
+<li>&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x3068;&#x95A2;&#x6570;&#x306B;&#x3064;&#x3044;&#x3066;&#x77E5;&#x308A;&#x3001;&#x8AAD;&#x3081;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;</li>
+<li>&#x5B9A;&#x7FA9;&#x69CB;&#x6587;&#x3092;&#x77E5;&#x308A;&#x3001;&#x66F8;&#x3051;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;</li>
+</ul>
+</li>
+<li>&#x6240;&#x8981;&#x6642;&#x9593;: 15 &#x5206;&#x7A0B;&#x5EA6;<ul>
+<li>&#x3053;&#x3053;&#x307E;&#x3067;&#x7D2F;&#x7A4D;&#x3067; 90 &#x5206;&#x7A0B;&#x5EA6;&#x4E88;&#x5B9A;(&#x74B0;&#x5883;&#x69CB;&#x7BC9;&#x306B;&#x6642;&#x9593;&#x3092;&#x53D6;&#x3089;&#x306A;&#x3044;&#x5834;&#x5408;)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;">&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;</h3>
+<p>&#x8CC7;&#x6599;: <a href="https://elixir-lang.org/getting-started/modules-and-functions.html" target="_blank">Modules and functions - Elixir</a></p>
+<ul>
+<li>Elixir &#x3067;&#x306F;&#x95A2;&#x9023;&#x3059;&#x308B;&#x95A2;&#x6570;&#x3092;&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x5316;&#x3057;&#x3066;<strong>Module; &#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;</strong>&#x3068;&#x3057;&#x3066;&#x7BA1;&#x7406;&#x3057;&#x307E;&#x3059;</li>
+<li>&#x30B0;&#x30EB;&#x30FC;&#x30D7;&#x5316;&#x306E;&#x969B;&#x306B;&#x306F;&#x3001;&#x95A2;&#x5FC3;&#x306E;&#x5BFE;&#x8C61;&#x3067;&#x3042;&#x308B;&#x30C7;&#x30FC;&#x30BF;&#x3054;&#x3068;&#x306B;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x3092;&#x5206;&#x3051;&#x308B;&#x3053;&#x3068;&#x304C;&#x591A;&#x3044;&#x3067;&#x3059;<ul>
+<li>&#x4F8B;&#x3048;&#x3070;&#x6587;&#x5B57;&#x5217;&#x3092;&#x6271;&#x3046;&#x95A2;&#x6570;&#x7FA4;&#x3092;<code>String</code>&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x3067;&#x7BA1;&#x7406;&#x3059;&#x308B;&#x3001;&#x306A;&#x3069;</li>
+<li>&#x3053;&#x308C;&#x306F;&#x300C;<strong>&#x30C7;&#x30FC;&#x30BF;&#x3068;&#x3001;&#x305D;&#x308C;&#x3092;&#x6271;&#x3046;&#x95A2;&#x6570;</strong>&#x300D;&#x304C;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x306E;&#x307B;&#x307C;&#x5168;&#x3066;&#x3067;&#x3042;&#x308B;&#x95A2;&#x6570;&#x578B;&#x8A00;&#x8A9E;&#x306E;&#x7279;&#x6027;&#x3092;&#x3088;&#x304F;&#x8868;&#x3057;&#x3066;&#x3044;&#x308B;&#x3068;&#x8A00;&#x3048;&#x307E;&#x3059;</li>
+</ul>
+</li>
+<li><code>String</code>&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x3092;&#x4F8B;&#x306B;&#x53D6;&#x308B;&#x3068;&#x3001;</li>
+</ul>
+<pre><code class="lang-elixir">iex&gt; String.length(<span class="hljs-string">&quot;hello&quot;</span>)
+<span class="hljs-number">5</span>
+</code></pre>
+<ul>
+<li>&#x5148;&#x307B;&#x3069;&#x3082;&#x51FA;&#x3066;&#x304D;&#x305F;&#x3082;&#x306E;&#x3067;&#x3059;&#x304C;&#x3001;<code>length/1</code>&#x304C;<code>String</code>&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x306B;&#x5C5E;&#x3059;&#x308B;&#x95A2;&#x6570;&#x3067;&#x3059;</li>
+<li><code>String</code>&#x306F;&#x3001;&#x5B9F;&#x306F;&#x5185;&#x90E8;&#x7684;&#x306B;&#x306F;&#x5358;&#x306A;&#x308B; Atom &#x3067;&#x3059;&#x3002;Atom &#x306F;&#x3053;&#x306E;&#x3088;&#x3046;&#x306B; Elixir &#x8A00;&#x8A9E;&#x306B;&#x304A;&#x3044;&#x3066;&#x3001;&#x6A19;&#x6E96;&#x6A5F;&#x80FD;&#x3092;&#x5B9F;&#x73FE;&#x3059;&#x308B;&#x305F;&#x3081;&#x306B;&#x3082;&#x591A;&#x304F;&#x4F7F;&#x308F;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;</li>
+</ul>
+<hr>
+<ul>
+<li>&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x306F;<code>defmodule</code>&#x30DE;&#x30AF;&#x30ED;&#x3067;&#x5B9A;&#x7FA9;&#x3057;&#x307E;&#x3059;<ul>
+<li><code>defmodule</code>&#x3084;&#x3001;&#x3053;&#x306E;&#x3042;&#x3068;&#x767B;&#x5834;&#x3059;&#x308B;<code>def</code>&#x304C;&#x30DE;&#x30AF;&#x30ED;&#x3067;&#x3042;&#x308B;&#x3068;&#x3044;&#x3046;&#x3053;&#x3068;&#x306F;&#x3001;&#x6700;&#x521D;&#x306F;&#x305D;&#x308C;&#x307B;&#x3069;&#x610F;&#x8B58;&#x3057;&#x306A;&#x304F;&#x3066;&#x69CB;&#x3044;&#x307E;&#x305B;&#x3093;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-elixir"><span class="hljs-class"><span class="hljs-keyword">defmodule</span> <span class="hljs-title">Math</span></span> <span class="hljs-keyword">do</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<ul>
+<li><code>Math</code>&#x3068;&#x3044;&#x3046;&#x540D;&#x524D;&#x3092;&#x6301;&#x3063;&#x305F;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x304C;&#x3053;&#x308C;&#x3067;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;&#x4E2D;&#x8EAB;&#x306F;&#x307E;&#x3060;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;<ul>
+<li><code>iex</code>&#x3067;&#x3082;&#x5B9F;&#x884C;&#x53EF;&#x80FD;&#x3067;&#x3059;</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="&#x540D;&#x524D;&#x4ED8;&#x304D;&#x95A2;&#x6570;">(&#x540D;&#x524D;&#x4ED8;&#x304D;)&#x95A2;&#x6570;</h3>
+<ul>
+<li><code>String.length/1</code>&#x306E;&#x3088;&#x3046;&#x306A;&#x95A2;&#x6570;&#x3092;<strong>&#x540D;&#x524D;&#x4ED8;&#x304D;&#x95A2;&#x6570;; named function</strong>&#x3068;&#x3044;&#x3044;&#x3001;Elixir &#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x306E;&#x6700;&#x3082;&#x6A19;&#x6E96;&#x7684;&#x306A;&#x69CB;&#x6210;&#x8981;&#x7D20;&#x3067;&#x3059;</li>
+<li><code>def</code>&#x30DE;&#x30AF;&#x30ED;&#x3067;&#x3001;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x5185;&#x306B;&#x5B9A;&#x7FA9;&#x3057;&#x307E;&#x3059;</li>
+</ul>
+<pre><code class="lang-elixir"><span class="hljs-class"><span class="hljs-keyword">defmodule</span> <span class="hljs-title">Math</span></span> <span class="hljs-keyword">do</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span></span>(a, b) <span class="hljs-keyword">do</span>
+    a + b
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<ul>
+<li><code>iex</code>&#x3067;&#x3082;&#x5B9F;&#x884C;&#x3067;&#x304D;&#x307E;&#x3059;&#x3002;&#x3084;&#x3063;&#x3066;&#x307F;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;<ul>
+<li>&#x3059;&#x3067;&#x306B;<code>iex</code>&#x4E0A;&#x3067;<code>Math</code>&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x3092;&#x5B9A;&#x7FA9;&#x3057;&#x3066;&#x3042;&#x3063;&#x305F;&#x5834;&#x5408;&#x3001;&#x5B9A;&#x7FA9;&#x304C;&#x4E0A;&#x66F8;&#x304D;&#x3055;&#x308C;&#x307E;&#x3059;(&#x518D;&#x5B9A;&#x7FA9;&#x8B66;&#x544A;&#x304C;&#x51FA;&#x308B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;)</li>
+</ul>
+</li>
+<li>&#x3053;&#x306E;&#x3088;&#x3046;&#x306B;&#x5B9A;&#x7FA9;&#x3059;&#x308B;&#x3068;&#x3001;<code>Math.add(1, 2)</code>&#x306E;&#x3088;&#x3046;&#x306B;&#x4ED6;&#x306E;&#x5834;&#x6240;&#x304B;&#x3089;&#x547C;&#x3073;&#x51FA;&#x305B;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;&#x308F;&#x3051;&#x3067;&#x3059;</li>
+<li>&#x8907;&#x96D1;&#x306A;&#x95A2;&#x6570;&#x306E;&#x51E6;&#x7406;&#x3092;&#x5225;&#x306E;&#x95A2;&#x6570;&#x306B;&#x5206;&#x89E3;&#x3059;&#x308B;&#x3088;&#x3046;&#x306A;&#x30B1;&#x30FC;&#x30B9;&#x3067;&#x306F;&#x3001;&#x540C;&#x4E00;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x5185;&#x90E8;&#x304B;&#x3089;&#x306E;&#x307F;&#x53C2;&#x7167;&#x53EF;&#x80FD;&#x306A;&#x30D7;&#x30E9;&#x30A4;&#x30D9;&#x30FC;&#x30C8;&#x95A2;&#x6570;; private function &#x3092;<code>defp</code>&#x3067;&#x5B9A;&#x7FA9;&#x3067;&#x304D;&#x307E;&#x3059;</li>
+</ul>
+<pre><code class="lang-elixir"><span class="hljs-class"><span class="hljs-keyword">defmodule</span> <span class="hljs-title">Math</span></span> <span class="hljs-keyword">do</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add</span></span>(a, b) <span class="hljs-keyword">do</span>
+    do_add(a, b)
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">defp</span> <span class="hljs-title">do_add</span></span>(a, b) <span class="hljs-keyword">do</span>
+      a + b
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<hr>
+<ul>
+<li>&#x7121;&#x540D;&#x95A2;&#x6570;&#x3068;&#x540D;&#x524D;&#x4ED8;&#x304D;&#x95A2;&#x6570;&#x306E;&#x9055;&#x3044;&#x306F;&#x3001;<ul>
+<li>&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x306B;&#x5C5E;&#x3057;&#x3066;&#x3044;&#x308B;&#x304B;</li>
+<li>&#x547C;&#x3073;&#x51FA;&#x3059;&#x969B;&#x306E;&#x69CB;&#x6587;&#x304C;&#x3001;<code>name()</code>&#x304B;<code>name.()</code>&#x304B;&#x3001;&#x3067;&#x3059;</li>
+</ul>
+</li>
+<li>&#x305D;&#x308C;&#x4EE5;&#x5916;&#x306F;&#x307B;&#x3068;&#x3093;&#x3069;&#x540C;&#x69D8;&#x306B;&#x6271;&#x3048;&#x307E;&#x3059;&#x3002;&#x4F8B;&#x3048;&#x3070;&#x3001;&#x7121;&#x540D;&#x95A2;&#x6570;&#x3068;&#x540C;&#x69D8;&#x3001;&#x540D;&#x524D;&#x4ED8;&#x304D;&#x95A2;&#x6570;&#x3092;&#x5225;&#x540D;&#x306E;&#x5909;&#x6570;&#x306B;&#x675F;&#x7E1B;&#x3059;&#x308B;&#x3053;&#x3068;&#x3082;&#x3067;&#x304D;&#x307E;&#x3059;</li>
+</ul>
+<pre><code class="lang-elixir">iex&gt; sl = &amp;String.length/<span class="hljs-number">1</span>
+&amp;String.length/<span class="hljs-number">1</span>
+iex&gt; sl.(<span class="hljs-string">&quot;hello&quot;</span>)
+<span class="hljs-number">5</span>
+</code></pre>
+<ul>
+<li>&#x672B;&#x5C3E;&#x306E;<code>/n</code>&#x306F;&#x3059;&#x3067;&#x306B;&#x89E6;&#x308C;&#x307E;&#x3057;&#x305F;&#x304C;&#x3001;<code>&amp;</code>&#x3067;&#x59CB;&#x3081;&#x308B;&#x306E;&#x304C;&#x540D;&#x524D;&#x4ED8;&#x304D;&#x95A2;&#x6570;&#x3092;&#x5024;&#x3068;&#x3057;&#x3066;&#x6271;&#x3046;&#x5834;&#x5408;&#x306E;&#x69CB;&#x6587;&#x3067;&#x3059;</li>
+</ul>
+<hr>
+<ul>
+<li>&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x3068;&#x95A2;&#x6570;&#x3092;&#x5B9F;&#x88C5;&#x3057;&#x3066;&#x3044;&#x304F;&#x969B;&#x306B;&#x306F;&#x3001;&#x4ED6;&#x306E;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x306E;&#x95A2;&#x6570;&#x3092;&#x5229;&#x7528;&#x3059;&#x308B;&#x3053;&#x3068;&#x3082;&#x983B;&#x7E41;&#x306B;&#x3042;&#x308A;&#x307E;&#x3059;<ul>
+<li>Elixir &#x3067;&#x306F;&#x3001;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x540D;&#x3068;&#x95A2;&#x6570;&#x540D;&#x3092;&#x30D5;&#x30EB;&#x30CD;&#x30FC;&#x30E0;&#x3067;&#x660E;&#x8A18;&#x3059;&#x308C;&#x3070;&#x3001;&#x3069;&#x3053;&#x304B;&#x3089;&#x3067;&#x3082;&#x5229;&#x7528;&#x53EF;&#x80FD;&#x3067;&#x3059;<ul>
+<li>&#x300C;&#x7D99;&#x627F;&#x300D;&#x306E;&#x6982;&#x5FF5;&#x306F;&#x5B58;&#x5728;&#x305B;&#x305A;&#x3001;&#x3057;&#x305F;&#x304C;&#x3063;&#x3066;&#x7D99;&#x627F;&#x5148;&#x3067;&#x306E;&#x307F;&#x4F7F;&#x7528;&#x3067;&#x304D;&#x308B;&#x95A2;&#x6570;(protected)&#xFF0C;&#x306E;&#x3088;&#x3046;&#x306A;&#x4ED5;&#x7D44;&#x307F;&#x3082;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;</li>
+</ul>
+</li>
+<li>&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x540D;&#x3092;&#x7C21;&#x7D04;&#x8868;&#x8A18;&#x3059;&#x308B;&#x305F;&#x3081;&#x306E;<code>alias</code>&#x3084;&#x3001;&#x30DE;&#x30AF;&#x30ED;&#x3092;&#x4F7F;&#x7528;&#x53EF;&#x80FD;&#x306B;&#x3059;&#x308B;&#x305F;&#x3081;&#x306E;&#x7279;&#x5225;&#x306A;&#x5BA3;&#x8A00;&#x69CB;&#x6587;(<code>require</code>)&#x306A;&#x3069;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;</li>
+<li>&#x8A73;&#x3057;&#x304F;&#x306F;<a href="https://elixir-lang.org/getting-started/alias-require-and-import.html" target="_blank">alias, require, and import - Elixir</a>&#x53C2;&#x7167;</li>
+</ul>
+</li>
+<li>&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x3092;&#x30B3;&#x30F3;&#x30D1;&#x30A4;&#x30EB;&#x3059;&#x308B;&#x969B;&#x306E;&#x307F;&#x306B;&#x4F7F;&#x7528;&#x3059;&#x308B;&#x5024;&#x3092;&#x683C;&#x7D0D;&#x3059;&#x308B;&#x3001;module attribute &#x3068;&#x3044;&#x3046;&#x5C02;&#x7528;&#x306E;&#x4ED5;&#x7D44;&#x307F;&#x304C;&#x3042;&#x308A;&#x3001;<code>@name</code>&#x3067;&#x8868;&#x8A18;&#x3055;&#x308C;&#x307E;&#x3059;<ul>
+<li>&#x30BD;&#x30FC;&#x30B9;&#x30B3;&#x30FC;&#x30C9;&#x306B;&#x30C9;&#x30AD;&#x30E5;&#x30E1;&#x30F3;&#x30C8;&#x3092;&#x66F8;&#x304F;&#x969B;&#x306B;&#x3082;&#x5229;&#x7528;&#x3055;&#x308C;&#x307E;&#x3059;</li>
+<li>&#x8A73;&#x3057;&#x304F;&#x306F;<a href="https://elixir-lang.org/getting-started/module-attributes.html" target="_blank">Module attributes - Elixir</a>&#x53C2;&#x7167;</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>&#x3053;&#x3053;&#x307E;&#x3067;&#x3067;&#x3001;Elixir &#x30B3;&#x30FC;&#x30C9;&#x3092;&#x8AAD;&#x3080;&#x305F;&#x3081;&#x306E;&#x3054;&#x304F;&#x57FA;&#x672C;&#x7684;&#x306A;&#x69CB;&#x6587;&#x8981;&#x7D20;&#x306F;&#x7D39;&#x4ECB;&#x3067;&#x304D;&#x307E;&#x3057;&#x305F;</li>
+<li>&#x3082;&#x3061;&#x308D;&#x3093;&#x3001;&#x7701;&#x7565;&#x3057;&#x305F;&#x7D30;&#x304B;&#x306A;&#x5185;&#x5BB9;&#x3082;&#x591A;&#x304F;&#x3042;&#x308A;&#x307E;&#x3059;&#x306E;&#x3067;&#x3001;&#x4EE5;&#x964D;&#x306F;&#x516C;&#x5F0F;&#x30AC;&#x30A4;&#x30C9;&#x3092;&#x8AAD;&#x307F;&#x9032;&#x3081;&#x3001;&#x691C;&#x7D22;&#x3057;&#x306A;&#x304C;&#x3089;&#x5B66;&#x3093;&#x3067;&#x3044;&#x3063;&#x3066;&#x304F;&#x3060;&#x3055;&#x3044;<ul>
+<li>&#x7814;&#x4FEE;&#x671F;&#x9593;&#x4E2D;&#x306F;&#x3069;&#x3093;&#x3069;&#x3093;&#x8CEA;&#x554F;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;&#x3002;&#x90FD;&#x5EA6;&#x8B1B;&#x5E2B;&#x304C;&#x8AAC;&#x660E;&#x3092;&#x5C55;&#x958B;&#x3059;&#x308B;&#x306E;&#x3067;&#x3001;&#x4ED6;&#x306E;&#x30E1;&#x30F3;&#x30D0;&#x3082;&#x5171;&#x6709;&#x3067;&#x304D;&#x307E;&#x3059;</li>
+</ul>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="string_and_map.html" class="navigation navigation-prev " aria-label="Previous page: 文字列と Map">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="enum_and_pipe.html" class="navigation navigation-next " aria-label="Next page: Enum と|>">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"モジュールと関数","level":"1.3.7","depth":2,"next":{"title":"Enum と|>","level":"1.3.8","depth":2,"path":"elixir/enum_and_pipe.md","ref":"elixir/enum_and_pipe.md","articles":[]},"previous":{"title":"文字列と Map","level":"1.3.6","depth":2,"path":"elixir/string_and_map.md","ref":"elixir/string_and_map.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"elixir/module_and_function.md","mtime":"2019-05-13T10:52:53.963Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-13T11:22:47.044Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,649 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Enum と|> · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="mix.html" />
+    
+    
+    <link rel="prev" href="module_and_function.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Server Development Tutorial
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../basics/basics.html">
+            
+                <a href="../basics/basics.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../basics/requirements.html">
+            
+                <a href="../basics/requirements.html">
+            
+                    
+                    前提
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../basics/dev_to1.html">
+            
+                <a href="../basics/dev_to1.html">
+            
+                    
+                    dev.to part 1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../basics/recap.html">
+            
+                <a href="../basics/recap.html">
+            
+                    
+                    復習: インターネットと Web
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../basics/dev_to2.html">
+            
+                <a href="../basics/dev_to2.html">
+            
+                    
+                    dev.to part 2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../basics/app_server.html">
+            
+                <a href="../basics/app_server.html">
+            
+                    
+                    アプリケーションサーバ, 「動的生成」
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../basics/api_design.html">
+            
+                <a href="../basics/api_design.html">
+            
+                    
+                    API 設計, 「状態」
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../basics/database.html">
+            
+                <a href="../basics/database.html">
+            
+                    
+                    「リソース」, データベース
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../basics/distribution.html">
+            
+                <a href="../basics/distribution.html">
+            
+                    
+                    「キャッシュ」そして「分散」
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../basics/conclusion.html">
+            
+                <a href="../basics/conclusion.html">
+            
+                    
+                    結び
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="elixir.html">
+            
+                <a href="elixir.html">
+            
+                    
+                    Elixir
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="requirements.html">
+            
+                <a href="requirements.html">
+            
+                    
+                    環境構築
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="what.html">
+            
+                <a href="what.html">
+            
+                    
+                    Elixir とは
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="why.html">
+            
+                <a href="why.html">
+            
+                    
+                    なぜ Elixir か
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="syntax.html">
+            
+                <a href="syntax.html">
+            
+                    
+                    文法基礎
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="pattern_match.html">
+            
+                <a href="pattern_match.html">
+            
+                    
+                    パターンマッチ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="string_and_map.html">
+            
+                <a href="string_and_map.html">
+            
+                    
+                    文字列と Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="module_and_function.html">
+            
+                <a href="module_and_function.html">
+            
+                    
+                    モジュールと関数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.8" data-path="enum_and_pipe.html">
+            
+                <a href="enum_and_pipe.html">
+            
+                    
+                    Enum と|>
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="mix.html">
+            
+                <a href="mix.html">
+            
+                    
+                    Mix project, 初めてのテスト
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="deps.html">
+            
+                <a href="deps.html">
+            
+                    
+                    発展: パッケージの導入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="otp.html">
+            
+                <a href="otp.html">
+            
+                    
+                    発展: OTP に触れる
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Enum と|></a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="enum&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x3068;&#x6F14;&#x7B97;&#x5B50;"><code>Enum</code>&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x3068;<code>|&gt;</code>&#x6F14;&#x7B97;&#x5B50;</h2>
+<ul>
+<li>&#x3053;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x306E;&#x76EE;&#x6A19;<ul>
+<li><code>Enum</code>&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x306B;&#x89E6;&#x308C;&#x3001;&#x983B;&#x51FA;&#x3059;&#x308B;&#x30C7;&#x30FC;&#x30BF;&#x64CD;&#x4F5C;&#x3092;&#x77E5;&#x3063;&#x3066;&#x304A;&#x304F;</li>
+<li><code>|&gt;</code>&#x6F14;&#x7B97;&#x5B50;&#x3092;&#x77E5;&#x308A;&#x3001;&#x3088;&#x304F;&#x3042;&#x308B;&#x30C7;&#x30FC;&#x30BF;&#x64CD;&#x4F5C;&#x306E;&#x30B3;&#x30FC;&#x30C9;&#x3092;&#x8AAD;&#x307F;&#x66F8;&#x304D;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308B;</li>
+</ul>
+</li>
+<li>&#x6240;&#x8981;&#x6642;&#x9593;: 15 &#x5206;&#x7A0B;&#x5EA6;</li>
+</ul>
+<hr>
+<p>&#x8CC7;&#x6599;: <a href="https://elixir-lang.org/getting-started/enumerables-and-streams.html" target="_blank">Enumerables and Streams - Elixir</a></p>
+<ul>
+<li>&#x95A2;&#x6570;&#x578B;&#x8A00;&#x8A9E;&#x3067;&#x306F;&#x300C;<strong>&#x30C7;&#x30FC;&#x30BF;&#x3068;&#x3001;&#x305D;&#x308C;&#x3092;&#x6271;&#x3046;&#x95A2;&#x6570;</strong>&#x300D;&#x304C;&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x306E;&#x307B;&#x307C;&#x5168;&#x3066;&#x3067;&#x3042;&#x308B;&#x3068;&#x524D;&#x306E;&#x30DA;&#x30FC;&#x30B8;&#x3067;&#x66F8;&#x304D;&#x307E;&#x3057;&#x305F;&#x304C;&#x3001;
+&#x305D;&#x306E;&#x305F;&#x3081;&#x306B; Elixir &#x306F;&#x6A19;&#x6E96;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306E;&#x4E2D;&#x306B;&#x57FA;&#x672C;&#x7684;&#x306A;&#x30C7;&#x30FC;&#x30BF;&#x64CD;&#x4F5C;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x3092;&#x5099;&#x3048;&#x3066;&#x3044;&#x307E;&#x3059;</li>
+<li><code>Enum</code>&#x306F;&#x305D;&#x306E;&#x4E2D;&#x3067;&#x3082;&#x4EE3;&#x8868;&#x7684;&#x306A;&#x3082;&#x306E;&#x3067;&#x3001;&#x300C;&#x6570;&#x3048;&#x4E0A;&#x3052;&#x3089;&#x308C;&#x308B;&#x30C7;&#x30FC;&#x30BF;; Enumerable&#x300D;&#x3092;&#x6271;&#x3046;&#x95A2;&#x6570;&#x3092;&#x63D0;&#x4F9B;&#x3057;&#x307E;&#x3059;<ul>
+<li>&#x6570;&#x3048;&#x4E0A;&#x3052;&#x3089;&#x308C;&#x308B;&#x30C7;&#x30FC;&#x30BF;&#x3068;&#x306F;&#x3001;&#x4F8B;&#x3048;&#x3070;&#x30EA;&#x30B9;&#x30C8;&#x3084; Map &#x306A;&#x3069;&#x3067;&#x3059;</li>
+<li><a href="https://hexdocs.pm/elixir/1.7.4/Enum.html" target="_blank">Enum &#x2013; Elixir v1.7.4</a></li>
+</ul>
+</li>
+<li>&#x4EE5;&#x4E0B;&#x3067;&#x4F8B;&#x306B;&#x4E0A;&#x3052;&#x308B;<code>Enum.map/2</code>&#x306F;&#x975E;&#x5E38;&#x306B;&#x5229;&#x7528;&#x983B;&#x5EA6;&#x306E;&#x9AD8;&#x3044;&#x95A2;&#x6570;&#x306E; 1 &#x3064;&#x3067;&#x3059;</li>
+</ul>
+<pre><code class="lang-elixir">iex&gt; Enum.map([<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>], <span class="hljs-keyword">fn</span> x -&gt; x * <span class="hljs-number">2</span> <span class="hljs-keyword">end</span>)
+[<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>]
+iex&gt; Enum.map(%{<span class="hljs-number">1</span> =&gt; <span class="hljs-number">2</span>, <span class="hljs-number">3</span> =&gt; <span class="hljs-number">4</span>}, <span class="hljs-keyword">fn</span> {k, v} -&gt; k * v <span class="hljs-keyword">end</span>)
+[<span class="hljs-number">2</span>, <span class="hljs-number">12</span>]
+iex&gt; Enum.map(<span class="hljs-number">1</span>..<span class="hljs-number">3</span>, <span class="hljs-keyword">fn</span> x -&gt; x * <span class="hljs-number">2</span> <span class="hljs-keyword">end</span>)
+[<span class="hljs-number">2</span>, <span class="hljs-number">4</span>, <span class="hljs-number">6</span>]
+</code></pre>
+<ul>
+<li><code>1..3</code>&#x306F; range &#x69CB;&#x6587;&#x3068;&#x3044;&#x3046;&#x3082;&#x306E;&#x3067;&#x3001;&#x6574;&#x6570;&#x306E;&#x9023;&#x756A;&#x30EA;&#x30B9;&#x30C8;&#x3092;&#x7C21;&#x5358;&#x306B;&#x5B9A;&#x7FA9;&#x3067;&#x304D;&#x307E;&#x3059;</li>
+</ul>
+<hr>
+<ul>
+<li>&#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30DF;&#x30F3;&#x30B0;&#x3092;&#x5B66;&#x3093;&#x3060;&#x3053;&#x3068;&#x304C;&#x3042;&#x308C;&#x3070;&#x3001;&#x8A00;&#x8A9E;&#x306B;&#x3082;&#x3088;&#x308A;&#x307E;&#x3059;&#x304C;&#x3001;<code>for</code>&#x6587;&#x3084;<code>while</code>&#x6587;&#x3067;&#x914D;&#x5217;&#x7B49;&#x306B;&#x5BFE;&#x3059;&#x308B;&#x30EB;&#x30FC;&#x30D7;&#x51E6;&#x7406;&#x3092;&#x66F8;&#x3044;&#x305F;&#x3053;&#x3068;&#x304C;&#x3042;&#x308B;&#x3068;&#x601D;&#x3044;&#x307E;&#x3059;</li>
+<li>Elixir &#x306B;&#x306F;&#x307E;&#x305A;&#x3001;<code>while</code>&#x6587;&#x304C;&#x6587;&#x6CD5;&#x30FB;&#x6A19;&#x6E96;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x306B;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;&#x3002;<code>for</code>&#x30DE;&#x30AF;&#x30ED;&#x306F;&#x3042;&#x308A;&#x307E;&#x3059;&#x304C;&#x3001;C &#x7B49;&#x306E;<code>for</code>&#x6587;&#x3068;&#x306F;&#x3060;&#x3044;&#x3076;&#x9055;&#x3044;&#x307E;&#x3059;</li>
+<li>Enumerable &#x306A;&#x5024;&#x306E;&#x8981;&#x7D20;&#x306B;&#x5BFE;&#x3059;&#x308B;&#x51E6;&#x7406;&#x306F;&#x3001;<ul>
+<li>&#x518D;&#x5E30;&#x95A2;&#x6570;&#x3068;&#x3057;&#x3066;&#x66F8;&#x304F;&#x304B;&#x3001;</li>
+<li><code>Enum</code>&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x306E;&#x95A2;&#x6570;&#x3092;&#x4F7F;&#x3046;&#x304B;&#x3001;</li>
+<li><code>for</code>&#x30DE;&#x30AF;&#x30ED;&#x3092;&#x4F7F;&#x3046;&#x304B;&#x3001;&#x304C;&#x4E3B;&#x305F;&#x308B;&#x65B9;&#x6CD5;&#x3067;&#x3059;</li>
+</ul>
+</li>
+<li>&#x518D;&#x5E30;&#x95A2;&#x6570;&#x306B;&#x3064;&#x3044;&#x3066;&#x306F;<a href="https://elixir-lang.org/getting-started/recursion.html" target="_blank">Recursion - Elixir</a>&#x3092;&#x53C2;&#x7167;<ul>
+<li>&#x5C11;&#x3057;&#x9AD8;&#x5EA6;&#x306A;&#x5185;&#x5BB9;&#x306A;&#x306E;&#x3067;&#x3001;&#x5F8C;&#x56DE;&#x3057;&#x3067;&#x69CB;&#x3044;&#x307E;&#x305B;&#x3093;</li>
+</ul>
+</li>
+<li><code>for</code>&#x30DE;&#x30AF;&#x30ED;&#x306F;&#x3001; &#x3044;&#x308F;&#x3086;&#x308B;&#x300C;&#x5185;&#x5305;&#x8868;&#x8A18;; comprehension&#x300D;&#x3068;&#x547C;&#x3070;&#x308C;&#x308B;&#x30B9;&#x30BF;&#x30A4;&#x30EB;&#x3092;&#x5B9F;&#x73FE;&#x3059;&#x308B;&#x3082;&#x306E;&#x3067;&#x3059;<ul>
+<li><a href="https://elixir-lang.org/getting-started/comprehensions.html" target="_blank">Comprehensions - Elixir</a>&#x3092;&#x53C2;&#x7167;</li>
+<li>&#x7D50;&#x69CB;&#x4FBF;&#x5229;&#x306A;&#x306E;&#x3067;&#x3059;&#x304C;&#x3001;&#x3053;&#x308C;&#x3082;&#x307E;&#x305F;&#x3061;&#x3087;&#x3063;&#x3068;&#x9AD8;&#x5EA6;&#x306A;&#x5185;&#x5BB9;&#x306A;&#x306E;&#x3067;&#x5F8C;&#x56DE;&#x3057;&#x3067; OK</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li><code>Enum.map/2</code>&#x306F;&#x3001;&#x5BFE;&#x8C61;&#x3068;&#x3059;&#x308B;&#x30C7;&#x30FC;&#x30BF;&#x3068;&#x3001;&#x5BFE;&#x8C61;&#x3068;&#x3059;&#x308B;&#x30C7;&#x30FC;&#x30BF;&#x306E;&#x5404;&#x8981;&#x7D20;&#x306B;&#x9069;&#x7528;&#x3057;&#x305F;&#x3044;&#x51E6;&#x7406;&#x3092;&#x95A2;&#x6570;&#x3068;&#x3057;&#x3066;&#x53D7;&#x3051;&#x53D6;&#x308A;&#x307E;&#x3059;</li>
+<li>&#x305D;&#x3057;&#x3066;&#x3001;&#x53D7;&#x3051;&#x53D6;&#x3063;&#x305F;&#x95A2;&#x6570;&#x3092;&#x5404;&#x8981;&#x7D20;&#x306B;&#x9069;&#x7528;&#x3057;&#x3001;&#x3044;&#x308F;&#x3070;&#x5909;&#x63DB;&#x3057;&#x305F;&#x30C7;&#x30FC;&#x30BF;&#x3092;&#x8FD4;&#x3057;&#x307E;&#x3059;</li>
+<li>&#x3053;&#x306E;&#x3088;&#x3046;&#x306A;&#x3001;&#x300C;&#x95A2;&#x6570;&#x3092;&#x53D7;&#x3051;&#x53D6;&#x308B;&#x95A2;&#x6570;&#x300D;&#x3092;&#x9AD8;&#x968E;&#x95A2;&#x6570;&#x3068;&#x8A00;&#x3063;&#x305F;&#x308A;&#x3057;&#x307E;&#x3059;</li>
+<li>&#x300C;&#x30C7;&#x30FC;&#x30BF;&#x3068;&#x3001;&#x305D;&#x308C;&#x306B;&#x5BFE;&#x3059;&#x308B;&#x51E6;&#x7406;&#x300D;&#x3092;&#x3088;&#x308A;&#x5BA3;&#x8A00;&#x7684;&#x306B;&#x66F8;&#x3051;&#x3001;&#x30AB;&#x30A6;&#x30F3;&#x30BF;&#x5909;&#x6570;&#x3092;&#x5229;&#x7528;&#x3057;&#x305F;&#x8A18;&#x8FF0;&#x3068;&#x6BD4;&#x3079;&#x3066; off-by-one &#x30D0;&#x30B0;&#x3092;&#x751F;&#x307F;&#x306B;&#x304F;&#x3044;&#x5229;&#x70B9;&#x304C;&#x3042;&#x308A;&#x307E;&#x3059;</li>
+<li>&#x3053;&#x3046;&#x3044;&#x3063;&#x305F;&#x30C7;&#x30FC;&#x30BF;&#x51E6;&#x7406;&#x3092;&#x95A2;&#x6570;&#x306E;&#x7D44;&#x307F;&#x5408;&#x308F;&#x305B;&#x3067;&#x8868;&#x73FE;&#x3059;&#x308B;&#x306E;&#x306F;&#x95A2;&#x6570;&#x578B;&#x8A00;&#x8A9E;&#x306B;&#x304A;&#x3044;&#x3066;&#x57FA;&#x672C;&#x7684;&#x306A;&#x30B9;&#x30BF;&#x30A4;&#x30EB;&#x3068;&#x8A00;&#x3048;&#x307E;&#x3059;</li>
+</ul>
+<hr>
+<ul>
+<li><code>Enum.reduce/2</code>&#x306F;&#x3082;&#x3046;&#x4E00;&#x3064;&#x306E;&#x4EE3;&#x8868;&#x7684;&#x306A; Enum &#x95A2;&#x6570;&#x3067;&#x3059;&#x3002; &#x3061;&#x3087;&#x3063;&#x3068;&#x96E3;&#x3057;&#x3044;&#x3067;&#x3059;&#x304C;&#x898B;&#x3066;&#x307F;&#x307E;&#x3057;&#x3087;&#x3046;</li>
+</ul>
+<pre><code class="lang-elixir">iex&gt; Enum.reduce(1..3, 0, &amp;+/2)
+6
+</code></pre>
+<ul>
+<li>&#x7D50;&#x679C;&#x3068;&#x3057;&#x3066;&#x306F; 1 &#x304B;&#x3089; 3 &#x307E;&#x3067;&#x306E;&#x6574;&#x6570;&#x3092;&#x8DB3;&#x3057;&#x4E0A;&#x3052;&#x3066;&#x3044;&#x308B;&#x306E;&#x3067;&#x3059;&#x304C;&#x3001;&#x4EE5;&#x4E0B;&#x306E;&#x3053;&#x3068;&#x304C;&#x8A00;&#x3048;&#x307E;&#x3059;<ul>
+<li>&#x521D;&#x671F;&#x5024;(&#x3053;&#x306E;&#x5834;&#x5408;<code>0</code>)&#x3092;&#x53D7;&#x3051;&#x53D6;&#x3063;&#x3066;&#x3044;&#x308B;</li>
+<li>&#x524D;&#x306E;&#x8981;&#x7D20;&#x306B;&#x5BFE;&#x3059;&#x308B;&#x8A08;&#x7B97;&#x7D50;&#x679C;(&#x3053;&#x306E;&#x5024;&#x3092; accumulator &#x3068;&#x3088;&#x304F;&#x547C;&#x3076;)&#x3092;&#x6B21;&#x306E;&#x8981;&#x7D20;&#x306E;&#x8A08;&#x7B97;&#x7D50;&#x679C;&#x306B;&#x5229;&#x7528;&#x3057;&#x3066;&#x3001;&#x6700;&#x7D42;&#x7684;&#x306B; 1 &#x3064;&#x306E;&#x5024;&#x3092;&#x8FD4;&#x3057;&#x3066;&#x3044;&#x308B;</li>
+<li>&#x7121;&#x540D;&#x95A2;&#x6570;&#x3092;&#x66F8;&#x304F;&#x65B9;&#x6CD5;&#x3060;&#x3051;&#x3067;&#x306A;&#x304F;&#x3001;&#x95A2;&#x6570;&#x3084;&#x6F14;&#x7B97;&#x5B50;&#x3092; <code>&amp;name/n</code>&#x8A18;&#x6CD5;&#x3067;&#x6307;&#x5B9A;&#x3057;&#x3066;&#x3082;&#x826F;&#x3044;</li>
+</ul>
+</li>
+<li>&#x5C11;&#x3057;&#x308F;&#x304B;&#x308A;&#x3084;&#x3059;&#x304F;&#x3059;&#x308B;&#x3068;&#x3001;&#x3053;&#x3046;&#x3067;&#x3059;</li>
+</ul>
+<pre><code class="lang-elixir">iex&gt; Enum.reduce(<span class="hljs-number">1</span>..<span class="hljs-number">3</span>, <span class="hljs-number">0</span>, <span class="hljs-keyword">fn</span> num, acc -&gt; num + acc <span class="hljs-keyword">end</span>)
+<span class="hljs-number">6</span>
+</code></pre>
+<ul>
+<li>&#x3053;&#x306E;&#x3088;&#x3046;&#x306A;&#x51E6;&#x7406;&#x3092;&#x300C;&#x7573;&#x307F;&#x8FBC;&#x307F;&#x300D;&#x3068;&#x547C;&#x3076;&#x3053;&#x3068;&#x3082;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;&#x8A00;&#x8A9E;&#x306B;&#x3088;&#x3063;&#x3066;&#x306F;<code>fold</code>&#x3068;&#x3044;&#x3046;&#x540D;&#x524D;&#x3067;&#x63D0;&#x4F9B;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;</li>
+<li>&#x4ED6;&#x306B;&#x3082;<code>Enum</code>&#x306B;&#x306F;&#x4FBF;&#x5229;&#x306A;&#x95A2;&#x6570;&#x304C;&#x305F;&#x304F;&#x3055;&#x3093;&#x3042;&#x308A;&#x307E;&#x3059;&#x3002;&#x56F0;&#x3063;&#x305F;&#x3089;<code>Enum</code>&#x3092;&#x63A2;&#x3057;&#x307E;&#x3057;&#x3087;&#x3046;</li>
+</ul>
+<hr>
+<h3 id="the-pipe-operator"><code>|&gt;</code>; The pipe operator</h3>
+<p>&#x8CC7;&#x6599;: <a href="https://elixir-lang.org/getting-started/enumerables-and-streams.html#the-pipe-operator" target="_blank">The pipe operator</a></p>
+<ul>
+<li>&#x300C;1 &#x304B;&#x3089; 10 &#x4E07;&#x307E;&#x3067;&#x306E;&#x6574;&#x6570;&#x3092;&#x305D;&#x308C;&#x305E;&#x308C; 3 &#x500D;&#x3057;&#x305F;&#x3082;&#x306E;&#x306E;&#x3046;&#x3061;&#x3001;&#x5947;&#x6570;&#x3067;&#x3042;&#x308B;&#x3082;&#x306E;&#x306E;&#x5408;&#x8A08;&#x5024;&#x300D;&#x3092;&#x6C42;&#x3081;&#x308B;&#x51E6;&#x7406;&#x304C;&#x66F8;&#x304D;&#x305F;&#x3044;&#x3068;&#x3057;&#x307E;&#x3059;</li>
+<li><code>Enum</code>&#x306B;&#x306F;&#x3061;&#x3087;&#x3046;&#x3069;&#x3044;&#x3044;&#x95A2;&#x6570;&#x304C;&#x63C3;&#x3063;&#x3066;&#x3044;&#x307E;&#x3059;&#x306E;&#x3067;&#x3001;&#x307E;&#x305A;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x66F8;&#x3051;&#x307E;&#x3059;</li>
+</ul>
+<pre><code class="lang-elixir">iex&gt; odd? = &amp;(rem(&amp;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>) != <span class="hljs-number">0</span>)
+<span class="hljs-comment">#Function&lt;6.80484245/1 in :erl_eval.expr/5&gt;</span>
+iex&gt; Enum.sum(Enum.filter(Enum.map(<span class="hljs-number">1</span>..<span class="hljs-number">100_000</span>, &amp;(&amp;<span class="hljs-number">1</span> * <span class="hljs-number">3</span>)), odd?))
+<span class="hljs-number">7500000000</span>
+</code></pre>
+<ul>
+<li><code>odd?</code>&#x306B;&#x306F;&#x7701;&#x7565;&#x8A18;&#x6CD5;&#x3067;&#x5B9A;&#x7FA9;&#x3057;&#x305F;&#x7121;&#x540D;&#x95A2;&#x6570;&#x304C;&#x675F;&#x7E1B;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;&#x3002;&#x5947;&#x6570;&#x3092;&#x5224;&#x5B9A;&#x3059;&#x308B;&#x95A2;&#x6570;&#x3067;&#x3059;&#x306D;<ul>
+<li><code>rem/2</code>&#x306F;&#x6A19;&#x6E96;&#x30E9;&#x30A4;&#x30D6;&#x30E9;&#x30EA;&#x304C;&#x63D0;&#x4F9B;&#x3059;&#x308B;&#x5270;&#x4F59;&#x3092;&#x6C42;&#x3081;&#x308B;&#x95A2;&#x6570;&#x3067;&#x3059;</li>
+</ul>
+</li>
+<li><code>100_000</code>&#x306F;&#x5358;&#x306A;&#x308B;&#x6574;&#x6570;&#x3067;&#x3059;&#x304C;&#x3001;&#x8AAD;&#x307F;&#x3084;&#x3059;&#x3055;&#x306E;&#x305F;&#x3081;&#x3053;&#x306E;&#x3088;&#x3046;&#x306B; 3 &#x6841;&#x3054;&#x3068;&#x306B;<code>_</code>&#x3067;&#x533A;&#x5207;&#x308B;&#x8868;&#x8A18;&#x304C;&#x63A8;&#x5968;&#x3055;&#x308C;&#x3066;&#x3044;&#x307E;&#x3059;</li>
+<li><code>Enum.map/2</code>&#x306B;<code>&amp;(&amp;1 * 3)</code>&#x3092;&#x4E0E;&#x3048;&#x3066;&#x300C;&#x5404;&#x8981;&#x7D20;&#x3092; 3 &#x500D;&#x300D;&#x3057;&#x3001;<code>Enum.filter/2</code>&#x306B;<code>odd?</code>&#x3092;&#x4E0E;&#x3048;&#x3066;&#x5947;&#x6570;&#x3067;&#x3042;&#x308B;&#x3082;&#x306E;&#x3060;&#x3051;&#x3092;&#x9078;&#x3073;&#x3001;<code>Enum.sum/1</code>&#x3067;&#x5408;&#x8A08;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;</li>
+</ul>
+<hr>
+<ul>
+<li>&#x3057;&#x304B;&#x3057;<code>()</code>&#x304C;&#x591A;&#x304F;&#x3066;&#x8AAD;&#x307F;&#x306B;&#x304F;&#x3044;&#xFF01; &#x305D;&#x3053;&#x3067;<code>|&gt;</code>(&#x30D1;&#x30A4;&#x30D7;&#x6F14;&#x7B97;&#x5B50;; pipe operator)&#x3092;&#x4F7F;&#x3046;&#x3068;&#x4EE5;&#x4E0B;&#x306E;&#x3088;&#x3046;&#x306B;&#x66F8;&#x3051;&#x307E;&#x3059;</li>
+</ul>
+<pre><code class="lang-elixir">iex&gt; <span class="hljs-number">1</span>..<span class="hljs-number">100_000</span> |&gt; Enum.map(&amp;(&amp;<span class="hljs-number">1</span> * <span class="hljs-number">3</span>)) |&gt; Enum.filter(odd?) |&gt; Enum.sum
+<span class="hljs-number">7500000000</span>
+</code></pre>
+<ul>
+<li>&#x5143;&#x30C7;&#x30FC;&#x30BF;&#x304B;&#x3089;&#x3001;&#x51E6;&#x7406;&#x306E;&#x9806;&#x756A;&#x305D;&#x306E;&#x307E;&#x307E;&#x306B;&#x3001;&#x5E73;&#x5766;&#x306B;&#x8AAD;&#x3081;&#x308B;&#x3088;&#x3046;&#x306B;&#x306A;&#x308A;&#x307E;&#x3057;&#x305F;</li>
+<li><code>|&gt;</code>&#x306F;&#x5B9F;&#x4F53;&#x3068;&#x3057;&#x3066;&#x306F;&#x30DE;&#x30AF;&#x30ED;&#x3067;&#x3001;<ul>
+<li>&#x53F3;&#x8FBA;&#x306E;&#x95A2;&#x6570;&#x306E;&#x7B2C; 1 &#x5F15;&#x6570;&#x3092;&#x5DE6;&#x8FBA;&#x306B;&#x66F8;&#x304D;&#x3001;</li>
+<li>&#x53F3;&#x8FBA;&#x306E;&#x95A2;&#x6570;&#x306F;&#x7B2C; 1 &#x5F15;&#x6570;&#x3092;&#x7701;&#x7565;&#x3057;&#x3066;&#x66F8;&#x304F;&#x3053;&#x3068;&#x3067;&#x3001;&#x901A;&#x5E38;&#x306E;&#x95A2;&#x6570;&#x547C;&#x3073;&#x51FA;&#x3057;&#x3068;&#x540C;&#x3058;&#x3053;&#x3068;&#x3092;&#x5B9F;&#x73FE;&#x3067;&#x304D;&#x308B;&#x3088;&#x3046;&#x306B;&#x3059;&#x308B;&#x3082;&#x306E;&#x3067;&#x3059;</li>
+</ul>
+</li>
+<li>&#x3053;&#x306E;&#x6F14;&#x7B97;&#x5B50;&#x306F;&#x5225;&#x306E;&#x95A2;&#x6570;&#x578B;&#x8A00;&#x8A9E;&#x3067;&#x3042;&#x308B; F#(F Sharp)&#x3067;&#x767B;&#x5834;&#x3057;&#x3001;&#x30C7;&#x30FC;&#x30BF;&#x51E6;&#x7406;&#x306E;&#x6D41;&#x308C;&#x304C;&#x8AAD;&#x307F;&#x3084;&#x3059;&#x304F;&#x66F8;&#x3051;&#x308B;&#x3053;&#x3068;&#x304B;&#x3089;&#x4ED6;&#x8A00;&#x8A9E;&#x306B;&#x3082;&#x6CE2;&#x53CA;&#x3057;&#x3066;&#x3044;&#x307E;&#x3059;</li>
+</ul>
+<hr>
+<ul>
+<li>&#x6700;&#x521D;&#x306B;&#x306A;&#x306B;&#x304B;&#x30C7;&#x30FC;&#x30BF;&#x304C;&#x3042;&#x308A;&#x3001;&#x305D;&#x3053;&#x306B;&#x9023;&#x7D9A;&#x7684;&#x306B;&#x51E6;&#x7406;&#x3092;&#x9069;&#x7528;&#x3057;&#x3066;&#x3044;&#x304F;&#x5834;&#x5408;&#x306B;&#x306F;&#x3001;&#x3053;&#x306E;&#x30B9;&#x30BF;&#x30A4;&#x30EB;&#x304C;&#x8AAD;&#x307F;&#x3084;&#x3059;&#x304F;&#x3001;&#x983B;&#x51FA;&#x3067;&#x3059;&#x306E;&#x3067;&#x899A;&#x3048;&#x3066;&#x304A;&#x304D;&#x307E;&#x3057;&#x3087;&#x3046;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="module_and_function.html" class="navigation navigation-prev " aria-label="Previous page: モジュールと関数">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="mix.html" class="navigation navigation-next " aria-label="Next page: Mix project, 初めてのテスト">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Enum と|>","level":"1.3.8","depth":2,"next":{"title":"Mix project, 初めてのテスト","level":"1.3.9","depth":2,"path":"elixir/mix.md","ref":"elixir/mix.md","articles":[]},"previous":{"title":"モジュールと関数","level":"1.3.7","depth":2,"path":"elixir/module_and_function.md","ref":"elixir/module_and_function.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"elixir/enum_and_pipe.md","mtime":"2019-05-13T10:53:29.314Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-13T11:22:47.044Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
