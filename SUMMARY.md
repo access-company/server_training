@@ -23,3 +23,5 @@
   - [Mix project, 初めてのテスト](elixir/mix.md)
   - [発展: パッケージの導入](elixir/deps.md)
   - [発展: OTP に触れる](elixir/otp.md)
+  - [練習問題](elixir/exercise.md)
+  - [練習問題解答](elixir/exercise_answer.md)
