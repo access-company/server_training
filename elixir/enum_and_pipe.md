@@ -13,7 +13,7 @@
   そのために Elixir は標準ライブラリの中に基本的なデータ操作モジュールを備えています
 - `Enum`はその中でも代表的なもので、「数え上げられるデータ; Enumerable」を扱う関数を提供します
   - 数え上げられるデータとは、例えばリストや Map などです
-  - [Enum – Elixir v1.7.4](https://hexdocs.pm/elixir/1.7.4/Enum.html)
+  - [Enum – Elixir v1.9.4](https://hexdocs.pm/elixir/1.9.4/Enum.html)
 - 以下で例に上げる`Enum.map/2`は非常に利用頻度の高い関数の 1 つです
 
 ```elixir
