@@ -8,7 +8,7 @@
 <summary>解答例</summary>
 <p>
 
-```ex
+```elixir
 Stream.unfold({0, 1}, fn {n1, n2} -> {n1, {n2, n1 + n2}} end) \
 |> Stream.filter(fn n -> rem(n, 3) == 0 end) \
 |> Stream.take_while(fn n -> n <= 3_000_000 end) \
@@ -27,7 +27,7 @@ Stream.unfold({0, 1}, fn {n1, n2} -> {n1, {n2, n1 + n2}} end) \
 <p>
 100万行なのでそこそこ時間がかかる。
 
-```ex
+```elixir
 Stream.repeatedly(fn -> :rand.uniform(65_536) - 1 end) \
 |> Stream.chunk_every(4) \
 |> Stream.take(1_000_000) \
@@ -45,7 +45,7 @@ Stream.repeatedly(fn -> :rand.uniform(65_536) - 1 end) \
 <p>
  `File.stream!` はその扱い方でよしなに read/write が決まってくれるので便利。最後の `Stream.run/1` を忘れずに。
 
-```ex
+```elixir
 File.stream!("numbers.csv") \
 |> Stream.map(&Regex.replace(~R/101/, &1, "lOl")) \
 |> Stream.into(File.stream!("lols.csv")) \
@@ -63,7 +63,7 @@ File.stream!("numbers.csv") \
 
 その昔 `Enum.filter_map/3` という、その名の通り filter しつつ map する関数があったが 「`Enum.flat_map/2` を使え」ということで無くなった。
 
-```ex
+```elixir
 Stream.unfold({2, []}, fn {candidate, primes} ->
   if Enum.any?(primes, fn prime -> rem(candidate, prime) == 0 end) do
     {[], {candidate + 1, primes}}
@@ -81,7 +81,7 @@ end) \
 <p>
 上記のストリームを使うため `v(-1)` とする(iex で直前の実行結果を参照する)
 
-```ex
+```elixir
 v(-1) \
 |> Stream.chunk_every(2, 1) \
 |> Enum.find(fn [p1, p2] -> p2 - p1 === 30 end)
@@ -96,7 +96,7 @@ v(-1) \
 
 `candidate` の平方根までの素数だけ調べれば良いのと、1ずつ足していくのではなく5から始めて2,4を交互に足していくことである程度枝刈りが出来る:
 
-```ex
+```elixir
 Stream.unfold({5, [2, 3], 2}, fn {candidate, primes, added} ->
   sqrt = :math.sqrt(candidate)
   primes
@@ -124,7 +124,7 @@ end) \
 <details><summary>解答例・解説</summary>
 <p>
 
-```ex
+```elixir
 defmodule Factory do
   def fact(n), do: fact(n, 1)
 
@@ -148,7 +148,7 @@ Elixir(に限らず大抵のモダンな言語)はシームレスに多倍長整
 <details><summary>解答例・解説</summary>
 <p>
 
-```ex
+```elixir
 defmodule Collatz do
   def count(n), do: count(n, 0)
 
@@ -174,7 +174,7 @@ Collatz.count(6_171)
 
 `%{key => {value, count}}` という状態を持たせれば良い。
 
-```ex
+```elixir
 defmodule LazyKV do
   def start_link() do
     Task.start_link(fn -> loop(%{}) end)
@@ -235,7 +235,7 @@ flush()
 <details><summary> `GenServer` を使う場合</summary>
 <p>
 
-```ex
+```elixir
 defmodule LazyKV do
   use GenServer
 
@@ -292,7 +292,7 @@ GenServer.call(pid, {:get, :foo, self()})
 
 (並列に生成したほうが早いかと思って出題したが、普通に 1 process で繰り返したほうが早かった)
 
-```ex
+```elixir
 Stream.iterate(0, &(&1 + 1)) \
 |> Enum.each(fn n -> n |> to_string() |> String.to_atom() end)
 ```
@@ -307,7 +307,7 @@ Stream.iterate(0, &(&1 + 1)) \
 <details><summary>解答例・解説</summary>
 <p>
 
-```ex
+```elixir
 defmodule SleepSort do
   @interval 10
 

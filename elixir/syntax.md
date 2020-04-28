@@ -33,7 +33,7 @@
 $ iex
 Erlang/OTP 20 [erts-9.3.3.3] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:10] [hipe] [kernel-poll:false]
 
-Interactive Elixir (1.7.4) - press Ctrl+C to exit (type h() ENTER for help)
+Interactive Elixir (1.9.4) - press Ctrl+C to exit (type h() ENTER for help)
 iex(1)>
 ```
 
