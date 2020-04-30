@@ -144,15 +144,15 @@ Compiling 1 file (.ex)
 Generated myapp app
 ..
 
-Finished in 0.04 seconds
-2 tests, 0 failures
+Finished in 0.05 seconds
+1 doctest, 1 test, 0 failures
 
-Randomized with seed 285458
+Randomized with seed 769936
 ```
 
 ---
 
-- 「2 つのテストが実行された」ようですが、一体何を実行したのでしょうか。
+- 「1つの doctest と1つの test が実行された」ようですが、一体何を実行したのでしょうか。
   テストファイルを見てみましょう。`test/myapp_test.exs`です
 
 ```elixir
@@ -225,10 +225,10 @@ $ mix test
 
 .
 
-Finished in 0.04 seconds
-2 tests, 1 failure
+Finished in 0.09 seconds
+1 doctest, 1 test, 1 failure
 
-Randomized with seed 762492
+Randomized with seed 56571
 ```
 
 - "1 failure"となりました。doctest の方は書き換えていないので成功しています
