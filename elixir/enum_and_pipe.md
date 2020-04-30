@@ -51,7 +51,7 @@ iex> Enum.map(1..3, fn x -> x * 2 end)
 
 ---
 
-- `Enum.reduce/2`はもう一つの代表的な Enum 関数です。 ちょっと難しいですが見てみましょう
+- `Enum.reduce/3`はもう一つの代表的な Enum 関数です。 ちょっと難しいですが見てみましょう
 
 ```elixir
 iex> Enum.reduce(1..3, 0, &+/2)
