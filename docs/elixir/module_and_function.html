@@ -514,6 +514,7 @@
 </code></pre>
 <ul>
 <li><code>Math</code>&#x3068;&#x3044;&#x3046;&#x540D;&#x524D;&#x3092;&#x6301;&#x3063;&#x305F;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x304C;&#x3053;&#x308C;&#x3067;&#x5B9A;&#x7FA9;&#x3055;&#x308C;&#x307E;&#x3059;&#x3002;&#x4E2D;&#x8EAB;&#x306F;&#x307E;&#x3060;&#x3042;&#x308A;&#x307E;&#x305B;&#x3093;<ul>
+<li>&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x540D;&#x306B;&#x306F; CamelCase &#x3092;&#x4F7F;&#x3044;&#x307E;&#x3059;</li>
 <li><code>iex</code>&#x3067;&#x3082;&#x5B9F;&#x884C;&#x53EF;&#x80FD;&#x3067;&#x3059;</li>
 </ul>
 </li>
@@ -522,6 +523,7 @@
 <h3 id="&#x540D;&#x524D;&#x4ED8;&#x304D;&#x95A2;&#x6570;">(&#x540D;&#x524D;&#x4ED8;&#x304D;)&#x95A2;&#x6570;</h3>
 <ul>
 <li><code>String.length/1</code>&#x306E;&#x3088;&#x3046;&#x306A;&#x95A2;&#x6570;&#x3092;<strong>&#x540D;&#x524D;&#x4ED8;&#x304D;&#x95A2;&#x6570;; named function</strong>&#x3068;&#x3044;&#x3044;&#x3001;Elixir &#x30D7;&#x30ED;&#x30B0;&#x30E9;&#x30E0;&#x306E;&#x6700;&#x3082;&#x6A19;&#x6E96;&#x7684;&#x306A;&#x69CB;&#x6210;&#x8981;&#x7D20;&#x3067;&#x3059;</li>
+<li>&#x95A2;&#x6570;&#x540D;&#x306B;&#x306F; snake_case &#x3092;&#x4F7F;&#x3044;&#x307E;&#x3059;</li>
 <li><code>def</code>&#x30DE;&#x30AF;&#x30ED;&#x3067;&#x3001;&#x30E2;&#x30B8;&#x30E5;&#x30FC;&#x30EB;&#x5185;&#x306B;&#x5B9A;&#x7FA9;&#x3057;&#x307E;&#x3059;</li>
 </ul>
 <pre><code class="lang-elixir"><span class="hljs-class"><span class="hljs-keyword">defmodule</span> <span class="hljs-title">Math</span></span> <span class="hljs-keyword">do</span>
@@ -544,7 +546,7 @@
   <span class="hljs-keyword">end</span>
 
   <span class="hljs-function"><span class="hljs-keyword">defp</span> <span class="hljs-title">do_add</span></span>(a, b) <span class="hljs-keyword">do</span>
-      a + b
+    a + b
   <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span>
 </code></pre>
@@ -633,7 +635,7 @@ iex&gt; sl.(<span class="hljs-string">&quot;hello&quot;</span>)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"モジュールと関数","level":"1.3.7","depth":2,"next":{"title":"Enum と|>","level":"1.3.8","depth":2,"path":"elixir/enum_and_pipe.md","ref":"elixir/enum_and_pipe.md","articles":[]},"previous":{"title":"文字列と Map","level":"1.3.6","depth":2,"path":"elixir/string_and_map.md","ref":"elixir/string_and_map.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"elixir/module_and_function.md","mtime":"2020-04-30T05:13:44.730Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-30T05:44:00.380Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"モジュールと関数","level":"1.3.7","depth":2,"next":{"title":"Enum と|>","level":"1.3.8","depth":2,"path":"elixir/enum_and_pipe.md","ref":"elixir/enum_and_pipe.md","articles":[]},"previous":{"title":"文字列と Map","level":"1.3.6","depth":2,"path":"elixir/string_and_map.md","ref":"elixir/string_and_map.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"elixir/module_and_function.md","mtime":"2020-04-30T05:58:28.575Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-30T06:12:17.019Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
