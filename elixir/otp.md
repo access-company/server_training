@@ -129,13 +129,13 @@ end
 
 [![supervisor](sup.png)](sup.png)
 
-- おめでとう！ `myapp`は OTP アプリケーションとなり、プロセスツリーを手に入れました
+- おめでとう！ `myapp`は OTP アプリケーションとなり、プロセスツリーを手に入れました
 
 - 今後、`myapp`が実行時に何か状態を持ちたいということになったなら、
   - `Myapp.Supervisor`配下に、状態保持用のプロセスを生やす
   - そのプロセスに対し、メッセージパッシングで値を出し入れするような API を定義する
   - アプリケーション内外から、その API を使ってプロセスにアクセスし、状態を利用する
-- といった流れになります。 このあたりをより深く知りたいと思ったら、
+- といった流れになります。 このあたりをより深く知りたいと思ったら、
   - [Official Introduction](https://elixir-lang.org/getting-started/introduction.html)や
     [Elixir School](https://elixirschool.com/ja/lessons/basics/basics/)を更に読み進めてみましょう
   - Erlang 関連の入門書([すご E](http://amzn.asia/9Vo8clh)など)もおすすめです。英語で良ければ Web 版もあります
