@@ -97,19 +97,19 @@ iex> [head | tail] = []
 
 ```elixir
 case some_list do
-    [] ->
-        "empty!"
-    [head | _] ->
-        "first value: " <> to_string(head)
+  [] ->
+    "empty!"
+  [head | _] ->
+    "first value: " <> to_string(head)
 end
 ```
 
 ```elixir
 fn
-    [] ->
-        "empty!"
-    [head | _] ->
-        "first value: " <> to_string(head)
+  [] ->
+    "empty!"
+  [head | _] ->
+    "first value: " <> to_string(head)
 end
 ```
 

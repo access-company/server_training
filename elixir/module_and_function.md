@@ -68,7 +68,7 @@ defmodule Math do
   end
 
   defp do_add(a, b) do
-      a + b
+    a + b
   end
 end
 ```
