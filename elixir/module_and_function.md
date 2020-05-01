@@ -37,6 +37,7 @@ end
 ```
 
 - `Math`という名前を持ったモジュールがこれで定義されます。中身はまだありません
+  - モジュール名には CamelCase を使います
   - `iex`でも実行可能です
 
 ---
@@ -44,6 +45,7 @@ end
 ### (名前付き)関数
 
 - `String.length/1`のような関数を**名前付き関数; named function**といい、Elixir プログラムの最も標準的な構成要素です
+- 関数名には snake_case を使います
 - `def`マクロで、モジュール内に定義します
 
 ```elixir
@@ -66,7 +68,7 @@ defmodule Math do
   end
 
   defp do_add(a, b) do
-      a + b
+    a + b
   end
 end
 ```

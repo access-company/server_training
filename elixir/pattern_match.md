@@ -93,28 +93,27 @@ iex> [head | tail] = []
   - `case`式
   - 関数の引数部分
 - で行うことができます。例えば以下のようなパターンマッチは頻出です
-  - 下記コード例は`iex`で直接実行するには工夫が必要なので、見るだけで OK
 
 ```elixir
 case some_list do
-    [] ->
-        "empty!"
-    [head | _] ->
-        "first value: " <> to_string(head)
+  [] ->
+    "empty!"
+  [head | _] ->
+    "first value: " <> to_string(head)
 end
 ```
 
 ```elixir
 fn
-    [] ->
-        "empty!"
-    [head | _] ->
-        "first value: " <> to_string(head)
+  [] ->
+    "empty!"
+  [head | _] ->
+    "first value: " <> to_string(head)
 end
 ```
 
 - パターンマッチで、マッチした値を変数に束縛しない場合は`_`で始まるプレースホルダ変数が使えます
-- 見て分かる通り、`case`式でのパターンマッチは**すなわち条件分岐にほかなりません**
-  - Elixir では**真偽値; boolean**を条件とする場合には`if`を使いますが、
+- 見て分かる通り、`case`式でのパターンマッチは **すなわち条件分岐にほかなりません**
+  - Elixir では **真偽値; boolean** を条件とする場合には`if`を使いますが、
     それ以外の値を対象に条件分岐する場合、`case`が最も頻繁に登場します
 - (例に登場している`to_string/1`は標準ライブラリが提供する文字列変換関数です)
