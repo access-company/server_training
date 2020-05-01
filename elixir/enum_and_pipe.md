@@ -37,7 +37,7 @@ iex> Enum.map(1..3, fn x -> x * 2 end)
   - `for`マクロを使うか、が主たる方法です
 - 再帰関数については[Recursion - Elixir](https://elixir-lang.org/getting-started/recursion.html)を参照
   - 少し高度な内容なので、後回しで構いません
-- `for`マクロは、 いわゆる「内包表記; comprehension」と呼ばれるスタイルを実現するものです
+- `for`マクロは、いわゆる「内包表記; comprehension」と呼ばれるスタイルを実現するものです
   - [Comprehensions - Elixir](https://elixir-lang.org/getting-started/comprehensions.html)を参照
   - 結構便利なのですが、これもまたちょっと高度な内容なので後回しで OK
 
